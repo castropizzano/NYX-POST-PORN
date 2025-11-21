@@ -58,7 +58,7 @@ export const translations = {
         {
           name: "Castro Pizzano",
           role: "Idealização, Dir. de Foto, Montagem e Pós-Prod.",
-          bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Grupo de Pesquisa CineCriare. Fundador, diretor de arte e videomaker no CasaTreze Studio."
+          bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Grupo de Pesquisa CineCriare. Fundador, designer, diretor de arte e videomaker na CasaTreze Studio."
         },
         {
           name: "Patrícia Ressureição",
