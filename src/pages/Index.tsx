@@ -7,6 +7,7 @@ import { Process } from '@/components/Process';
 import { Posters } from '@/components/Posters';
 import { Filmmakers } from '@/components/Filmmakers';
 import { References } from '@/components/References';
+import { VisualReferences } from '@/components/VisualReferences';
 import { Credits } from '@/components/Credits';
 import { Footer } from '@/components/Footer';
 import AgeGate from '@/components/AgeGate';
@@ -44,6 +45,7 @@ export default function Index() {
             <Posters />
             <Filmmakers />
             <References />
+            <VisualReferences />
             <Credits />
             <Footer />
           </>

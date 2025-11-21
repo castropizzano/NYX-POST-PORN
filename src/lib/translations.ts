@@ -130,6 +130,33 @@ export const translations = {
         }
       ]
     },
+    visualReferences: {
+      title: "Referências Visuais",
+      subtitle: "Obras cinematográficas que dialogam com NYX-POST-PORN",
+      films: [
+        {
+          title: "Destricted",
+          year: "2006",
+          directors: "7 diretores",
+          description: "Antologia de curtas explorando a interseção entre arte e pornografia, incluindo obras de Marina Abramović e Matthew Barney.",
+          image: "/images/ref-destricted.png"
+        },
+        {
+          title: "Shame",
+          year: "2011",
+          directors: "Steve McQueen",
+          description: "Exploração visceral da sexualidade, solidão e vulnerabilidade através do corpo masculino.",
+          image: "/images/ref-shame.png"
+        },
+        {
+          title: "Love",
+          year: "2015",
+          directors: "Gaspar Noé",
+          description: "Experiência sensorial imersiva sobre sexualidade, intimidade e memória através de uma linguagem visual radical.",
+          image: "/images/ref-love.png"
+        }
+      ]
+    },
     credits: {
       title: "Ficha Técnica",
       credits: [
@@ -333,6 +360,33 @@ export const translations = {
           work: "Hoist (Destricted)",
           description: "Bodily fragmentation and fusion between organic and mechanical.",
           relation: "NYX incorporates hybridization, dissolving boundaries between body and device."
+        }
+      ]
+    },
+    visualReferences: {
+      title: "Visual References",
+      subtitle: "Cinematographic works in dialogue with NYX-POST-PORN",
+      films: [
+        {
+          title: "Destricted",
+          year: "2006",
+          directors: "7 directors",
+          description: "Anthology of short films exploring the intersection between art and pornography, including works by Marina Abramović and Matthew Barney.",
+          image: "/images/ref-destricted.png"
+        },
+        {
+          title: "Shame",
+          year: "2011",
+          directors: "Steve McQueen",
+          description: "Visceral exploration of sexuality, loneliness and vulnerability through the male body.",
+          image: "/images/ref-shame.png"
+        },
+        {
+          title: "Love",
+          year: "2015",
+          directors: "Gaspar Noé",
+          description: "Immersive sensory experience about sexuality, intimacy and memory through radical visual language.",
+          image: "/images/ref-love.png"
         }
       ]
     },
