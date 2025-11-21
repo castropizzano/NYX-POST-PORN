@@ -6,8 +6,7 @@ const posters = [
   { src: '/images/poster-02.png', alt: 'NYX-POST-PORN Poster 2' },
   { src: '/images/poster-03.png', alt: 'NYX-POST-PORN Poster 3' },
   { src: '/images/poster-04.png', alt: 'NYX-POST-PORN Poster 4' },
-  { src: '/images/poster-05.png', alt: 'NYX-POST-PORN Poster 5' },
-  { src: '/images/poster-06.png', alt: 'NYX-POST-PORN Poster 6' }
+  { src: '/images/poster-05.png', alt: 'NYX-POST-PORN Poster 5' }
 ];
 
 export function Posters() {
