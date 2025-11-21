@@ -52,12 +52,12 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
 
         <div className="space-y-6 p-6">
           <div className="space-y-2 text-center">
-            <h2 className="text-2xl font-bold tracking-tight">{t.title}</h2>
-            <p className="text-sm text-[#9b7653]">{t.subtitle}</p>
+            <h2 className="nyx-h2">{t.title}</h2>
+            <p className="nyx-xs">{t.subtitle}</p>
           </div>
 
-          <div className="space-y-4 text-sm leading-relaxed text-justify">
-            <p className="text-xs">{t.description}</p>
+          <div className="space-y-4">
+            <p className="nyx-small text-justify">{t.description}</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -75,7 +75,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
             <Button
               type="submit"
               disabled={!confirmed || !email}
-              className="w-full bg-[#9b7653] hover:bg-[#7d5d42] text-black font-medium rounded-none"
+              className="w-full bg-[#9b7653] hover:bg-[#7d5d42] text-black nyx-small rounded-none"
             >
               {t.enterButton}
             </Button>
@@ -88,10 +88,10 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
                 className="mt-1 accent-[#9b7653]"
                 required
               />
-              <span className="leading-relaxed text-justify text-xs">{t.confirmText}</span>
+              <span className="nyx-small text-justify">{t.confirmText}</span>
             </label>
 
-            <p className="text-xs text-[#9b7653] text-center">{t.ageWarning}</p>
+            <p className="nyx-small text-center">{t.ageWarning}</p>
           </form>
         </div>
       </DialogContent>

@@ -48,7 +48,7 @@ export function Filmmakers() {
                 <h3 className="nyx-h2 mb-3">
                   {filmmaker.name}
                 </h3>
-                <p className="nyx-xs italic mb-4">
+                <p className="nyx-xs mb-4">
                   {filmmaker.role}
                 </p>
               </div>

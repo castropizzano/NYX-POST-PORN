@@ -39,14 +39,14 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
               className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-6 py-3"
               disabled={!ageVerified}
             >
-              OFFICIAL CUT {!ageVerified && <span className="ml-2 text-xs">🔒</span>}
+              OFFICIAL CUT {!ageVerified && <span className="ml-2 nyx-meta">🔒</span>}
             </TabsTrigger>
             <TabsTrigger
               value="multicam"
               className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-6 py-3"
               disabled={!ageVerified}
             >
-              MULTICAM {!ageVerified && <span className="ml-2 text-xs">🔒</span>}
+              MULTICAM {!ageVerified && <span className="ml-2 nyx-meta">🔒</span>}
             </TabsTrigger>
           </TabsList>
 
@@ -154,7 +154,7 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <p className="text-left text-xs text-[#9b7653] mt-8">
+        <p className="text-left nyx-meta mt-8">
           {activeTab === 'trailer' && `TRAILER Duração: ${durations.trailer} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
           {activeTab === 'official' && `OFFICIAL CUT Duração: ${durations.official} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
           {activeTab === 'multicam' && `MULTICAM Duração: ${durations.multicam} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
