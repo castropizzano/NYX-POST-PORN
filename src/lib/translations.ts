@@ -150,8 +150,13 @@ export const translations = {
       realizationName: "CasaTrezeStudio®",
       documentation: "Documentação",
       mainDoc: "[MAIN DOC.]",
+      projectFiles: "[PROJETO]",
+      certifications: "[CERTIFICAÇÕES]",
+      archive: "[INTERNET ARCHIVE]",
       completeRepo: "[COMPLETE REPOSITORY]",
       completeRepoDesc: "Acesse todos os arquivos no GitHub",
+      archiveTitle: "Página Oficial Internet Archive",
+      archiveDesc: "Acesse todos os vídeos e materiais",
       docs: {
         main: [
           { id: "01", name: "README.MD", desc: "Manifesto e estrutura do projeto" },
@@ -160,6 +165,17 @@ export const translations = {
           { id: "04", name: "METHODOLOGY.MD", desc: "Métodos e procedimentos de pesquisa" },
           { id: "05", name: "PHILOSOPHY.MD", desc: "Justificativa das escolhas conceituais" },
           { id: "06", name: "COPYRIGHT.MD", desc: "Ética e transparência da co-criação" }
+        ],
+        project: [
+          { id: "01", name: "CONCEITO.PDF", desc: "Documento conceitual do projeto", file: "/documents/conceito.pdf" },
+          { id: "02", name: "ESTUDO-PT.PDF", desc: "Estudo acadêmico em português", file: "/documents/estudo-pt.pdf" },
+          { id: "03", name: "STUDY-EN.PDF", desc: "Academic study in english", file: "/documents/study-en.pdf" }
+        ],
+        certifications: [
+          { id: "01", name: "CONSENTIMENTO.PDF", desc: "Carta de consentimento da performer", file: "/documents/consentimento.pdf" },
+          { id: "02", name: "CINECRIARE-CONVITE.PDF", desc: "Convite oficial CineCriare", file: "/documents/cinecriare-convite.pdf" },
+          { id: "03", name: "FACC-EXIBICAO.PDF", desc: "Certificado de exibição FACC", file: "/documents/facc-exibicao.pdf" },
+          { id: "04", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Certificado oficial CineCriare", file: "/documents/cinecriare-certificado.pdf" }
         ]
       }
     }
@@ -315,8 +331,13 @@ export const translations = {
       realizationName: "CasaTrezeStudio®",
       documentation: "Documentation",
       mainDoc: "[MAIN DOC.]",
+      projectFiles: "[PROJECT]",
+      certifications: "[CERTIFICATIONS]",
+      archive: "[INTERNET ARCHIVE]",
       completeRepo: "[COMPLETE REPOSITORY]",
       completeRepoDesc: "Access all files on GitHub",
+      archiveTitle: "Official Internet Archive Page",
+      archiveDesc: "Access all videos and materials",
       docs: {
         main: [
           { id: "01", name: "README.MD", desc: "Manifesto and project structure" },
@@ -325,6 +346,17 @@ export const translations = {
           { id: "04", name: "METHODOLOGY.MD", desc: "Research methods and procedures" },
           { id: "05", name: "PHILOSOPHY.MD", desc: "Rationale for conceptual choices" },
           { id: "06", name: "COPYRIGHT.MD", desc: "Ethics and transparency of co-creation" }
+        ],
+        project: [
+          { id: "01", name: "CONCEITO.PDF", desc: "Project conceptual document", file: "/documents/conceito.pdf" },
+          { id: "02", name: "ESTUDO-PT.PDF", desc: "Academic study in portuguese", file: "/documents/estudo-pt.pdf" },
+          { id: "03", name: "STUDY-EN.PDF", desc: "Academic study in english", file: "/documents/study-en.pdf" }
+        ],
+        certifications: [
+          { id: "01", name: "CONSENTIMENTO.PDF", desc: "Performer consent letter", file: "/documents/consentimento.pdf" },
+          { id: "02", name: "CINECRIARE-CONVITE.PDF", desc: "Official CineCriare invitation", file: "/documents/cinecriare-convite.pdf" },
+          { id: "03", name: "FACC-EXIBICAO.PDF", desc: "FACC exhibition certificate", file: "/documents/facc-exibicao.pdf" },
+          { id: "04", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Official CineCriare certificate", file: "/documents/cinecriare-certificado.pdf" }
         ]
       }
     }
