@@ -54,6 +54,12 @@ export const translations = {
       title: "Realizadores",
       filmmakers: [
         {
+          name: "Flávia Massali",
+          role: "Performer",
+          bio: "Artista multidisciplinar em formação pela UNESPAR. Atua nas interseções entre dança, poesia, teatro e performance. Pesquisa o corpo como território de expressão e resistência, explorando linguagens híbridas e experimentais. Desenvolve trabalhos que investigam presença cênica e corporalidade expandida.",
+          lattes: ""
+        },
+        {
           name: "Castro Pizzano",
           role: "Idealização, Dir. de Foto, Montagem e Pós-Prod.",
           bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Grupo de Pesquisa CineCriare. Fundador, designer, diretor de arte e videomaker na CasaTreze Studio.",
@@ -294,6 +300,12 @@ export const translations = {
     filmmakers: {
       title: "Filmmakers",
       filmmakers: [
+        {
+          name: "Flávia Massali",
+          role: "Performer",
+          bio: "Multidisciplinary artist in training at UNESPAR. Works at the intersections of dance, poetry, theater and performance. Researches the body as territory of expression and resistance, exploring hybrid and experimental languages. Develops works investigating scenic presence and expanded corporality.",
+          lattes: ""
+        },
         {
           name: "Castro Pizzano",
           role: "Idealization, Dir. of Photo, Editing and Post-Prod.",
