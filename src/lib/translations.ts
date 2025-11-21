@@ -33,7 +33,7 @@ export const translations = {
       paragraph1: "O processo criativo de \"NYX-POST-PORN\" é guiado pela exploração do corpo expandido e pela dinâmica coletiva entre a performer e a equipe. A obra propõe uma performance corporal que envolve a masturbação feminina como um ato poético de autodescoberta e empoderamento. A interação entre corpo e câmera é fluida, naturalizando o ato performativo e desconstruindo o tabu da sexualidade feminina. As etapas do processo criativo vão desde a ativação energética da equipe, passando pela preparação do cenário com luzes e elementos sensoriais, até a captura da performance fragmentada e o relato posterior da experiência vivenciada pelo corpo coletivo. Esse processo colaborativo é essencial para a criação de uma experiência imersiva e coletiva, onde cada membro da equipe participa ativamente da construção estética e emocional da obra.",
       visualStyle: {
         title: "Estilo Visual e Tom",
-        text: "Iluminação suave e difusa, criando uma atmosfera etérea e sensorial. Movimento de câmera fluido e orgânico, criando uma sensação de intimidade e expansão. Sons naturais do corpo, respiração ampliada, trilha composta na versão official e som ambiente, reflexões na versão multicam."
+        text: "Iluminação suave e difusa, criando uma atmosfera etérea e sensorial. Movimento de câmera fluido e orgânico, criando uma sensação de intimidade e expansão. Sons naturais do corpo, respiração ampliada, trilha composta na versão oficial e som ambiente, reflexões na versão multicam."
       },
       performanceStages: {
         title: "Etapas da Performance",
