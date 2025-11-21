@@ -88,42 +88,42 @@ export const translations = {
         {
           author: "Mulvey, Laura",
           work: "Prazer Visual e Cinema Narrativo",
-          description: "A crítica à escopofilia patriarcal e à objetificação do corpo feminino no cinema tradicional.",
-          relation: "NYX ressignifica o olhar cinematográfico, propondo um prazer visual ético que nasce do corpo expandido e autônomo.",
+          description: "A crítica à escopofilia patriarcal e à objetificação do corpo feminino no cinema tradicional narrativo.",
+          relation: "NYX ressignifica o olhar cinematográfico propondo um prazer visual ético que nasce do corpo expandido e autônomo em performance.",
           pdf: "/documents/mulvey-prazer-visual.pdf"
         },
         {
           author: "Comolli, Jean-Louis",
           work: "Ver e Poder",
-          description: "A problematização do poder da imagem e o uso do cinema como ferramenta crítica de análise social.",
-          relation: "O filme convoca corpo filmado e espectador para um mesmo campo de fricção ética e estética.",
+          description: "A problematização do poder da imagem e o uso do cinema como ferramenta crítica de análise social e política.",
+          relation: "O filme convoca corpo filmado e espectador para um mesmo campo de fricção ética estética e perceptiva em diálogo constante.",
           pdf: "/documents/comolli-ver-poder.pdf"
         },
         {
           author: "Vinhosa, Luciano",
           work: "Videoperformance: Corpo em Trânsito",
-          description: "O vídeo como extensão da performance corporal e dispositivo de captura do corpo em processo criativo.",
-          relation: "NYX assume o gesto videoperformático como método artístico e político de resistência cultural.",
+          description: "O vídeo como extensão da performance corporal e dispositivo de captura do corpo em processo criativo e transformador.",
+          relation: "NYX assume o gesto videoperformático como método artístico e político de resistência cultural propondo novas formas de presença.",
           pdf: "/documents/vinhosa-videoperformance.pdf"
         },
         {
           author: "Azevedo, Adriana",
           work: "Sexorcismos Selvagens: Pós-Pornografia",
-          description: "O pós-pornô como ferramenta de desconstrução das tecnologias de produção subjetiva e controle do desejo.",
-          relation: "NYX propõe novos modos de existência através da performance corporal e da imagem expandida.",
+          description: "O pós-pornô como ferramenta de desconstrução das tecnologias de produção subjetiva controle do desejo e normatização dos corpos.",
+          relation: "NYX propõe novos modos de existência através da performance corporal e da imagem expandida em práticas de liberdade.",
           pdf: "/documents/azevedo-sexorcismos.pdf"
         },
         {
           author: "Abramović, Marina",
           work: "Balkan Erotic Epic (Destricted)",
-          description: "O corpo feminino como espaço ritualístico de resistência e desconstrução da erotização patriarcal.",
-          relation: "NYX dialoga ao tratar o corpo como ritual performático que desconstrói a objetificação."
+          description: "O corpo feminino como espaço ritualístico de resistência e desconstrução da erotização patriarcal dos gestos e performances.",
+          relation: "NYX dialoga ao tratar o corpo como ritual performático que desconstrói a objetificação criando novos espaços de autonomia corporal."
         },
         {
           author: "Barney, Matthew",
           work: "Hoist (Destricted)",
-          description: "Fragmentação corporal e fusão entre orgânico e mecânico na performance audiovisual contemporânea.",
-          relation: "NYX incorpora a hibridização tecnológica, dissolvendo fronteiras entre corpo e dispositivo de captura.",
+          description: "Fragmentação corporal e fusão entre orgânico e mecânico na performance audiovisual contemporânea explorando limites do corpo.",
+          relation: "NYX incorpora a hibridização tecnológica dissolvendo fronteiras entre corpo e dispositivo de captura em processos de expansão sensorial.",
           pdf: ""
         }
       ]
@@ -319,43 +319,43 @@ export const translations = {
         {
           author: "Mulvey, Laura",
           work: "Visual Pleasure and Narrative Cinema",
-          description: "The critique of patriarchal scopophilia and objectification of the female body in traditional cinema.",
-          relation: "NYX redefines the cinematic gaze, proposing ethical visual pleasure from the expanded and autonomous body.",
+          description: "The critique of patriarchal scopophilia and objectification of the female body in traditional narrative cinema practices.",
+          relation: "NYX redefines the cinematic gaze proposing ethical visual pleasure born from the expanded and autonomous body in performance practice.",
           pdf: "/documents/mulvey-prazer-visual.pdf"
         },
         {
           author: "Comolli, Jean-Louis",
           work: "See and Power",
-          description: "The problematization of image power and the use of cinema as critical tool for social analysis.",
-          relation: "The film summons both filmed body and spectator into the same field of ethical and aesthetic friction.",
+          description: "The problematization of image power and the use of cinema as critical tool for social and political analysis in contemporary society.",
+          relation: "The film summons both filmed body and spectator into the same field of ethical aesthetic and perceptive friction in constant dialogue.",
           pdf: "/documents/comolli-ver-poder.pdf"
         },
         {
           author: "Vinhosa, Luciano",
           work: "Videoperformance: Body in Transit",
-          description: "Video as extension of bodily performance and device for capturing the body in creative process.",
-          relation: "NYX assumes the videoperformative gesture as artistic and political method of cultural resistance.",
+          description: "Video as extension of bodily performance and device for capturing the body in creative and transformative processes of expression.",
+          relation: "NYX assumes the videoperformative gesture as artistic and political method of cultural resistance proposing new forms of presence.",
           pdf: "/documents/vinhosa-videoperformance.pdf"
         },
         {
           author: "Azevedo, Adriana",
           work: "Savage Sexorcisms: Post-Pornography",
-          description: "Post-porn as a tool for deconstructing technologies of subjective production and desire control.",
-          relation: "NYX proposes new modes of existence through bodily performance and the expanded image.",
+          description: "Post-porn as a tool for deconstructing technologies of subjective production desire control and body normalization processes.",
+          relation: "NYX proposes new modes of existence through bodily performance and the expanded image in practices of freedom and autonomy creation.",
           pdf: "/documents/azevedo-sexorcismos.pdf"
         },
         {
           author: "Abramović, Marina",
           work: "Balkan Erotic Epic (Destricted)",
-          description: "The female body as ritualistic space of resistance and deconstruction of patriarchal eroticization.",
-          relation: "NYX dialogues by treating the body as performative ritual that deconstructs objectification.",
+          description: "The female body as ritualistic space of resistance and deconstruction of patriarchal eroticization of gestures and performances.",
+          relation: "NYX dialogues by treating the body as performative ritual that deconstructs objectification creating new spaces of bodily autonomy.",
           pdf: ""
         },
         {
           author: "Barney, Matthew",
           work: "Hoist (Destricted)",
-          description: "Bodily fragmentation and fusion between organic and mechanical in contemporary audiovisual performance.",
-          relation: "NYX incorporates technological hybridization, dissolving boundaries between body and capture device.",
+          description: "Bodily fragmentation and fusion between organic and mechanical in contemporary audiovisual performance exploring body limits.",
+          relation: "NYX incorporates technological hybridization dissolving boundaries between body and capture device in sensory expansion processes.",
           pdf: ""
         }
       ]
