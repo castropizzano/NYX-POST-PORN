@@ -140,15 +140,15 @@ export const translations = {
           title: "Destricted",
           year: "2006",
           directors: "7 diretores",
-          description: "Antologia de curtas explorando a interseção entre arte e pornografia, incluindo obras de Marina Abramović e Matthew Barney.",
+          description: "Antologia provocativa que reúne sete curtas de artistas renomados explorando as fronteiras entre arte contemporânea e pornografia. Destaque para 'Balkan Erotic Epic' de Marina Abramović, ritual erótico-folclórico sobre fertilidade, e 'Hoist' de Matthew Barney, fusão visceral entre corpo e máquina em performance radical.",
           image: "/images/ref-destricted.png",
-          imdb: "https://www.imdb.com/title/tt0462295/"
+          imdb: "https://www.imdb.com/title/tt0492962/"
         },
         {
           title: "Shame",
           year: "2011",
           directors: "Steve McQueen",
-          description: "Exploração visceral da sexualidade, solidão e vulnerabilidade através do corpo masculino.",
+          description: "Drama psicológico intenso sobre dependência sexual em Nova York. McQueen utiliza longos planos-sequência e enquadramentos claustrofóbicos para criar uma experiência visceral da solidão urbana, vulnerabilidade masculina e incapacidade de intimidade emocional. Performance magnética de Michael Fassbender.",
           image: "/images/ref-shame.png",
           imdb: "https://www.imdb.com/title/tt1723811/"
         },
@@ -156,7 +156,7 @@ export const translations = {
           title: "Love",
           year: "2015",
           directors: "Gaspar Noé",
-          description: "Experiência sensorial imersiva sobre sexualidade, intimidade e memória através de uma linguagem visual radical.",
+          description: "Experiência sensorial radical filmada em 3D que dissolve as fronteiras entre cinema narrativo e performance erótica. Noé utiliza cenas sexuais explícitas não simuladas como linguagem cinematográfica para explorar memória, perda, intimidade e obsessão através de uma estética hipnótica e visceralmente poética.",
           image: "/images/ref-love.png",
           imdb: "https://www.imdb.com/title/tt3774694/"
         }
@@ -382,15 +382,15 @@ export const translations = {
           title: "Destricted",
           year: "2006",
           directors: "7 directors",
-          description: "Anthology of short films exploring the intersection between art and pornography, including works by Marina Abramović and Matthew Barney.",
+          description: "Provocative anthology bringing together seven short films by renowned artists exploring boundaries between contemporary art and pornography. Features Marina Abramović's 'Balkan Erotic Epic,' an erotic-folkloric fertility ritual, and Matthew Barney's 'Hoist,' visceral fusion of body and machine in radical performance.",
           image: "/images/ref-destricted.png",
-          imdb: "https://www.imdb.com/title/tt0462295/"
+          imdb: "https://www.imdb.com/title/tt0492962/"
         },
         {
           title: "Shame",
           year: "2011",
           directors: "Steve McQueen",
-          description: "Visceral exploration of sexuality, loneliness and vulnerability through the male body.",
+          description: "Intense psychological drama about sexual addiction in New York. McQueen employs long sequence shots and claustrophobic framing to create a visceral experience of urban loneliness, male vulnerability, and emotional intimacy incapacity. Magnetic performance by Michael Fassbender.",
           image: "/images/ref-shame.png",
           imdb: "https://www.imdb.com/title/tt1723811/"
         },
@@ -398,7 +398,7 @@ export const translations = {
           title: "Love",
           year: "2015",
           directors: "Gaspar Noé",
-          description: "Immersive sensory experience about sexuality, intimacy and memory through radical visual language.",
+          description: "Radical sensory experience filmed in 3D that dissolves boundaries between narrative cinema and erotic performance. Noé uses explicit unsimulated sex scenes as cinematic language to explore memory, loss, intimacy and obsession through a hypnotic and viscerally poetic aesthetic.",
           image: "/images/ref-love.png",
           imdb: "https://www.imdb.com/title/tt3774694/"
         }
