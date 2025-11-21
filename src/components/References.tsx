@@ -21,24 +21,38 @@ export function References() {
               key={index}
               className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
             >
-              {/* Header com Autor e PDF */}
+              {/* Header com Autor e Botões */}
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex-1">
                   <h4 className="nyx-h2">{ref.author}</h4>
                   <p className="nyx-xs mt-1">{ref.work}</p>
                 </div>
                 
-                {ref.pdf && (
-                  <a
-                    href={ref.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
-                    aria-label={`Download PDF: ${ref.work}`}
-                  >
-                    PDF
-                  </a>
-                )}
+                <div className="flex gap-2">
+                  {ref.pdf && (
+                    <a
+                      href={ref.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                      aria-label={`Download PDF: ${ref.work}`}
+                    >
+                      PDF
+                    </a>
+                  )}
+                  
+                  {ref.imdb && (
+                    <a
+                      href={ref.imdb}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                      aria-label={`IMDb: ${ref.work}`}
+                    >
+                      IMDb
+                    </a>
+                  )}
+                </div>
               </div>
 
               {/* Descrição */}
