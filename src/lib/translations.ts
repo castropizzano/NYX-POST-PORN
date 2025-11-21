@@ -109,8 +109,8 @@ export const translations = {
         {
           author: "Azevedo, Adriana",
           work: "Sexorcismos Selvagens: Pós-Pornografia",
-          description: "O pós-pornô como ferramenta de desconstrução das tecnologias de produção subjetiva controle do desejo e normatização dos corpos.",
-          relation: "NYX propõe novos modos de existência através da performance corporal e da imagem expandida em práticas de liberdade.",
+          description: "O pós-pornô como ferramenta de desconstrução das tecnologias de produção subjetiva, controle do desejo e normatização dos corpos.",
+          relation: "NYX propõe novos modos de existência através da performance corporal e da imagem expandida, criando práticas radicais de liberdade e autonomia corporal.",
           pdf: "/documents/azevedo-sexorcismos.pdf"
         },
         {
