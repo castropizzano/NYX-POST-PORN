@@ -29,26 +29,28 @@ export function Credits() {
         {/* Program Section */}
         <div className="border border-[#9b7653]/20 rounded-lg p-8 md:p-12 bg-black/40">
           <h2 className="nyx-h2 mb-8">{t.program}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="space-y-4">
-              <p className="nyx-small">
-                {t.ppgCineav}<br />
-                {t.ppgCineavFull}
-              </p>
-              <p className="nyx-small">
-                {t.unespar}<br />
-                {t.unesparFull}<br />
-                {t.unesparSub}
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div>
+                <h3 className="nyx-h2 mb-2">{t.ppgCineav}</h3>
+                <p className="nyx-small">{t.ppgCineavFull}</p>
+              </div>
+              <div>
+                <h3 className="nyx-h2 mb-2">{t.unespar}</h3>
+                <p className="nyx-small">
+                  {t.unesparFull}<br />
+                  {t.unesparSub}
+                </p>
+              </div>
             </div>
-            <div className="space-y-4">
-              <p className="nyx-small">
-                {t.research}
-              </p>
-              <p className="nyx-small pt-6 border-t border-[#9b7653]/20">
-                {t.project}<br />
-                {t.projectLead}
-              </p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="nyx-h2 mb-2">{t.research}</h3>
+                <p className="nyx-small">{t.project}</p>
+              </div>
+              <div>
+                <h3 className="nyx-h2 mb-2">{t.projectLead}</h3>
+              </div>
             </div>
           </div>
         </div>
