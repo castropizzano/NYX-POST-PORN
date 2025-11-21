@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface AudioPlayerProps {
@@ -101,11 +100,9 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
           className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
-          {isPlaying ? (
-            <Pause className="w-5 h-5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors" />
-          ) : (
-            <Play className="w-5 h-5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors ml-0.5" />
-          )}
+          <span className="text-lg text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
+            {isPlaying ? '⏸' : '▶'}
+          </span>
         </button>
 
         {/* Progress Bar */}
@@ -136,14 +133,10 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
         {/* Volume Control */}
         <button
           onClick={toggleMute}
-          className="flex-shrink-0 w-10 h-10 flex items-center justify-center hover:bg-[#9b7653]/10 transition-colors"
+          className="flex-shrink-0 w-10 h-10 flex items-center justify-center hover:bg-[#9b7653]/10 transition-colors text-[#9b7653] text-lg"
           aria-label={isMuted ? 'Unmute' : 'Mute'}
         >
-          {isMuted || volume === 0 ? (
-            <VolumeX className="w-5 h-5 text-[#9b7653]" />
-          ) : (
-            <Volume2 className="w-5 h-5 text-[#9b7653]" />
-          )}
+          {isMuted || volume === 0 ? '🔇' : '🔊'}
         </button>
       </div>
     </motion.div>

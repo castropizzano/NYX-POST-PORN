@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const posters = [
   { src: '/images/poster-01.png', alt: 'NYX-POST-PORN Poster 1' },
@@ -41,18 +40,18 @@ export function Posters() {
 
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-[#e8d5c4] hover:text-white transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
             aria-label="Previous poster"
           >
-            <ChevronLeft className="w-8 h-8" />
+            ←
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-[#e8d5c4] hover:text-white transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
             aria-label="Next poster"
           >
-            <ChevronRight className="w-8 h-8" />
+            →
           </button>
         </div>
       </div>

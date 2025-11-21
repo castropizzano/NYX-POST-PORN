@@ -1,6 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
-import { Download, FileText } from 'lucide-react';
 import { useState } from 'react';
 
 export function References() {
@@ -10,7 +9,7 @@ export function References() {
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 className="nyx-h2 mb-8">
           {title}
         </h2>
@@ -30,12 +29,9 @@ export function References() {
             >
               {/* Header com Autor e PDF */}
               <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="flex items-start gap-3 flex-1">
-                  <FileText size={20} className="text-[#9b7653] flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="nyx-h2 text-lg">{ref.author}</h4>
-                    <em className="nyx-xs block mt-1 opacity-80">{ref.work}</em>
-                  </div>
+                <div className="flex-1">
+                  <h4 className="nyx-h2 text-lg">{ref.author}</h4>
+                  <em className="nyx-xs block mt-1 opacity-80">{ref.work}</em>
                 </div>
                 
                 {ref.pdf && (
@@ -43,10 +39,10 @@ export function References() {
                     href={ref.pdf}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 p-2 rounded-md bg-[#9b7653]/10 text-[#9b7653] hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] transition-all duration-300 border border-[#9b7653]/20 hover:border-[#e8d5c4]/40"
+                    className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] transition-all duration-300 border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 text-xs font-mono"
                     aria-label={`Download PDF: ${ref.work}`}
                   >
-                    <Download size={20} />
+                    PDF
                   </a>
                 )}
               </div>

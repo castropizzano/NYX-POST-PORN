@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Lock } from 'lucide-react';
 
 interface FilmPlayerProps {
   ageVerified: boolean;
@@ -40,14 +39,14 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
               className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-6 py-3"
               disabled={!ageVerified}
             >
-              OFFICIAL CUT {!ageVerified && <Lock className="ml-2 h-3 w-3" />}
+              OFFICIAL CUT {!ageVerified && <span className="ml-2 text-xs">🔒</span>}
             </TabsTrigger>
             <TabsTrigger
               value="multicam"
               className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-6 py-3"
               disabled={!ageVerified}
             >
-              MULTICAM {!ageVerified && <Lock className="ml-2 h-3 w-3" />}
+              MULTICAM {!ageVerified && <span className="ml-2 text-xs">🔒</span>}
             </TabsTrigger>
           </TabsList>
 
