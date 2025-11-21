@@ -26,8 +26,8 @@ export function References() {
               {/* Header com Autor e PDF */}
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex-1">
-                  <h4 className="font-semibold text-[13px] leading-[1.3] tracking-[-0.01em] text-[#e8d5c4] uppercase">{ref.author}</h4>
-                  <p className="font-normal text-[13px] leading-[1.3] text-[#9b7653] opacity-80 uppercase block mt-1">{ref.work}</p>
+                  <h4 className="font-semibold text-[15px] leading-[1.3] tracking-[-0.01em] text-[#e8d5c4] uppercase">{ref.author}</h4>
+                  <p className="font-normal text-[14px] leading-[1.3] text-[#9b7653] opacity-80 uppercase block mt-1">{ref.work}</p>
                 </div>
                 
                 {ref.pdf && (
@@ -45,7 +45,7 @@ export function References() {
 
               {/* Descrição */}
               <div>
-                <p className="font-light text-[13px] leading-[1.6] text-[#9b7653] text-justify" style={{ fontFamily: 'TT Commons, system-ui, sans-serif' }}>
+                <p className="font-light text-[14px] leading-[1.6] text-[#9b7653] text-justify" style={{ fontFamily: 'TT Commons, system-ui, sans-serif' }}>
                   {ref.description} {ref.relation}
                 </p>
               </div>
