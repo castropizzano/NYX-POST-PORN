@@ -19,6 +19,10 @@ export function Credits() {
                 <p className="nyx-small" dangerouslySetInnerHTML={{ __html: credit.value }} />
               </div>
             ))}
+            <div>
+              <h3 className="nyx-h2 mb-1">{t.realization}</h3>
+              <p className="nyx-small">{t.realizationName}</p>
+            </div>
           </div>
         </div>
 
@@ -44,10 +48,6 @@ export function Credits() {
               <p className="nyx-small pt-6 border-t border-[#9b7653]/20">
                 {t.project}<br />
                 {t.projectLead}
-              </p>
-              <p className="nyx-small">
-                <span className="nyx-h2">{t.realization}</span><br />
-                {t.realizationName}
               </p>
             </div>
           </div>
