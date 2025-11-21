@@ -114,13 +114,6 @@ export const translations = {
           pdf: "/documents/azevedo-sexorcismos.pdf"
         },
         {
-          author: "Marinelli, Princesa Ricardo & Machado, Gabriel",
-          work: "Práticas Monstruosas na Invenção de um Mundo para Além do Humano",
-          description: "A dança e a imaginação como laboratório de práticas corporais monstruosas.",
-          relation: "NYX explora o corpo como território de transformação e invenção.",
-          pdf: "/documents/marinelli-machado-praticas-monstruosas.pdf"
-        },
-        {
           author: "Abramović, Marina",
           work: "Balkan Erotic Epic (Destricted)",
           description: "O corpo feminino como espaço ritualístico.",
@@ -349,13 +342,6 @@ export const translations = {
           description: "Post-porn as a tool for deconstructing technologies of subjective production.",
           relation: "NYX proposes new modes of existence through performance and image.",
           pdf: "/documents/azevedo-sexorcismos.pdf"
-        },
-        {
-          author: "Marinelli, Princesa Ricardo & Machado, Gabriel",
-          work: "Monstrous Practices in the Invention of a World Beyond the Human",
-          description: "Dance and imagination as a laboratory for monstrous bodily practices.",
-          relation: "NYX explores the body as a territory of transformation and invention.",
-          pdf: "/documents/marinelli-machado-praticas-monstruosas.pdf"
         },
         {
           author: "Abramović, Marina",

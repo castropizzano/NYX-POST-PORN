@@ -20,9 +20,6 @@ export function Footer() {
     <footer className="py-16 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
         <div className="text-center">
-          <p className="nyx-small mb-8">
-            {t.rights}
-          </p>
           <div className="flex justify-center">
             <img
               src="/images/facc-badge.png"
