@@ -26,7 +26,7 @@ export function Filmmakers() {
             src="/images/mkgof-01.jpg"
             alt="NYX Making Of"
             loading="lazy"
-            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:brightness-105"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
         </motion.div>
