@@ -27,7 +27,7 @@ export function Posters() {
   return (
     <section className="py-20 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="nyx-h2 mb-[22px]">Posters</h2>
+        <h2 className="nyx-h2 mb-8">Posters</h2>
 
         <div className="relative">
           <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#1a1a1a]">
