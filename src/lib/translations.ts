@@ -37,6 +37,7 @@ export const translations = {
       },
       performanceStages: {
         title: "Etapas da Performance",
+        description: "A performance é estruturada em seis momentos distintos que guiam a experiência sensorial e a captura fragmentada do corpo em movimento, criando uma narrativa não-linear do prazer e da autodescoberta.",
         text: "O Corpo como Paisagem, Toques e Respiração, Respiração e Tensão, Fragmentação do Ato, Clímax Fragmentado e Pós-Clímax."
       }
     },
@@ -265,6 +266,7 @@ export const translations = {
       },
       performanceStages: {
         title: "Performance Stages",
+        description: "The performance is structured in six distinct moments that guide the sensory experience and fragmented capture of the body in movement, creating a non-linear narrative of pleasure and self-discovery.",
         text: "The Body as Landscape, Touch and Breath, Breath and Tension, Fragmentation of the Act, Fragmented Climax and Post-Climax."
       }
     },
