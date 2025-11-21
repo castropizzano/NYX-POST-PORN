@@ -27,13 +27,13 @@ export function VisualReferences() {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative overflow-hidden rounded-lg border border-[#9b7653]/20 bg-black/40 transition-all duration-500 hover:border-[#e8d5c4]/40 hover:scale-[1.02]">
+              <div className="relative overflow-hidden rounded-lg border border-[#9b7653]/20 bg-black/40 transition-all duration-500 hover:border-[#e8d5c4]/40">
                 {/* Image Container */}
                 <div className="aspect-[2/3] overflow-hidden">
                   <img
                     src={film.image}
                     alt={`${film.title} (${film.year})`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:brightness-105"
                   />
                   
                   {/* Gradient Overlay */}
