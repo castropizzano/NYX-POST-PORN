@@ -13,14 +13,14 @@ export function Credits() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left Column: Technical Credits */}
             <div>
-              <h2 className="heading-bold text-2xl text-[#e8d5c4] mb-6">
+              <h2 className="nyx-h2 mb-6">
                 {t.title}
               </h2>
-              <div className="space-y-6 font-extralight leading-relaxed text-sm tracking-tight">
+              <div className="space-y-6">
                 {t.credits.map((credit, index) => (
                   <div key={index}>
-                    <h3 className="heading-bold text-base text-[#e8d5c4] mb-1">{credit.label}</h3>
-                    <p className="text-[#9b7653]" dangerouslySetInnerHTML={{ __html: credit.value }} />
+                    <h3 className="nyx-small font-semibold mb-1">{credit.label}</h3>
+                    <p className="nyx-small" dangerouslySetInnerHTML={{ __html: credit.value }} />
                   </div>
                 ))}
               </div>
@@ -30,17 +30,17 @@ export function Credits() {
             <div className="space-y-10">
               {/* Contact Section */}
               <div>
-                <h3 className="heading-bold text-2xl text-[#e8d5c4] mb-6">{t.contact}</h3>
-                <div className="space-y-4 font-extralight leading-relaxed text-sm tracking-tight text-[#9b7653]">
-                  <p>
+                <h3 className="nyx-h2 mb-6">{t.contact}</h3>
+                <div className="space-y-4">
+                  <p className="nyx-small">
                     <strong className="text-[#e8d5c4]">{t.email}:</strong><br />
                     hello@casatrezestudio.com
                   </p>
-                  <p>
+                  <p className="nyx-small">
                     <strong className="text-[#e8d5c4]">{t.instagram}:</strong><br />
                     @casatrezestudio
                   </p>
-                  <p>
+                  <p className="nyx-small">
                     <strong className="text-[#e8d5c4]">{t.location}:</strong><br />
                     {t.locationValue}
                   </p>
@@ -49,25 +49,25 @@ export function Credits() {
 
               {/* Program Section */}
               <div>
-                <h3 className="heading-bold text-2xl text-[#e8d5c4] mb-6">{t.program}</h3>
-                <div className="space-y-4 font-extralight leading-relaxed text-sm tracking-tight text-[#9b7653]">
-                  <p>
+                <h3 className="nyx-h2 mb-6">{t.program}</h3>
+                <div className="space-y-4">
+                  <p className="nyx-small">
                     {t.ppgCineav}<br />
                     {t.ppgCineavFull}
                   </p>
-                  <p>
+                  <p className="nyx-small">
                     {t.unespar}<br />
                     {t.unesparFull}<br />
                     {t.unesparSub}
                   </p>
-                  <p>
+                  <p className="nyx-small">
                     {t.research}
                   </p>
-                  <p className="mt-6 pt-6 border-t border-[#9b7653]/20">
+                  <p className="nyx-small mt-6 pt-6 border-t border-[#9b7653]/20">
                     {t.project}<br />
                     {t.projectLead}
                   </p>
-                  <p>
+                  <p className="nyx-small">
                     <strong className="text-[#e8d5c4]">{t.realization}</strong><br />
                     {t.realizationName}
                   </p>
@@ -76,7 +76,7 @@ export function Credits() {
 
               {/* Documentation Section */}
               <div>
-                <h3 className="heading-bold text-2xl text-[#e8d5c4] mb-6">{t.documentation}</h3>
+                <h3 className="nyx-h2 mb-6">{t.documentation}</h3>
 
                 <div className="space-y-6">
                   {/* Main Documentation */}
