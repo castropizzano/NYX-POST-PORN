@@ -23,9 +23,16 @@ export function Footer() {
           <p className="nyx-small mb-4">
             {t.rights}
           </p>
-          <p className="nyx-xs opacity-60">
+          <p className="nyx-xs opacity-60 mb-6">
             {t.selection}
           </p>
+          <div className="flex justify-center">
+            <img
+              src="/images/facc-badge.png"
+              alt="FACC 2025 - Selección Oficial"
+              className="w-16 h-16 object-contain opacity-70"
+            />
+          </div>
         </div>
       </div>
     </footer>
