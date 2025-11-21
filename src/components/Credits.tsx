@@ -237,12 +237,9 @@ export function Credits() {
               className="block border border-[#9b7653]/30 rounded-md p-4 bg-black/60 hover:border-[#e8d5c4]/40 transition-colors group"
             >
               <div className="flex items-center justify-between">
-                <div>
-                  <p className="nyx-meta text-[#e8d5c4] mb-1">{t.completeRepo}</p>
-                  <p className="nyx-meta">{t.completeRepoDesc}</p>
-                </div>
+                <p className="nyx-meta text-[#e8d5c4]">{t.completeRepo} | Acesse todos os arquivos no GitHub</p>
                 <svg
-                  className="w-4 h-4 text-[#e8d5c4] group-hover:translate-x-1 transition-transform"
+                  className="w-4 h-4 text-[#e8d5c4] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
