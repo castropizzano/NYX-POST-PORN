@@ -40,8 +40,18 @@
     --nyx-gold-hover: 28 33% 40%;  /* #7d5d42 */
     --nyx-cream: 36 28% 85%;  /* #e8d5c4 */
     
-    /* Typography */
-    --font-base: 1rem;
+    /* NYX Typography Scale */
+    --font-h1: 2.25rem;      /* 36px */
+    --font-h2: 1.5rem;       /* 24px */
+    --font-body: 1.5rem;     /* 24px */
+    --font-small: 1rem;      /* 16px */
+    --font-xs: 0.875rem;     /* 14px */
+    
+    /* Mobile Typography Scale */
+    --font-h1-mobile: 1.75rem;   /* 28px */
+    --font-h2-mobile: 1.125rem;  /* 18px */
+    --font-body-mobile: 1.125rem; /* 18px */
+    --font-small-mobile: 0.875rem; /* 14px */
   }
 }
 
@@ -54,7 +64,6 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'TT Commons', system-ui, sans-serif;
-    font-size: var(--font-base);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -69,21 +78,78 @@
   color: #000;
 }
 
-/* Typography Classes */
+/* NYX Typography System */
+
+/* H1 - Main Titles (NYX-POST-PORN) */
+.nyx-h1 {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-size: var(--font-h1);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: hsl(var(--nyx-cream));
+}
+
+/* H2/H3 - Subtitles */
+.nyx-h2 {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-size: var(--font-h2);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: hsl(var(--nyx-cream));
+}
+
+/* Body Text */
+.nyx-body {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-size: var(--font-body);
+  font-weight: 400;
+  line-height: 1.8;
+  color: hsl(var(--nyx-gold));
+}
+
+/* Small Text */
+.nyx-small {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-size: var(--font-small);
+  font-weight: 300;
+  line-height: 1.6;
+  color: hsl(var(--nyx-gold));
+}
+
+/* Extra Small Text */
+.nyx-xs {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-size: var(--font-xs);
+  font-weight: 300;
+  line-height: 1.6;
+  color: hsl(var(--nyx-gold));
+}
+
+/* Text Justified */
 .text-justified {
   text-align: justify;
   text-align-last: left;
   hyphens: auto;
 }
 
-.heading-bold {
-  font-family: 'TT Commons', system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.body-regular {
-  font-family: 'TT Commons', system-ui, sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
+/* Mobile Typography */
+@media (max-width: 768px) {
+  .nyx-h1 {
+    font-size: var(--font-h1-mobile);
+  }
+  
+  .nyx-h2 {
+    font-size: var(--font-h2-mobile);
+  }
+  
+  .nyx-body {
+    font-size: var(--font-body-mobile);
+  }
+  
+  .nyx-small {
+    font-size: var(--font-small-mobile);
+  }
 }

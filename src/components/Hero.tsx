@@ -17,10 +17,10 @@ export function Hero() {
       <div className="absolute bottom-0 left-0 right-0 pb-8 md:pb-12 lg:pb-16">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-0">
           <div>
-            <h1 className="heading-bold text-4xl text-[#e8d5c4] md:text-lg mb-0 ml-0">
+            <h1 className="nyx-h1 mb-4">
               NYX-POST-PORN
             </h1>
-            <p className="body-regular text-[#9b7653] leading-relaxed text-justified text-justify mx-0 font-extralight leading-[0.55rem] tracking-tight text-xs">
+            <p className="nyx-xs">
               {t.subtitle}
             </p>
           </div>

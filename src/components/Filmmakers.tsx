@@ -10,7 +10,7 @@ export function Filmmakers() {
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="heading-bold text-4xl text-[#e8d5c4] md:text-xl mb-[22px]">
+        <h2 className="nyx-h2 mb-8">
           {title}
         </h2>
 
@@ -45,14 +45,14 @@ export function Filmmakers() {
           {filmmakers.map((filmmaker, index) => (
             <div key={index} className="space-y-3">
               <div>
-                <h3 className="heading-bold text-4xl text-[#e8d5c4] md:text-xl mb-[22px]">
+                <h3 className="nyx-h2 mb-3">
                   {filmmaker.name}
                 </h3>
-                <p className="font-extralight leading-relaxed tracking-tight text-[#9b7653] italic mb-4 text-xs">
+                <p className="nyx-xs italic mb-4">
                   {filmmaker.role}
                 </p>
               </div>
-              <p className="font-extralight leading-relaxed text-sm tracking-tight text-[#9b7653] text-justify">
+              <p className="nyx-small text-justified">
                 {filmmaker.bio}
               </p>
             </div>
