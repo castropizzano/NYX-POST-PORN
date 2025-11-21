@@ -43,29 +43,73 @@ export function Filmmakers() {
         </div>
 
         {/* Filmmakers Biographies */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filmmakers.map((filmmaker, index) => (
-            <div key={index} className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40">
+        <div className="space-y-6">
+          {/* Performer - Full Width Card */}
+          {filmmakers[0] && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="border border-[#9b7653]/20 rounded-lg p-8 bg-black/40"
+            >
               <div className="mb-4">
                 <h3 className="nyx-h2">
-                  <a
-                    href={filmmaker.lattes}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
-                  >
-                    {filmmaker.name}
-                  </a>
+                  {filmmakers[0].lattes ? (
+                    <a
+                      href={filmmakers[0].lattes}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
+                    >
+                      {filmmakers[0].name}
+                    </a>
+                  ) : (
+                    <span>{filmmakers[0].name}</span>
+                  )}
                 </h3>
                 <p className="nyx-xs mt-1">
-                  {filmmaker.role}
+                  {filmmakers[0].role}
                 </p>
               </div>
               <p className="nyx-small text-justified">
-                {filmmaker.bio}
+                {filmmakers[0].bio}
               </p>
-            </div>
-          ))}
+            </motion.div>
+          )}
+
+          {/* Other Filmmakers - Two Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filmmakers.slice(1).map((filmmaker, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+              >
+                <div className="mb-4">
+                  <h3 className="nyx-h2">
+                    <a
+                      href={filmmaker.lattes}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
+                    >
+                      {filmmaker.name}
+                    </a>
+                  </h3>
+                  <p className="nyx-xs mt-1">
+                    {filmmaker.role}
+                  </p>
+                </div>
+                <p className="nyx-small text-justified">
+                  {filmmaker.bio}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
