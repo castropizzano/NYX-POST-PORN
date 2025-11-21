@@ -221,9 +221,8 @@ export const translations = {
         ],
         certifications: [
           { id: "01", name: "CONSENTIMENTO.PDF", desc: "Carta de consentimento da performer", file: "/documents/consentimento.pdf" },
-          { id: "02", name: "CINECRIARE-CONVITE.PDF", desc: "Convite oficial CineCriare", file: "/documents/cinecriare-convite.pdf" },
-          { id: "03", name: "FACC-EXIBICAO.PDF", desc: "Certificado de exibição FACC", file: "/documents/facc-exibicao.pdf" },
-          { id: "04", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Certificado oficial CineCriare", file: "/documents/cinecriare-certificado.pdf" }
+          { id: "02", name: "FACC-EXIBICAO.PDF", desc: "Certificado de exibição FACC", file: "/documents/facc-exibicao.pdf" },
+          { id: "03", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Certificado oficial CineCriare", file: "/documents/cinecriare-certificado.pdf" }
         ]
       }
     }
@@ -451,9 +450,8 @@ export const translations = {
         ],
         certifications: [
           { id: "01", name: "CONSENTIMENTO.PDF", desc: "Performer consent letter", file: "/documents/consentimento.pdf" },
-          { id: "02", name: "CINECRIARE-CONVITE.PDF", desc: "Official CineCriare invitation", file: "/documents/cinecriare-convite.pdf" },
-          { id: "03", name: "FACC-EXIBICAO.PDF", desc: "FACC exhibition certificate", file: "/documents/facc-exibicao.pdf" },
-          { id: "04", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Official CineCriare certificate", file: "/documents/cinecriare-certificado.pdf" }
+          { id: "02", name: "FACC-EXIBICAO.PDF", desc: "FACC exhibition certificate", file: "/documents/facc-exibicao.pdf" },
+          { id: "03", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Official CineCriare certificate", file: "/documents/cinecriare-certificado.pdf" }
         ]
       }
     }
