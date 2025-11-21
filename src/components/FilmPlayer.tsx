@@ -27,7 +27,7 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
     <section className="py-20 px-6 md:px-12 lg:px-16 bg-black">
       <div className="max-w-6xl mx-auto">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="w-full bg-transparent border-b border-[#9b7653]/30 rounded-none h-auto p-0 mb-8">
+          <TabsList className="w-full bg-transparent border-b border-[#9b7653]/30 rounded-none h-auto p-0 mb-8 justify-start">
             <TabsTrigger
               value="trailer"
               className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-6 py-3"
