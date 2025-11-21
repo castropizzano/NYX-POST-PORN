@@ -117,7 +117,7 @@ export const translations = {
           author: "Abramović, Marina",
           work: "Balkan Erotic Epic (Destricted)",
           description: "O corpo feminino como espaço ritualístico de resistência e desconstrução da erotização patriarcal dos gestos e performances.",
-          relation: "NYX dialoga profundamente ao tratar o corpo como ritual performático sagrado que desconstrói a objetificação, criando novos espaços potentes de autonomia corporal."
+          relation: "NYX dialoga profundamente ao tratar o corpo como ritual performático sagrado que desconstrói a objetificação, criando novos espaços potentes de liberdade e emancipação."
         },
         {
           author: "Barney, Matthew",
