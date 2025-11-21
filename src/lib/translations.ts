@@ -108,7 +108,7 @@ export const translations = {
         },
         {
           author: "Azevedo, Adriana",
-          work: "Sexorcismos Selvagens: Pós-Pornografia e Performance",
+          work: "Sexorcismos Selvagens: Pós-Pornografia",
           description: "O pós-pornô como ferramenta de desconstrução das tecnologias de produção subjetiva.",
           relation: "NYX propõe novos modos de existência através da performance e da imagem.",
           pdf: "/documents/azevedo-sexorcismos.pdf"
@@ -338,7 +338,7 @@ export const translations = {
         },
         {
           author: "Azevedo, Adriana",
-          work: "Savage Sexorcisms: Post-Pornography and Performance",
+          work: "Savage Sexorcisms: Post-Pornography",
           description: "Post-porn as a tool for deconstructing technologies of subjective production.",
           relation: "NYX proposes new modes of existence through performance and image.",
           pdf: "/documents/azevedo-sexorcismos.pdf"
