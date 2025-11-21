@@ -50,6 +50,16 @@ export const translations = {
         stage6: "Pós-Clímax"
       }
     },
+    filmPlayer: {
+      trailer: "TRAILER",
+      officialCut: "OFFICIAL CUT",
+      multicam: "MULTICAM",
+      duration: "Duration",
+      digital: "Digital",
+      color: "Color",
+      stereoSound: "Stereo Sound",
+      brazil: "Brazil"
+    },
     filmmakers: {
       title: "Realizadores",
       filmmakers: [
@@ -278,6 +288,16 @@ export const translations = {
         stage5: "Fragmented Climax",
         stage6: "Post-Climax"
       }
+    },
+    filmPlayer: {
+      trailer: "TRAILER",
+      officialCut: "OFFICIAL CUT",
+      multicam: "MULTICAM",
+      duration: "Duration",
+      digital: "Digital",
+      color: "Color",
+      stereoSound: "Stereo Sound",
+      brazil: "Brazil"
     },
     filmmakers: {
       title: "Filmmakers",

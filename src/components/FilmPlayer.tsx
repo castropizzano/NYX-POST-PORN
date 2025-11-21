@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/lib/translations';
 
 interface FilmPlayerProps {
   ageVerified: boolean;
 }
 
 export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
   const [activeTab, setActiveTab] = useState('trailer');
   const [isTrailerPlaying, setIsTrailerPlaying] = useState(false);
   const [isOfficialPlaying, setIsOfficialPlaying] = useState(false);
@@ -155,9 +159,9 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
 
       <div className="max-w-4xl mx-auto">
         <p className="text-center nyx-meta mt-8">
-          {activeTab === 'trailer' && `TRAILER Duração: ${durations.trailer} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
-          {activeTab === 'official' && `OFFICIAL CUT Duração: ${durations.official} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
-          {activeTab === 'multicam' && `MULTICAM Duração: ${durations.multicam} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
+          {activeTab === 'trailer' && `${t.filmPlayer.trailer} ${t.filmPlayer.duration}: ${durations.trailer} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
+          {activeTab === 'official' && `${t.filmPlayer.officialCut} ${t.filmPlayer.duration}: ${durations.official} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
+          {activeTab === 'multicam' && `${t.filmPlayer.multicam} ${t.filmPlayer.duration}: ${durations.multicam} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
         </p>
       </div>
     </section>
