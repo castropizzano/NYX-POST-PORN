@@ -45,9 +45,23 @@ export function VisualReferences() {
                     </p>
                   </div>
                   
-                  <h3 className="nyx-h2 mb-3">
-                    {film.title}
-                  </h3>
+                  <div className="flex items-center justify-between gap-4 mb-3">
+                    <h3 className="nyx-h2">
+                      {film.title}
+                    </h3>
+                    
+                    {film.imdb && (
+                      <a
+                        href={film.imdb}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                        aria-label={`IMDb: ${film.title}`}
+                      >
+                        IMDb
+                      </a>
+                    )}
+                  </div>
                   
                   <div className={`transition-all duration-500 ${hoveredIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
                     <p className="nyx-small">
