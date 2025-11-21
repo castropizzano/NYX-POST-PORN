@@ -32,11 +32,11 @@ export function Posters() {
         </div>
 
         <div className="relative">
-          <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#1a1a1a]">
+          <div className="relative w-full flex items-center justify-center bg-black">
             <img
               src={posters[currentIndex].src}
               alt={posters[currentIndex].alt}
-              className="absolute inset-0 w-full h-full object-contain"
+              className="w-full max-h-screen object-contain"
             />
           </div>
 
