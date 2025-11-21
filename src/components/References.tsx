@@ -54,13 +54,6 @@ export function References() {
                 </p>
               </div>
 
-              {/* Indicador de "Ler Mais" */}
-              {hoveredIndex !== index && (
-                <div className="absolute bottom-4 right-6 text-[#9b7653] text-xs opacity-50">
-                  Hover para ler mais →
-                </div>
-              )}
-
               {/* Borda Animada */}
               <div className={`absolute inset-0 border-2 border-[#e8d5c4]/0 rounded-lg transition-all duration-500 pointer-events-none ${hoveredIndex === index ? 'border-[#e8d5c4]/30' : ''}`} />
             </div>
