@@ -27,34 +27,34 @@ export function Posters() {
   return (
     <section className="py-20 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
-          <h2 className="nyx-h2">Posters</h2>
-        </div>
+        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
+          <h2 className="nyx-h2 mb-8">Posters</h2>
+          
+          <div className="relative">
+            <div className="relative w-full flex items-center justify-center bg-black">
+              <img
+                src={posters[currentIndex].src}
+                alt={posters[currentIndex].alt}
+                className="w-full max-h-screen object-contain"
+              />
+            </div>
 
-        <div className="relative">
-          <div className="relative w-full flex items-center justify-center bg-black">
-            <img
-              src={posters[currentIndex].src}
-              alt={posters[currentIndex].alt}
-              className="w-full max-h-screen object-contain"
-            />
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
+              aria-label="Previous poster"
+            >
+              ←
+            </button>
+
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
+              aria-label="Next poster"
+            >
+              →
+            </button>
           </div>
-
-          <button
-            onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
-            aria-label="Previous poster"
-          >
-            ←
-          </button>
-
-          <button
-            onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
-            aria-label="Next poster"
-          >
-            →
-          </button>
         </div>
       </div>
     </section>
