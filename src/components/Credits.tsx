@@ -26,27 +26,8 @@ export function Credits() {
               </div>
             </div>
 
-            {/* Right Column: Contact & Program */}
+            {/* Right Column: Program */}
             <div className="space-y-10">
-              {/* Contact Section */}
-              <div>
-                <h3 className="nyx-h2 mb-6">{t.contact}</h3>
-                <div className="space-y-4">
-                  <p className="nyx-small">
-                    <span className="nyx-h2">{t.email}:</span><br />
-                    hello@casatrezestudio.com
-                  </p>
-                  <p className="nyx-small">
-                    <span className="nyx-h2">{t.instagram}:</span><br />
-                    @casatrezestudio
-                  </p>
-                  <p className="nyx-small">
-                    <span className="nyx-h2">{t.location}:</span><br />
-                    {t.locationValue}
-                  </p>
-                </div>
-              </div>
-
               {/* Program Section */}
               <div>
                 <h3 className="nyx-h2 mb-6">{t.program}</h3>
