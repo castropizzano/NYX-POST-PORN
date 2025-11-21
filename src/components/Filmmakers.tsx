@@ -53,35 +53,31 @@ export function Filmmakers() {
               viewport={{ once: true }}
               className="border border-[#9b7653]/20 rounded-lg p-8 bg-black/40"
             >
-              <div className="mb-4">
-                <h3 className="nyx-h2 mb-2">
-                  {filmmakers[0].name}
-                </h3>
-                <p className="nyx-xs mt-1">
-                  {filmmakers[0].role}
-                </p>
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="flex-1">
+                  <h3 className="nyx-h2 mb-2">
+                    {filmmakers[0].name}
+                  </h3>
+                  <p className="nyx-xs mt-1">
+                    {filmmakers[0].role}
+                  </p>
+                </div>
+                
+                {filmmakers[0].lattes && (
+                  <a
+                    href={filmmakers[0].lattes}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                    aria-label="Instagram Flávia Massali"
+                  >
+                    INSTAGRAM
+                  </a>
+                )}
               </div>
-              <p className="nyx-small text-justified mb-6">
+              <p className="nyx-small text-justified">
                 {filmmakers[0].bio}
               </p>
-              {filmmakers[0].lattes && (
-                <a
-                  href={filmmakers[0].lattes}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 border border-[#9b7653]/40 rounded bg-black/60 hover:border-[#e8d5c4] hover:bg-black transition-colors group"
-                >
-                  <span className="nyx-meta text-[#e8d5c4]">INSTAGRAM</span>
-                  <svg
-                    className="w-3 h-3 text-[#9b7653] group-hover:text-[#e8d5c4] group-hover:translate-x-0.5 transition-all"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              )}
             </motion.div>
           )}
 
@@ -94,37 +90,33 @@ export function Filmmakers() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40 flex flex-col"
+                className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
               >
-                <div className="mb-4">
-                  <h3 className="nyx-h2 mb-2">
-                    {filmmaker.name}
-                  </h3>
-                  <p className="nyx-xs mt-1">
-                    {filmmaker.role}
-                  </p>
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <div className="flex-1">
+                    <h3 className="nyx-h2 mb-2">
+                      {filmmaker.name}
+                    </h3>
+                    <p className="nyx-xs mt-1">
+                      {filmmaker.role}
+                    </p>
+                  </div>
+                  
+                  {filmmaker.lattes && (
+                    <a
+                      href={filmmaker.lattes}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                      aria-label={`Lattes ${filmmaker.name}`}
+                    >
+                      LATTES
+                    </a>
+                  )}
                 </div>
-                <p className="nyx-small text-justified mb-6 flex-grow">
+                <p className="nyx-small text-justified">
                   {filmmaker.bio}
                 </p>
-                {filmmaker.lattes && (
-                  <a
-                    href={filmmaker.lattes}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 border border-[#9b7653]/40 rounded bg-black/60 hover:border-[#e8d5c4] hover:bg-black transition-colors group self-start"
-                  >
-                    <span className="nyx-meta text-[#e8d5c4]">LATTES</span>
-                    <svg
-                      className="w-3 h-3 text-[#9b7653] group-hover:text-[#e8d5c4] group-hover:translate-x-0.5 transition-all"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                )}
               </motion.div>
             ))}
           </div>
