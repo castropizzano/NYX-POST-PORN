@@ -10,10 +10,12 @@ export function Process() {
       <div className="max-w-4xl mx-auto">
         <h2 className="nyx-h2 mb-8">{t.title}</h2>
         
-        <div className="space-y-8">
-          <p className="nyx-small text-justified">{t.paragraph1}</p>
-          <p className="nyx-small text-justified">{t.paragraph2}</p>
-          <p className="nyx-small text-justified">{t.paragraph3}</p>
+        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
+          <div className="space-y-8">
+            <p className="nyx-small text-justified">{t.paragraph1}</p>
+            <p className="nyx-small text-justified">{t.paragraph2}</p>
+            <p className="nyx-small text-justified">{t.paragraph3}</p>
+          </div>
         </div>
 
         <div className="mt-16 space-y-12">

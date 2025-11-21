@@ -12,12 +12,14 @@ export function Concept() {
           {t.title}
         </h2>
 
-        <div className="space-y-8">
-          {t.paragraphs.map((paragraph, index) => (
-            <p key={index} className="nyx-small text-justified">
-              {paragraph}
-            </p>
-          ))}
+        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
+          <div className="space-y-8">
+            {t.paragraphs.map((paragraph, index) => (
+              <p key={index} className="nyx-small text-justified">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
