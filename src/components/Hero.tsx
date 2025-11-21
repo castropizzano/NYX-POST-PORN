@@ -53,7 +53,7 @@ export function Hero() {
               </div>
             </div>
 
-            <h1 className="nyx-h2 mb-4">
+            <h1 className="nyx-h2 mb-1">
               NYX-POST-PORN
             </h1>
             <p className="nyx-xs">
