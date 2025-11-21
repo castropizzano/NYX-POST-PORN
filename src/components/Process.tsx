@@ -25,9 +25,8 @@ export function Process() {
 
           <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
             <h3 className="nyx-h2 mb-8">{t.performanceStages.title}</h3>
-            <p className="nyx-small mb-6 text-justified">{t.performanceStages.description}</p>
             <div className="space-y-4">
-              <p className="nyx-small">{t.performanceStages.text}</p>
+              <p className="nyx-small text-justified">{t.performanceStages.text}</p>
             </div>
           </div>
         </div>
