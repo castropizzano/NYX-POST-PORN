@@ -56,22 +56,26 @@ export const translations = {
         {
           name: "Castro Pizzano",
           role: "Idealização, Dir. de Foto, Montagem e Pós-Prod.",
-          bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Grupo de Pesquisa CineCriare. Fundador, designer, diretor de arte e videomaker na CasaTreze Studio."
+          bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Grupo de Pesquisa CineCriare. Fundador, designer, diretor de arte e videomaker na CasaTreze Studio.",
+          lattes: "http://lattes.cnpq.br/5523516994010198"
         },
         {
           name: "Patrícia Ressureição",
           role: "Dir. Corporal e Dir. Coletiva",
-          bio: "Mestranda do PPG-CINEAV da Unespar. Membra do CineCriare. Atriz profissional, apresentadora, modelo, filmmaker, fotógrafa e produtora cultural. Bolsista CAPES/DS."
+          bio: "Mestranda do PPG-CINEAV da Unespar. Membra do CineCriare. Atriz profissional, apresentadora, modelo, filmmaker, fotógrafa e produtora cultural. Bolsista CAPES/DS.",
+          lattes: "http://lattes.cnpq.br/4634695086782866"
         },
         {
           name: "Murilo Castro",
           role: "Produção, Still e Making Of",
-          bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Eikos. Editor Assistente da RECOCINE. Sócio da SOCINE. Escritor, Diretor e Montador."
+          bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Eikos. Editor Assistente da RECOCINE. Sócio da SOCINE. Escritor, Diretor e Montador.",
+          lattes: "http://lattes.cnpq.br/5118575339218967"
         },
         {
           name: "Ana Pupo",
           role: "Dir. de Arte, Maquiagem e Produção",
-          bio: "Mestranda do PPG-CINEAV da Unespar. Membra do CineCriare. Pós-graduanda em Antropologia Cultural. Graduada em Artes Visuais pela Embap."
+          bio: "Mestranda do PPG-CINEAV da Unespar. Membra do CineCriare. Pós-graduanda em Antropologia Cultural. Graduada em Artes Visuais pela Embap.",
+          lattes: "http://lattes.cnpq.br/6198230125234271"
         }
       ],
       soundtrack: {
@@ -288,22 +292,26 @@ export const translations = {
         {
           name: "Castro Pizzano",
           role: "Idealization, Dir. of Photo, Editing and Post-Prod.",
+          lattes: "http://lattes.cnpq.br/5523516994010198",
           bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare Research Group. Founder, designer, art director and videomaker at CasaTreze Studio."
         },
         {
           name: "Patrícia Ressureição",
           role: "Corporal Dir. and Collective Dir.",
-          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Professional actress, filmmaker, photographer and cultural producer. CAPES/DS scholar."
+          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Professional actress, filmmaker, photographer and cultural producer. CAPES/DS scholar.",
+          lattes: "http://lattes.cnpq.br/4634695086782866"
         },
         {
           name: "Murilo Castro",
           role: "Production, Still and Making Of",
-          bio: "Master's student at PPG-CINEAV, Unespar. Member of Eikos. Assistant Editor at RECOCINE. SOCINE member. Writer, Director and Editor."
+          bio: "Master's student at PPG-CINEAV, Unespar. Member of Eikos. Assistant Editor at RECOCINE. SOCINE member. Writer, Director and Editor.",
+          lattes: "http://lattes.cnpq.br/5118575339218967"
         },
         {
           name: "Ana Pupo",
           role: "Art Dir., Makeup and Production",
-          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Postgraduate in Cultural Anthropology. Visual Arts graduate."
+          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Postgraduate in Cultural Anthropology. Visual Arts graduate.",
+          lattes: "http://lattes.cnpq.br/6198230125234271"
         }
       ],
       soundtrack: {
