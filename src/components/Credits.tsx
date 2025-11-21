@@ -104,7 +104,7 @@ export function Credits() {
               </div>
 
               {/* Project Files */}
-              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 min-h-[350px] flex flex-col">
+              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 flex flex-col">
                 <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.projectFiles}</h4>
                 <div className="space-y-3">
                   {t.docs.project.map((doc) => (
@@ -173,7 +173,7 @@ export function Credits() {
               </div>
 
               {/* Certifications */}
-              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 min-h-[350px] flex flex-col">
+              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 flex flex-col">
                 <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.certifications}</h4>
                 <div className="space-y-3">
                   {t.docs.certifications.map((doc) => (
