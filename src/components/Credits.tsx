@@ -216,10 +216,10 @@ export function Credits() {
               rel="noopener noreferrer"
               className="block border-2 border-[#e8d5c4]/40 rounded-md p-4 bg-black/80 hover:border-[#e8d5c4] hover:bg-black transition-colors group"
             >
-              <div className="flex items-center justify-between mb-2">
-                <h4 className="nyx-meta text-[#e8d5c4]">{t.archive}</h4>
+              <div className="flex items-center justify-between">
+                <h4 className="nyx-meta text-[#e8d5c4]">{t.archive} | Página Oficial Internet Archive</h4>
                 <svg
-                  className="w-4 h-4 text-[#e8d5c4] group-hover:translate-x-1 transition-transform"
+                  className="w-4 h-4 text-[#e8d5c4] group-hover:translate-x-1 transition-transform flex-shrink-0 ml-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -227,8 +227,6 @@ export function Credits() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </div>
-              <p className="nyx-meta text-[#e8d5c4] mb-1">{t.archiveTitle}</p>
-              <p className="nyx-meta">{t.archiveDesc}</p>
             </a>
 
             {/* Complete Repository Link */}
