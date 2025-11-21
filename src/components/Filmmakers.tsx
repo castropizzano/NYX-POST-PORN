@@ -10,9 +10,11 @@ export function Filmmakers() {
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="nyx-h2 mb-8">
-          {title}
-        </h2>
+        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
+          <h2 className="nyx-h2">
+            {title}
+          </h2>
+        </div>
 
         {/* Making Of Image - Full Width */}
         <motion.div
