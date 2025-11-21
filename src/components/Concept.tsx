@@ -14,7 +14,7 @@ export function Concept() {
 
         <div className="space-y-8">
           {t.paragraphs.map((paragraph, index) => (
-            <p key={index} className="nyx-body text-justified">
+            <p key={index} className="nyx-small text-justified">
               {paragraph}
             </p>
           ))}
@@ -24,7 +24,7 @@ export function Concept() {
           <h3 className="nyx-h2 mb-8">{t.nameSection.title}</h3>
           <div className="space-y-6">
             {t.nameSection.paragraphs.map((paragraph, index) => (
-              <p key={index} className="nyx-body text-justified">
+              <p key={index} className="nyx-small text-justified">
                 {paragraph}
               </p>
             ))}
