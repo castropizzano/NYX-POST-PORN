@@ -120,7 +120,7 @@ export const translations = {
           work: "Balkan Erotic Epic (Destricted)",
           description: "O corpo feminino como espaço ritualístico de resistência e desconstrução da erotização patriarcal dos gestos e performances.",
           relation: "NYX dialoga profundamente ao tratar o corpo como ritual performático sagrado que desconstrói a objetificação, criando novos espaços potentes de liberdade e emancipação.",
-          imdb: "https://www.imdb.com/title/tt0462295/"
+          imdb: "https://www.imdb.com/title/tt0492962/"
         },
         {
           author: "Barney, Matthew",
@@ -128,7 +128,7 @@ export const translations = {
           description: "Fragmentação corporal e fusão entre orgânico e mecânico na performance audiovisual contemporânea, explorando radicalmente os limites do corpo.",
           relation: "NYX incorpora a hibridização tecnológica dissolvendo fronteiras entre corpo e dispositivo de captura, criando processos intensos de expansão sensorial.",
           pdf: "",
-          imdb: "https://www.imdb.com/title/tt0462295/"
+          imdb: "https://www.imdb.com/title/tt0492962/"
         }
       ]
     },
@@ -362,7 +362,7 @@ export const translations = {
           description: "The female body as ritualistic space of resistance and deconstruction of patriarchal eroticization of gestures and performances.",
           relation: "NYX dialogues by treating the body as performative ritual that deconstructs objectification creating new spaces of bodily autonomy.",
           pdf: "",
-          imdb: "https://www.imdb.com/title/tt0462295/"
+          imdb: "https://www.imdb.com/title/tt0492962/"
         },
         {
           author: "Barney, Matthew",
@@ -370,7 +370,7 @@ export const translations = {
           description: "Bodily fragmentation and fusion between organic and mechanical in contemporary audiovisual performance exploring body limits.",
           relation: "NYX incorporates technological hybridization dissolving boundaries between body and capture device in sensory expansion processes.",
           pdf: "",
-          imdb: "https://www.imdb.com/title/tt0462295/"
+          imdb: "https://www.imdb.com/title/tt0492962/"
         }
       ]
     },
