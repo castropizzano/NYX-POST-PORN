@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import { Separator } from '@/components/ui/separator';
+import { motion } from 'framer-motion';
 
 export function Credits() {
   const { language } = useLanguage();
@@ -9,39 +10,176 @@ export function Credits() {
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
-      <div className="max-w-4xl mx-auto space-y-16">
-        {/* Ficha Técnica Section */}
-        <div className="border border-[#9b7653]/20 rounded-lg p-8 md:p-12 bg-black/40">
-          <h2 className="nyx-h2 mb-12 text-center">{t.title}</h2>
-          <div className="max-w-2xl mx-auto space-y-0">
-            {t.credits.map((credit, index) => (
-              <div key={index}>
-                <div className="group py-4 px-2 hover:bg-[#9b7653]/5 transition-colors rounded">
-                  <div className="flex items-start justify-between gap-8">
-                    <h3 className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+      <div className="max-w-6xl mx-auto space-y-16">
+        {/* Ficha Técnica Section - Editorial Layout */}
+        <div>
+          <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
+            <h2 className="nyx-h2">{t.title}</h2>
+          </div>
+
+          {/* Asymmetric Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            {/* Performance - Full Width Highlight */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-8 bg-black/60"
+            >
+              <h3 className="text-3xl font-bold text-[#e8d5c4] mb-6 tracking-tight uppercase">
+                {t.departments[0].name}
+              </h3>
+              {t.departments[0].credits.map((credit, index) => (
+                <div key={index} className="flex items-start justify-between gap-8">
+                  <p className="nyx-meta uppercase text-[#9b7653] tracking-wider">
+                    {credit.label}
+                  </p>
+                  <p 
+                    className="text-2xl font-light text-[#e8d5c4] text-right" 
+                    dangerouslySetInnerHTML={{ __html: credit.value }}
+                  />
+                </div>
+              ))}
+            </motion.div>
+
+            {/* Creative Direction - Larger Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="md:col-span-7 border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+            >
+              <h3 className="nyx-h2 mb-6 pb-3 border-b border-[#9b7653]/20">
+                {t.departments[1].name}
+              </h3>
+              <div className="space-y-4">
+                {t.departments[1].credits.map((credit, index) => (
+                  <div key={index}>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+                        {credit.label}
+                      </p>
+                      <p 
+                        className="nyx-small text-right text-[#e8d5c4] flex-grow" 
+                        dangerouslySetInnerHTML={{ __html: credit.value }}
+                      />
+                    </div>
+                    {index < t.departments[1].credits.length - 1 && (
+                      <Separator className="bg-[#9b7653]/10 mt-4" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Photography & Visual Art - Smaller Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="md:col-span-5 border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+            >
+              <h3 className="nyx-h2 mb-6 pb-3 border-b border-[#9b7653]/20">
+                {t.departments[2].name}
+              </h3>
+              <div className="space-y-4">
+                {t.departments[2].credits.map((credit, index) => (
+                  <div key={index}>
+                    <p className="nyx-meta uppercase text-[#9b7653] tracking-wider mb-1">
                       {credit.label}
-                    </h3>
-                    <div 
-                      className="nyx-small text-right text-[#e8d5c4] flex-grow" 
+                    </p>
+                    <p 
+                      className="nyx-small text-[#e8d5c4]" 
                       dangerouslySetInnerHTML={{ __html: credit.value }}
                     />
+                    {index < t.departments[2].credits.length - 1 && (
+                      <Separator className="bg-[#9b7653]/10 mt-4" />
+                    )}
                   </div>
-                </div>
-                {index < t.credits.length && <Separator className="bg-[#9b7653]/10" />}
+                ))}
               </div>
-            ))}
-            <div>
-              <div className="group py-4 px-2 hover:bg-[#9b7653]/5 transition-colors rounded">
-                <div className="flex items-start justify-between gap-8">
-                  <h3 className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
-                    {t.realization}
-                  </h3>
-                  <p className="nyx-small text-right text-[#e8d5c4] flex-grow">
-                    {t.realizationName}
-                  </p>
-                </div>
+            </motion.div>
+
+            {/* Post-Production - Smaller Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="md:col-span-5 border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+            >
+              <h3 className="nyx-h2 mb-6 pb-3 border-b border-[#9b7653]/20">
+                {t.departments[3].name}
+              </h3>
+              <div className="space-y-4">
+                {t.departments[3].credits.map((credit, index) => (
+                  <div key={index}>
+                    <p className="nyx-meta uppercase text-[#9b7653] tracking-wider mb-1">
+                      {credit.label}
+                    </p>
+                    <p 
+                      className="nyx-small text-[#e8d5c4]" 
+                      dangerouslySetInnerHTML={{ __html: credit.value }}
+                    />
+                    {index < t.departments[3].credits.length - 1 && (
+                      <Separator className="bg-[#9b7653]/10 mt-4" />
+                    )}
+                  </div>
+                ))}
               </div>
-            </div>
+            </motion.div>
+
+            {/* Production - Larger Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="md:col-span-7 border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+            >
+              <h3 className="nyx-h2 mb-6 pb-3 border-b border-[#9b7653]/20">
+                {t.departments[4].name}
+              </h3>
+              <div className="space-y-4">
+                {t.departments[4].credits.map((credit, index) => (
+                  <div key={index}>
+                    <div className="flex items-start justify-between gap-6">
+                      <p className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+                        {credit.label}
+                      </p>
+                      <p 
+                        className="nyx-small text-right text-[#e8d5c4] flex-grow" 
+                        dangerouslySetInnerHTML={{ __html: credit.value }}
+                      />
+                    </div>
+                    {index < t.departments[4].credits.length - 1 && (
+                      <Separator className="bg-[#9b7653]/10 mt-4" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Realization - Full Width */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="md:col-span-12 border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+            >
+              <div className="flex items-start justify-between gap-8">
+                <h3 className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+                  {t.realization}
+                </h3>
+                <p className="text-2xl font-light text-[#e8d5c4] text-right">
+                  {t.realizationName}
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
 

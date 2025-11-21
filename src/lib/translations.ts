@@ -170,22 +170,47 @@ export const translations = {
     },
     credits: {
       title: "Ficha Técnica",
-      credits: [
-        { label: "Performance", value: "Flávia Massali" },
-        { label: "Idealização", value: "Castro Pizzano" },
-        { label: "Dir. Coletiva", value: "Castro Pizzano<br />Patrícia Ressureição<br />Murilo Castro<br />Ana Pupo" },
-        { label: "Dir. de Fotografia", value: "Castro Pizzano" },
-        { label: "Dir. de Arte", value: "Ana Pupo" },
-        { label: "Dir. Corporal", value: "Patrícia Ressureição" },
-        { label: "Design Gráfico", value: "Castro Pizzano" },
-        { label: "Montagem", value: "Castro Pizzano" },
-        { label: "Pós-Produção", value: "Castro Pizzano" },
-        { label: "Música", value: "Dan Guinski \"Non-Grata\"" },
-        { label: "Produção Sonora", value: "Dan Guinski \"Non-Grata\"" },
-        { label: "Maquiagem", value: "Ana Pupo<br />Patricia Ressureição" },
-        { label: "Produção", value: "Ana Pupo<br />Murilo Castro<br />Patricia Ressureição" },
-        { label: "Still / Making Of", value: "Murilo Castro" },
-        { label: "Apoio", value: "Gi Fiatcoski<br />Lucas Lage<br />Andrey H. Percegona" }
+      departments: [
+        {
+          name: "Performance",
+          credits: [
+            { label: "Performance", value: "Flávia Massali" }
+          ]
+        },
+        {
+          name: "Direção Criativa",
+          credits: [
+            { label: "Idealização", value: "Castro Pizzano" },
+            { label: "Dir. Coletiva", value: "Castro Pizzano<br />Patrícia Ressureição<br />Murilo Castro<br />Ana Pupo" }
+          ]
+        },
+        {
+          name: "Fotografia & Arte Visual",
+          credits: [
+            { label: "Dir. de Fotografia", value: "Castro Pizzano" },
+            { label: "Dir. de Arte", value: "Ana Pupo" },
+            { label: "Dir. Corporal", value: "Patrícia Ressureição" },
+            { label: "Design Gráfico", value: "Castro Pizzano" }
+          ]
+        },
+        {
+          name: "Pós-Produção",
+          credits: [
+            { label: "Montagem", value: "Castro Pizzano" },
+            { label: "Pós-Produção", value: "Castro Pizzano" },
+            { label: "Música", value: "Dan Guinski \"Non-Grata\"" },
+            { label: "Produção Sonora", value: "Dan Guinski \"Non-Grata\"" }
+          ]
+        },
+        {
+          name: "Produção",
+          credits: [
+            { label: "Maquiagem", value: "Ana Pupo<br />Patricia Ressureição" },
+            { label: "Produção", value: "Ana Pupo<br />Murilo Castro<br />Patricia Ressureição" },
+            { label: "Still / Making Of", value: "Murilo Castro" },
+            { label: "Apoio", value: "Gi Fiatcoski<br />Lucas Lage<br />Andrey H. Percegona" }
+          ]
+        }
       ],
       contact: "Contato",
       email: "Email",
@@ -418,22 +443,47 @@ export const translations = {
     },
     credits: {
       title: "Technical Credits",
-      credits: [
-        { label: "Performance", value: "Flávia Massali" },
-        { label: "Idealization", value: "Castro Pizzano" },
-        { label: "Collective Dir.", value: "Castro Pizzano<br />Patrícia Ressureição<br />Murilo Castro<br />Ana Pupo" },
-        { label: "Dir. of Photography", value: "Castro Pizzano" },
-        { label: "Art Dir.", value: "Ana Pupo" },
-        { label: "Corporal Dir.", value: "Patrícia Ressureição" },
-        { label: "Graphic Design", value: "Castro Pizzano" },
-        { label: "Editing", value: "Castro Pizzano" },
-        { label: "Post-Production", value: "Castro Pizzano" },
-        { label: "Music", value: "Dan Guinski \"Non-Grata\"" },
-        { label: "Sound Production", value: "Dan Guinski \"Non-Grata\"" },
-        { label: "Makeup", value: "Ana Pupo<br />Patricia Ressureição" },
-        { label: "Production", value: "Ana Pupo<br />Murilo Castro<br />Patricia Ressureição" },
-        { label: "Still / Making Of", value: "Murilo Castro" },
-        { label: "Support", value: "Gi Fiatcoski<br />Lucas Lage<br />Andrey H. Percegona" }
+      departments: [
+        {
+          name: "Performance",
+          credits: [
+            { label: "Performance", value: "Flávia Massali" }
+          ]
+        },
+        {
+          name: "Creative Direction",
+          credits: [
+            { label: "Idealization", value: "Castro Pizzano" },
+            { label: "Collective Dir.", value: "Castro Pizzano<br />Patrícia Ressureição<br />Murilo Castro<br />Ana Pupo" }
+          ]
+        },
+        {
+          name: "Photography & Visual Art",
+          credits: [
+            { label: "Dir. of Photography", value: "Castro Pizzano" },
+            { label: "Art Dir.", value: "Ana Pupo" },
+            { label: "Corporal Dir.", value: "Patrícia Ressureição" },
+            { label: "Graphic Design", value: "Castro Pizzano" }
+          ]
+        },
+        {
+          name: "Post-Production",
+          credits: [
+            { label: "Editing", value: "Castro Pizzano" },
+            { label: "Post-Production", value: "Castro Pizzano" },
+            { label: "Music", value: "Dan Guinski \"Non-Grata\"" },
+            { label: "Sound Production", value: "Dan Guinski \"Non-Grata\"" }
+          ]
+        },
+        {
+          name: "Production",
+          credits: [
+            { label: "Makeup", value: "Ana Pupo<br />Patricia Ressureição" },
+            { label: "Production", value: "Ana Pupo<br />Murilo Castro<br />Patricia Ressureição" },
+            { label: "Still / Making Of", value: "Murilo Castro" },
+            { label: "Support", value: "Gi Fiatcoski<br />Lucas Lage<br />Andrey H. Percegona" }
+          ]
+        }
       ],
       contact: "Contact",
       email: "Email",
