@@ -55,7 +55,14 @@ export default {
       },
       fontFamily: {
         sans: ['TT Commons', 'system-ui', 'sans-serif'],
-        mono: ['TT Commons', 'system-ui', 'sans-serif'],
+        mono: ['monospace', 'monospace'],
+      },
+      fontSize: {
+        'nyx-h1': 'var(--font-h1)',
+        'nyx-h2': 'var(--font-h2)',
+        'nyx-xs': 'var(--font-xs)',
+        'nyx-small': 'var(--font-small)',
+        'nyx-meta': 'var(--font-meta)',
       },
       borderRadius: {
         lg: "var(--radius)",
