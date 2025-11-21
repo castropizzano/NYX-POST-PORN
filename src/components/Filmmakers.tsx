@@ -48,7 +48,14 @@ export function Filmmakers() {
             <div key={index} className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40">
               <div className="mb-4">
                 <h3 className="nyx-h2">
-                  {filmmaker.name}
+                  <a
+                    href={filmmaker.lattes}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
+                  >
+                    {filmmaker.name}
+                  </a>
                 </h3>
                 <p className="nyx-xs mt-1">
                   {filmmaker.role}
