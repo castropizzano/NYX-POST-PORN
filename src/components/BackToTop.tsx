@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ChevronUp } from 'lucide-react';
 
 export function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,10 +33,10 @@ export function BackToTop() {
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 flex justify-end">
         <button
           onClick={scrollToTop}
-          className="text-[#e8d5c4] hover:text-white transition-colors"
+          className="text-[#e8d5c4] hover:text-white transition-colors text-2xl"
           aria-label="Voltar ao topo"
         >
-          <ChevronUp className="h-8 mx-14 w-[22px]" />
+          ↑
         </button>
       </div>
     </div>
