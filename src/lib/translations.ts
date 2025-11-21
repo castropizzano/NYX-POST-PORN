@@ -57,7 +57,7 @@ export const translations = {
           name: "Flávia Massali",
           role: "Performer",
           bio: "Artista multidisciplinar em formação pela UNESPAR. Atua nas interseções entre dança, poesia, teatro e performance. Pesquisa o corpo como território de expressão e resistência, explorando linguagens híbridas e experimentais. Desenvolve trabalhos que investigam presença cênica e corporalidade expandida.",
-          lattes: ""
+          lattes: "https://www.instagram.com/flaviamassali/"
         },
         {
           name: "Castro Pizzano",
@@ -329,7 +329,7 @@ export const translations = {
           name: "Flávia Massali",
           role: "Performer",
           bio: "Multidisciplinary artist in training at UNESPAR. Works at the intersections of dance, poetry, theater and performance. Researches the body as territory of expression and resistance, exploring hybrid and experimental languages. Develops works investigating scenic presence and expanded corporality.",
-          lattes: ""
+          lattes: "https://www.instagram.com/flaviamassali/"
         },
         {
           name: "Castro Pizzano",
