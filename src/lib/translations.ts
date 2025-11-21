@@ -19,9 +19,7 @@ export const translations = {
     concept: {
       title: "Conceito Central",
       paragraphs: [
-        "\"NYX-POST-PORN\" é uma obra que se propõe a desmantelar as narrativas convencionais da pornografia tradicional, inserindo-se no campo do pós-pornô. Laura Mulvey, em seu texto \"Prazer Visual e Cinema Narrativo\", aborda o prazer visual tradicional como uma construção patriarcal que objetifica a mulher para o olhar masculino, destacando a escopofilia como um mecanismo central desse processo.",
-        "O projeto NYX busca subverter essa estrutura, propondo um novo paradigma de prazer visual que se baseia na desconstrução do corpo objetificado e na criação de uma experiência sensorial imersiva, onde o espectador é desafiado a participar de uma nova relação ética com o corpo filmado.",
-        "A câmera, em vez de dominar o corpo, cria uma relação íntima com a performer, promovendo um diálogo orgânico e colaborativo entre corpo e imagem."
+        "\"NYX-POST-PORN\" é uma obra que se propõe a desmantelar as narrativas convencionais da pornografia tradicional, inserindo-se no campo do pós-pornô. Laura Mulvey, em seu texto \"Prazer Visual e Cinema Narrativo\", aborda o prazer visual tradicional como uma construção patriarcal que objetifica a mulher para o olhar masculino, destacando a escopofilia como um mecanismo central desse processo. O projeto NYX busca subverter essa estrutura, propondo um novo paradigma de prazer visual que se baseia na desconstrução do corpo objetificado e na criação de uma experiência sensorial imersiva, onde o espectador é desafiado a participar de uma nova relação ética com o corpo filmado. A câmera, em vez de dominar o corpo, cria uma relação íntima com a performer, promovendo um diálogo orgânico e colaborativo entre corpo e imagem."
       ],
       nameSection: {
         title: "Sobre o Nome",
@@ -250,9 +248,7 @@ export const translations = {
     concept: {
       title: "Central Concept",
       paragraphs: [
-        "\"NYX-POST-PORN\" is a work that aims to dismantle the conventional narratives of traditional pornography, inserting itself in the field of post-porn.",
-        "The NYX project seeks to subvert this structure, proposing a new paradigm of visual pleasure based on the deconstruction of the objectified body.",
-        "The camera, instead of dominating the body, creates an intimate relationship with the performer."
+        "\"NYX-POST-PORN\" is a work that aims to dismantle the conventional narratives of traditional pornography, inserting itself in the field of post-porn. The NYX project seeks to subvert this structure, proposing a new paradigm of visual pleasure based on the deconstruction of the objectified body and the creation of an immersive sensory experience, where the viewer is challenged to participate in a new ethical relationship with the filmed body. The camera, instead of dominating the body, creates an intimate relationship with the performer, promoting an organic and collaborative dialogue between body and image."
       ],
       nameSection: {
         title: "About the Name",
