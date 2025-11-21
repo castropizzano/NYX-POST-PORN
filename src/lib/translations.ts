@@ -77,7 +77,7 @@ export const translations = {
         }
       ],
       soundtrack: {
-        title: "Trilha Sonora Oficial",
+        title: "Breeze",
         artist: "Dan Guinski \"Non-Grata\""
       }
     },
@@ -314,7 +314,7 @@ export const translations = {
         }
       ],
       soundtrack: {
-        title: "Official Soundtrack",
+        title: "Breeze",
         artist: "Dan Guinski \"Non-Grata\""
       }
     },
