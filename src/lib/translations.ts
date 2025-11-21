@@ -88,8 +88,8 @@ export const translations = {
         {
           author: "Mulvey, Laura",
           work: "Prazer Visual e Cinema Narrativo",
-          description: "A crítica à escopofilia patriarcal e à objetificação do corpo feminino no cinema tradicional narrativo.",
-          relation: "NYX ressignifica o olhar cinematográfico propondo um prazer visual ético que nasce do corpo expandido e autônomo em performance.",
+          description: "NYX critica a escopofilia patriarcal e a objetificação do corpo feminino no cinema narrativo tradicional, ressignificando profundamente o olhar cinematográfico.",
+          relation: "Propõe um prazer visual ético nascido do corpo expandido e autônomo em performance, subvertendo as estruturas históricas do male gaze.",
           pdf: "/documents/mulvey-prazer-visual.pdf"
         },
         {
