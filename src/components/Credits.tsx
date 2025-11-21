@@ -60,7 +60,7 @@ export function Credits() {
             {/* Left Column */}
             <div className="space-y-6">
               {/* Main Documentation */}
-              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
+              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 min-h-[500px] flex flex-col">
                 <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.mainDoc}</h4>
                 <div className="space-y-3">
                   {t.docs.main.map((doc) => {
@@ -140,7 +140,7 @@ export function Credits() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Research Corpus */}
-              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
+              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 min-h-[500px] flex flex-col">
                 <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.corpus}</h4>
                 <div className="space-y-3">
                   {t.docs.corpus.map((doc) => (
