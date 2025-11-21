@@ -2,68 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* NYX Dark Cinematic Aesthetic */
-    --background: 0 0% 5%;  /* #0C0C0C */
-    --foreground: 0 0% 95%;
+    /* NYX Colors - Exact from original */
+    --background: 0 0% 0%;  /* Pure black */
+    --foreground: 36 28% 85%;  /* #e8d5c4 */
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 0%;
+    --card-foreground: 36 28% 85%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 36 28% 85%;
 
-    --primary: 0 70% 39%;  /* #A32424 - NYX Red */
-    --primary-foreground: 0 0% 100%;
+    --primary: 28 33% 46%;  /* #9b7653 - NYX Gold */
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 210 18% 22%;  /* #323A46 - NYX Blue-Gray */
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 28 33% 46%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 15%;
+    --muted: 28 33% 46%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 0 70% 39%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 28 33% 46%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 0 70% 39%;
+    --border: 28 33% 46%;
+    --input: 0 0% 0%;
+    --ring: 28 33% 46%;
 
-    --radius: 0.25rem;
+    --radius: 0rem;  /* Sharp edges */
 
+    /* NYX Custom Colors */
+    --nyx-gold: 28 33% 46%;  /* #9b7653 */
+    --nyx-gold-hover: 28 33% 40%;  /* #7d5d42 */
+    --nyx-cream: 36 28% 85%;  /* #e8d5c4 */
+    
     /* Typography */
-    --font-base: 1rem;  /* 16px */
-    
-    /* NYX Custom */
-    --nyx-red: 0 70% 39%;
-    --nyx-red-hover: 0 70% 45%;
-    --nyx-blue-gray: 210 18% 22%;
-    --nyx-overlay: 0 0% 0%;
-    
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-base: 1rem;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'TT Commons', system-ui, sans-serif;
     font-size: var(--font-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
   }
+}
+
+::selection {
+  background-color: #9b7653;
+  color: #000;
+}
+
+/* Typography Classes */
+.text-justified {
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+}
+
+.heading-bold {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.body-regular {
+  font-family: 'TT Commons', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
 }
