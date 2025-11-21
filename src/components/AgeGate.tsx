@@ -1,106 +1,100 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from 'react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/lib/translations';
 
 interface AgeGateProps {
+  isOpen: boolean;
   onVerify: () => void;
 }
 
-const AgeGate = ({ onVerify }: AgeGateProps) => {
-  const [isExiting, setIsExiting] = useState(false);
+export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
+  const [email, setEmail] = useState('');
+  const [confirmed, setConfirmed] = useState(false);
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language].ageGate;
 
-  const handleVerify = () => {
-    setIsExiting(true);
-    setTimeout(() => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (confirmed && email) {
       onVerify();
-    }, 600);
-  };
-
-  const handleReject = () => {
-    window.location.href = "https://www.google.com";
+    }
   };
 
   return (
-    <AnimatePresence>
-      {!isExiting && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-nyx-overlay/95 backdrop-blur-md"
-        >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 1.1, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="text-center space-y-8 px-6"
+    <Dialog open={isOpen} onOpenChange={() => {}}>
+      <DialogContent
+        className="sm:max-w-md bg-black border border-[#9b7653] text-[#e8d5c4] rounded-none"
+        onPointerDownOutside={(e) => e.preventDefault()}
+        onEscapeKeyDown={(e) => e.preventDefault()}
+      >
+        <div className="absolute top-4 right-4 flex items-center gap-2 text-sm">
+          <button
+            onClick={() => setLanguage('pt')}
+            className={`transition-colors ${
+              language === 'pt' ? 'text-[#e8d5c4]' : 'text-[#9b7653] hover:text-[#e8d5c4]'
+            }`}
           >
-            <div className="space-y-4">
-              <motion.h1
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-5xl md:text-7xl font-black tracking-tighter"
-              >
-                <span className="text-nyx-red">NYX</span>
-                <br />
-                <span className="text-foreground">POST-PORN</span>
-              </motion.h1>
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg text-muted-foreground font-mono"
-              >
-                Verificação de Idade
-              </motion.p>
+            PT
+          </button>
+          <span className="text-[#9b7653]">|</span>
+          <button
+            onClick={() => setLanguage('en')}
+            className={`transition-colors ${
+              language === 'en' ? 'text-[#e8d5c4]' : 'text-[#9b7653] hover:text-[#e8d5c4]'
+            }`}
+          >
+            EN
+          </button>
+        </div>
+
+        <div className="space-y-6 p-6">
+          <div className="space-y-2 text-center">
+            <h2 className="text-2xl font-bold tracking-tight">{t.title}</h2>
+            <p className="text-sm text-[#9b7653]">{t.subtitle}</p>
+          </div>
+
+          <div className="space-y-4 text-sm leading-relaxed text-justify">
+            <p className="text-xs">{t.description}</p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <Input
+                type="email"
+                placeholder={t.emailPlaceholder}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="bg-black border-[#9b7653] text-[#e8d5c4] placeholder:text-[#9b7653]/50 rounded-none"
+              />
             </div>
 
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="space-y-4"
+            <Button
+              type="submit"
+              disabled={!confirmed || !email}
+              className="w-full bg-[#9b7653] hover:bg-[#7d5d42] text-black font-medium rounded-none"
             >
-              <p className="text-base text-foreground/80 max-w-md mx-auto">
-                Este conteúdo é destinado exclusivamente para maiores de 18 anos.
-                Confirme sua idade para continuar.
-              </p>
+              {t.enterButton}
+            </Button>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Button
-                  onClick={handleVerify}
-                  size="lg"
-                  className="w-full sm:w-auto bg-nyx-red hover:bg-nyx-red-hover text-white font-bold text-lg px-8 py-6 transition-all duration-300 transform hover:scale-105"
-                >
-                  Tenho +18
-                </Button>
-                <Button
-                  onClick={handleReject}
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-foreground/20 text-foreground hover:bg-foreground/10 font-bold text-lg px-8 py-6 transition-all duration-300"
-                >
-                  Não tenho
-                </Button>
-              </div>
-            </motion.div>
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={confirmed}
+                onChange={(e) => setConfirmed(e.target.checked)}
+                className="mt-1 accent-[#9b7653]"
+                required
+              />
+              <span className="leading-relaxed text-justify text-xs">{t.confirmText}</span>
+            </label>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-xs text-muted-foreground font-mono pt-8"
-            >
-              Ao continuar, você confirma ter mais de 18 anos
-            </motion.p>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+            <p className="text-xs text-[#9b7653] text-center">{t.ageWarning}</p>
+          </form>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
-};
-
-export default AgeGate;
+}

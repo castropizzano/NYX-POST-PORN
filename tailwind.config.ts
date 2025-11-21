@@ -48,15 +48,14 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         nyx: {
-          red: "hsl(var(--nyx-red))",
-          "red-hover": "hsl(var(--nyx-red-hover))",
-          "blue-gray": "hsl(var(--nyx-blue-gray))",
-          overlay: "hsl(var(--nyx-overlay))",
+          gold: "hsl(var(--nyx-gold))",
+          "gold-hover": "hsl(var(--nyx-gold-hover))",
+          cream: "hsl(var(--nyx-cream))",
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['Space Mono', 'monospace'],
+        sans: ['TT Commons', 'system-ui', 'sans-serif'],
+        mono: ['TT Commons', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
