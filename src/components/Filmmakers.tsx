@@ -54,27 +54,34 @@ export function Filmmakers() {
               className="border border-[#9b7653]/20 rounded-lg p-8 bg-black/40"
             >
               <div className="mb-4">
-                <h3 className="nyx-h2">
-                  {filmmakers[0].lattes ? (
-                    <a
-                      href={filmmakers[0].lattes}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
-                    >
-                      {filmmakers[0].name}
-                    </a>
-                  ) : (
-                    <span>{filmmakers[0].name}</span>
-                  )}
+                <h3 className="nyx-h2 mb-2">
+                  {filmmakers[0].name}
                 </h3>
                 <p className="nyx-xs mt-1">
                   {filmmakers[0].role}
                 </p>
               </div>
-              <p className="nyx-small text-justified">
+              <p className="nyx-small text-justified mb-6">
                 {filmmakers[0].bio}
               </p>
+              {filmmakers[0].lattes && (
+                <a
+                  href={filmmakers[0].lattes}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 border border-[#9b7653]/40 rounded bg-black/60 hover:border-[#e8d5c4] hover:bg-black transition-colors group"
+                >
+                  <span className="nyx-meta text-[#e8d5c4]">INSTAGRAM</span>
+                  <svg
+                    className="w-3 h-3 text-[#9b7653] group-hover:text-[#e8d5c4] group-hover:translate-x-0.5 transition-all"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
             </motion.div>
           )}
 
@@ -87,26 +94,37 @@ export function Filmmakers() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+                className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40 flex flex-col"
               >
                 <div className="mb-4">
-                  <h3 className="nyx-h2">
-                    <a
-                      href={filmmaker.lattes}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
-                    >
-                      {filmmaker.name}
-                    </a>
+                  <h3 className="nyx-h2 mb-2">
+                    {filmmaker.name}
                   </h3>
                   <p className="nyx-xs mt-1">
                     {filmmaker.role}
                   </p>
                 </div>
-                <p className="nyx-small text-justified">
+                <p className="nyx-small text-justified mb-6 flex-grow">
                   {filmmaker.bio}
                 </p>
+                {filmmaker.lattes && (
+                  <a
+                    href={filmmaker.lattes}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-[#9b7653]/40 rounded bg-black/60 hover:border-[#e8d5c4] hover:bg-black transition-colors group self-start"
+                  >
+                    <span className="nyx-meta text-[#e8d5c4]">LATTES</span>
+                    <svg
+                      className="w-3 h-3 text-[#9b7653] group-hover:text-[#e8d5c4] group-hover:translate-x-0.5 transition-all"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
