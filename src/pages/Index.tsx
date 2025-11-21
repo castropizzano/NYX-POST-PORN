@@ -33,9 +33,7 @@ export default function Index() {
   return (
     <>
       <AgeGate isOpen={!ageVerified} onVerify={handleVerify} />
-      {ageVerified && <LanguageSwitcher />}
       {ageVerified && <BackToTop />}
-      {ageVerified && <FaccBadge />}
       <main className="min-h-screen bg-black">
         {ageVerified && (
           <>
