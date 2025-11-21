@@ -24,30 +24,20 @@ export const translations = {
       nameSection: {
         title: "Sobre o Nome",
         paragraphs: [
-          "O nome \"NYX\" faz referência à deusa grega da noite, uma divindade primordial que representa o mistério, o oculto e o feminino em sua forma mais poderosa e autônoma.",
-          "\"POST-PORN\" situa o trabalho no contexto do pós-pornô, um movimento artístico e político que busca repensar a representação da sexualidade."
+          "O nome \"NYX\" faz referência à deusa grega da noite, uma divindade primordial que representa o mistério, o oculto e o feminino em sua forma mais poderosa e autônoma. \"POST-PORN\" situa o trabalho no contexto do pós-pornô, um movimento artístico e político que busca repensar a representação da sexualidade."
         ]
       }
     },
     process: {
       title: "Processo Criativo",
-      paragraph1: "O processo criativo de \"NYX-POST-PORN\" é guiado pela exploração do corpo expandido e pela dinâmica coletiva entre a performer e a equipe. A obra propõe uma performance corporal que envolve a masturbação feminina como um ato poético de autodescoberta e empoderamento.",
-      paragraph2: "A interação entre corpo e câmera é fluida, naturalizando o ato performativo e desconstruindo o tabu da sexualidade feminina. As etapas do processo criativo vão desde a ativação energética da equipe, passando pela preparação do cenário com luzes e elementos sensoriais, até a captura da performance fragmentada e o relato posterior da experiência vivenciada pelo corpo coletivo.",
-      paragraph3: "Esse processo colaborativo é essencial para a criação de uma experiência imersiva e coletiva, onde cada membro da equipe participa ativamente da construção estética e emocional da obra.",
+      paragraph1: "O processo criativo de \"NYX-POST-PORN\" é guiado pela exploração do corpo expandido e pela dinâmica coletiva entre a performer e a equipe. A obra propõe uma performance corporal que envolve a masturbação feminina como um ato poético de autodescoberta e empoderamento. A interação entre corpo e câmera é fluida, naturalizando o ato performativo e desconstruindo o tabu da sexualidade feminina. As etapas do processo criativo vão desde a ativação energética da equipe, passando pela preparação do cenário com luzes e elementos sensoriais, até a captura da performance fragmentada e o relato posterior da experiência vivenciada pelo corpo coletivo. Esse processo colaborativo é essencial para a criação de uma experiência imersiva e coletiva, onde cada membro da equipe participa ativamente da construção estética e emocional da obra.",
       visualStyle: {
         title: "Estilo Visual e Tom",
-        lighting: "• Iluminação: Suave e difusa, criando uma atmosfera etérea e sensorial",
-        cameraMovement: "• Movimento de Câmera: Fluido e orgânico, criando uma sensação de intimidade e expansão",
-        sounds: "• Sons: Sons naturais do corpo, respiração ampliada, trilha composta na versão official e som ambiente, reflexões na versão multicam"
+        text: "Iluminação suave e difusa, criando uma atmosfera etérea e sensorial. Movimento de câmera fluido e orgânico, criando uma sensação de intimidade e expansão. Sons naturais do corpo, respiração ampliada, trilha composta na versão official e som ambiente, reflexões na versão multicam."
       },
       performanceStages: {
         title: "Etapas da Performance",
-        stage1: "O Corpo como Paisagem",
-        stage2: "Toques e Respiração",
-        stage3: "Respiração e Tensão",
-        stage4: "Fragmentação do Ato",
-        stage5: "Clímax Fragmentado",
-        stage6: "Pós-Clímax"
+        text: "O Corpo como Paisagem, Toques e Respiração, Respiração e Tensão, Fragmentação do Ato, Clímax Fragmentado e Pós-Clímax."
       }
     },
     filmPlayer: {
@@ -263,30 +253,20 @@ export const translations = {
       nameSection: {
         title: "About the Name",
         paragraphs: [
-          "The name \"NYX\" refers to the Greek goddess of the night, a primordial deity representing mystery and the feminine in its most powerful form.",
-          "\"POST-PORN\" places the work in the context of post-porn, an artistic and political movement."
+          "The name \"NYX\" refers to the Greek goddess of the night, a primordial deity representing mystery and the feminine in its most powerful form. \"POST-PORN\" places the work in the context of post-porn, an artistic and political movement that seeks to rethink the representation of sexuality."
         ]
       }
     },
     process: {
       title: "Creative Process",
-      paragraph1: "The creative process of \"NYX-POST-PORN\" is guided by the exploration of the expanded body and the collective dynamic between the performer and the team.",
-      paragraph2: "The interaction between body and camera is fluid, naturalizing the performative act and deconstructing the taboo of female sexuality.",
-      paragraph3: "This collaborative process is essential for creating an immersive and collective experience.",
+      paragraph1: "The creative process of \"NYX-POST-PORN\" is guided by the exploration of the expanded body and the collective dynamic between the performer and the team. The work proposes a corporeal performance that involves female masturbation as a poetic act of self-discovery and empowerment. The interaction between body and camera is fluid, naturalizing the performative act and deconstructing the taboo of female sexuality. The stages of the creative process range from the energetic activation of the team, through the preparation of the scenario with lights and sensory elements, to the capture of the fragmented performance and the subsequent account of the experience lived by the collective body. This collaborative process is essential for creating an immersive and collective experience, where each team member actively participates in the aesthetic and emotional construction of the work.",
       visualStyle: {
         title: "Visual Style and Tone",
-        lighting: "• Lighting: Soft and diffused, creating an ethereal and sensory atmosphere",
-        cameraMovement: "• Camera Movement: Fluid and organic, creating a sense of intimacy and expansion",
-        sounds: "• Sounds: Natural body sounds, amplified breathing, composed soundtrack in official version and ambient sound in multicam version"
+        text: "Soft and diffused lighting, creating an ethereal and sensory atmosphere. Fluid and organic camera movement, creating a sense of intimacy and expansion. Natural body sounds, amplified breathing, composed soundtrack in official version and ambient sound in multicam version."
       },
       performanceStages: {
         title: "Performance Stages",
-        stage1: "The Body as Landscape",
-        stage2: "Touch and Breath",
-        stage3: "Breath and Tension",
-        stage4: "Fragmentation of the Act",
-        stage5: "Fragmented Climax",
-        stage6: "Post-Climax"
+        text: "The Body as Landscape, Touch and Breath, Breath and Tension, Fragmentation of the Act, Fragmented Climax and Post-Climax."
       }
     },
     filmPlayer: {
