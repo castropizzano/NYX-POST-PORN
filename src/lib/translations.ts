@@ -185,7 +185,11 @@ export const translations = {
       unesparSub: "Faculdade de Artes do Paraná (FAP)",
       research: "Grupo de Pesquisa CineCriare",
       project: "Projeto Corpo e Movimento",
-      projectLead: "Profa. Dra. Cristiane Wosniak",
+      support: "Apoio",
+      supportNames: [
+        { name: "Profa. Dra. Cristiane Wosniak", lattes: "http://lattes.cnpq.br/8707636250586166" },
+        { name: "Prof. Dr. Fábio Noronha", lattes: "http://lattes.cnpq.br/8001117846968595" }
+      ],
       realization: "Realização",
       realizationName: "CasaTrezeStudio®",
       documentation: "Documentação",
@@ -414,7 +418,11 @@ export const translations = {
       unesparSub: "Faculty of Arts of Paraná (FAP)",
       research: "CineCriare Research Group",
       project: "Body and Movement Project",
-      projectLead: "Prof. Dr. Cristiane Wosniak",
+      support: "Support",
+      supportNames: [
+        { name: "Prof. Dr. Cristiane Wosniak", lattes: "http://lattes.cnpq.br/8707636250586166" },
+        { name: "Prof. Dr. Fábio Noronha", lattes: "http://lattes.cnpq.br/8001117846968595" }
+      ],
       realization: "Production",
       realizationName: "CasaTrezeStudio®",
       documentation: "Documentation",
