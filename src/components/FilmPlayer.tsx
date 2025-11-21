@@ -154,7 +154,7 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
       </div>
 
       <div className="max-w-4xl mx-auto">
-        <p className="text-left nyx-meta mt-8">
+        <p className="text-center nyx-meta mt-8">
           {activeTab === 'trailer' && `TRAILER Duração: ${durations.trailer} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
           {activeTab === 'official' && `OFFICIAL CUT Duração: ${durations.official} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
           {activeTab === 'multicam' && `MULTICAM Duração: ${durations.multicam} | Digital | Cor | Som Estéreo | 2024 | Brasil`}
