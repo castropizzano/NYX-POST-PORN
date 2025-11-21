@@ -30,7 +30,7 @@ export function References() {
               {/* Header com Autor e PDF */}
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex-1">
-                  <h4 className="nyx-h2 text-lg">{ref.author}</h4>
+                  <h4 className="nyx-h2 text-sm uppercase">{ref.author}</h4>
                   <em className="nyx-xs block mt-1 opacity-80">{ref.work}</em>
                 </div>
                 
