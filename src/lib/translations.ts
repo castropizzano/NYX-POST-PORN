@@ -75,7 +75,11 @@ export const translations = {
           role: "Dir. de Arte, Maquiagem e Produção",
           bio: "Mestranda do PPG-CINEAV da Unespar. Membra do CineCriare. Pós-graduanda em Antropologia Cultural. Graduada em Artes Visuais pela Embap."
         }
-      ]
+      ],
+      soundtrack: {
+        title: "Trilha Sonora Oficial",
+        artist: "Dan Guinski \"Non-Grata\""
+      }
     },
     references: {
       title: "Referências",
@@ -308,7 +312,11 @@ export const translations = {
           role: "Art Dir., Makeup and Production",
           bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Postgraduate in Cultural Anthropology. Visual Arts graduate."
         }
-      ]
+      ],
+      soundtrack: {
+        title: "Official Soundtrack",
+        artist: "Dan Guinski \"Non-Grata\""
+      }
     },
     references: {
       title: "References",
