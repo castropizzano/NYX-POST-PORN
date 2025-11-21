@@ -1,15 +1,11 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
 import { motion } from 'framer-motion';
+import { AudioPlayer } from './AudioPlayer';
 
 export function Filmmakers() {
   const { language } = useLanguage();
-  const { title, filmmakers } = translations[language].filmmakers;
-
-  const makingOfImages = [
-    { src: '/images/mkgof-01.jpg', alt: 'NYX Making Of 01' },
-    { src: '/images/mkgof-02.jpg', alt: 'NYX Making Of 02' }
-  ];
+  const { title, filmmakers, soundtrack } = translations[language].filmmakers;
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
@@ -18,26 +14,30 @@ export function Filmmakers() {
           {title}
         </h2>
 
-        {/* Making Of Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          {makingOfImages.map((image, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden border border-[#9b7653]/20"
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-            </motion.div>
-          ))}
+        {/* Making Of Image - Full Width */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="group relative overflow-hidden border border-[#9b7653]/20 mb-12"
+        >
+          <img
+            src="/images/mkgof-01.jpg"
+            alt="NYX Making Of"
+            loading="lazy"
+            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+        </motion.div>
+
+        {/* Audio Player */}
+        <div className="mb-16">
+          <AudioPlayer
+            src="/audio/nyx-soundtrack.mp3"
+            title={soundtrack.title}
+            artist={soundtrack.artist}
+          />
         </div>
 
         {/* Filmmakers Biographies */}
