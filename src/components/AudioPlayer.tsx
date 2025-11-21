@@ -88,8 +88,8 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
       
       {/* Track Info */}
       <div className="mb-4">
-        <h4 className="heading-bold text-lg text-[#e8d5c4] mb-1">{title}</h4>
-        <p className="font-extralight text-xs text-[#9b7653] italic">{artist}</p>
+        <h4 className="nyx-h2 mb-1">{title}</h4>
+        <p className="nyx-xs">{artist}</p>
       </div>
 
       {/* Controls */}
@@ -100,14 +100,14 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
           className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
-          <span className="text-lg text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
+          <span className="nyx-meta text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
             {isPlaying ? '⏸' : '▶'}
           </span>
         </button>
 
         {/* Progress Bar */}
         <div className="flex-1 flex items-center gap-3">
-          <span className="text-xs font-extralight text-[#9b7653] tabular-nums min-w-[40px]">
+          <span className="nyx-meta tabular-nums min-w-[40px]">
             {formatTime(currentTime)}
           </span>
           
@@ -125,7 +125,7 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
             />
           </div>
           
-          <span className="text-xs font-extralight text-[#9b7653] tabular-nums min-w-[40px]">
+          <span className="nyx-meta tabular-nums min-w-[40px]">
             {formatTime(duration)}
           </span>
         </div>
@@ -133,7 +133,7 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
         {/* Volume Control */}
         <button
           onClick={toggleMute}
-          className="flex-shrink-0 w-10 h-10 flex items-center justify-center hover:bg-[#9b7653]/10 transition-colors text-[#9b7653] text-lg"
+          className="flex-shrink-0 w-10 h-10 flex items-center justify-center hover:bg-[#9b7653]/10 transition-colors nyx-meta"
           aria-label={isMuted ? 'Unmute' : 'Mute'}
         >
           {isMuted || volume === 0 ? '🔇' : '🔊'}

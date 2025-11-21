@@ -19,7 +19,7 @@ export function Credits() {
               <div className="space-y-6">
                 {t.credits.map((credit, index) => (
                   <div key={index}>
-                    <h3 className="nyx-small font-semibold mb-1">{credit.label}</h3>
+                    <h3 className="nyx-h2 mb-1">{credit.label}</h3>
                     <p className="nyx-small" dangerouslySetInnerHTML={{ __html: credit.value }} />
                   </div>
                 ))}
@@ -33,15 +33,15 @@ export function Credits() {
                 <h3 className="nyx-h2 mb-6">{t.contact}</h3>
                 <div className="space-y-4">
                   <p className="nyx-small">
-                    <strong className="text-[#e8d5c4]">{t.email}:</strong><br />
+                    <span className="nyx-h2">{t.email}:</span><br />
                     hello@casatrezestudio.com
                   </p>
                   <p className="nyx-small">
-                    <strong className="text-[#e8d5c4]">{t.instagram}:</strong><br />
+                    <span className="nyx-h2">{t.instagram}:</span><br />
                     @casatrezestudio
                   </p>
                   <p className="nyx-small">
-                    <strong className="text-[#e8d5c4]">{t.location}:</strong><br />
+                    <span className="nyx-h2">{t.location}:</span><br />
                     {t.locationValue}
                   </p>
                 </div>
@@ -68,7 +68,7 @@ export function Credits() {
                     {t.projectLead}
                   </p>
                   <p className="nyx-small">
-                    <strong className="text-[#e8d5c4]">{t.realization}</strong><br />
+                    <span className="nyx-h2">{t.realization}</span><br />
                     {t.realizationName}
                   </p>
                 </div>
@@ -81,7 +81,7 @@ export function Credits() {
                 <div className="space-y-6">
                   {/* Main Documentation */}
                   <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
-                    <h4 className="text-[#e8d5c4] font-mono text-xs mb-4">{t.mainDoc}</h4>
+                    <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.mainDoc}</h4>
                     <div className="space-y-3">
                       {t.docs.main.map((doc) => {
                         const fileMap: Record<string, string> = {
@@ -101,7 +101,7 @@ export function Credits() {
                             rel="noopener noreferrer"
                             className="block border border-[#9b7653]/20 rounded p-3 bg-black/40 hover:border-[#e8d5c4]/40 hover:bg-black/60 transition-colors group"
                           >
-                            <p className="font-mono text-[#e8d5c4] text-xs mb-1 flex items-center justify-between">
+                            <p className="nyx-meta text-[#e8d5c4] mb-1 flex items-center justify-between">
                               <span>
                                 <span className="text-[#9b7653]">[{doc.id}]</span> {doc.name}
                               </span>
@@ -114,7 +114,7 @@ export function Credits() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                               </svg>
                             </p>
-                            <p className="font-extralight text-[#9b7653] text-xs leading-relaxed">
+                            <p className="nyx-meta leading-relaxed">
                               // {doc.desc}
                             </p>
                           </a>
@@ -125,7 +125,7 @@ export function Credits() {
 
                   {/* Project Files */}
                   <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
-                    <h4 className="text-[#e8d5c4] font-mono text-xs mb-4">{t.projectFiles}</h4>
+                    <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.projectFiles}</h4>
                     <div className="space-y-3">
                       {t.docs.project.map((doc) => (
                         <a
@@ -135,7 +135,7 @@ export function Credits() {
                           rel="noopener noreferrer"
                           className="block border border-[#9b7653]/20 rounded p-3 bg-black/40 hover:border-[#e8d5c4]/40 hover:bg-black/60 transition-colors group"
                         >
-                          <p className="font-mono text-[#e8d5c4] text-xs mb-1 flex items-center justify-between">
+                          <p className="nyx-meta text-[#e8d5c4] mb-1 flex items-center justify-between">
                             <span>
                               <span className="text-[#9b7653]">[{doc.id}]</span> {doc.name}
                             </span>
@@ -148,7 +148,7 @@ export function Credits() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           </p>
-                          <p className="font-extralight text-[#9b7653] text-xs leading-relaxed">
+                          <p className="nyx-meta leading-relaxed">
                             // {doc.desc}
                           </p>
                         </a>
@@ -158,7 +158,7 @@ export function Credits() {
 
                   {/* Research Corpus */}
                   <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
-                    <h4 className="text-[#e8d5c4] font-mono text-xs mb-4">{t.corpus}</h4>
+                    <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.corpus}</h4>
                     <div className="space-y-3">
                       {t.docs.corpus.map((doc) => (
                         <a
@@ -168,7 +168,7 @@ export function Credits() {
                           rel="noopener noreferrer"
                           className="block border border-[#9b7653]/20 rounded p-3 bg-black/40 hover:border-[#e8d5c4]/40 hover:bg-black/60 transition-colors group"
                         >
-                          <p className="font-mono text-[#e8d5c4] text-xs mb-1 flex items-center justify-between">
+                          <p className="nyx-meta text-[#e8d5c4] mb-1 flex items-center justify-between">
                             <span>
                               <span className="text-[#9b7653]">[{doc.id}]</span> {doc.name}
                             </span>
@@ -181,7 +181,7 @@ export function Credits() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           </p>
-                          <p className="font-extralight text-[#9b7653] text-xs leading-relaxed">
+                          <p className="nyx-meta leading-relaxed">
                             // {doc.desc}
                           </p>
                         </a>
@@ -191,7 +191,7 @@ export function Credits() {
 
                   {/* Certifications */}
                   <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
-                    <h4 className="text-[#e8d5c4] font-mono text-xs mb-4">{t.certifications}</h4>
+                    <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.certifications}</h4>
                     <div className="space-y-3">
                       {t.docs.certifications.map((doc) => (
                         <a
@@ -201,7 +201,7 @@ export function Credits() {
                           rel="noopener noreferrer"
                           className="block border border-[#9b7653]/20 rounded p-3 bg-black/40 hover:border-[#e8d5c4]/40 hover:bg-black/60 transition-colors group"
                         >
-                          <p className="font-mono text-[#e8d5c4] text-xs mb-1 flex items-center justify-between">
+                          <p className="nyx-meta text-[#e8d5c4] mb-1 flex items-center justify-between">
                             <span>
                               <span className="text-[#9b7653]">[{doc.id}]</span> {doc.name}
                             </span>
@@ -214,7 +214,7 @@ export function Credits() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           </p>
-                          <p className="font-extralight text-[#9b7653] text-xs leading-relaxed">
+                          <p className="nyx-meta leading-relaxed">
                             // {doc.desc}
                           </p>
                         </a>
@@ -230,7 +230,7 @@ export function Credits() {
                     className="block border-2 border-[#e8d5c4]/40 rounded-md p-4 bg-black/80 hover:border-[#e8d5c4] hover:bg-black transition-colors group"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <h4 className="text-[#e8d5c4] font-mono text-xs">{t.archive}</h4>
+                      <h4 className="nyx-meta text-[#e8d5c4]">{t.archive}</h4>
                       <svg
                         className="w-4 h-4 text-[#e8d5c4] group-hover:translate-x-1 transition-transform"
                         fill="none"
@@ -240,8 +240,8 @@ export function Credits() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </div>
-                    <p className="font-mono text-[#e8d5c4] text-sm mb-1">{t.archiveTitle}</p>
-                    <p className="font-extralight text-[#9b7653] text-xs">{t.archiveDesc}</p>
+                    <p className="nyx-meta text-[#e8d5c4] mb-1">{t.archiveTitle}</p>
+                    <p className="nyx-meta">{t.archiveDesc}</p>
                   </a>
 
                   {/* Complete Repository Link */}
@@ -253,8 +253,8 @@ export function Credits() {
                   >
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-mono text-[#e8d5c4] text-xs mb-1">{t.completeRepo}</p>
-                        <p className="font-extralight text-[#9b7653] text-xs">{t.completeRepoDesc}</p>
+                        <p className="nyx-meta text-[#e8d5c4] mb-1">{t.completeRepo}</p>
+                        <p className="nyx-meta">{t.completeRepoDesc}</p>
                       </div>
                       <svg
                         className="w-4 h-4 text-[#e8d5c4] group-hover:translate-x-1 transition-transform"
