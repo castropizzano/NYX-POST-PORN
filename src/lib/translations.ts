@@ -95,8 +95,8 @@ export const translations = {
         {
           author: "Comolli, Jean-Louis",
           work: "Ver e Poder",
-          description: "A problematização do poder da imagem e o uso do cinema como ferramenta crítica de análise social e política.",
-          relation: "O filme convoca corpo filmado e espectador para um mesmo campo de fricção ética estética e perceptiva em diálogo constante.",
+          description: "A problematização do poder da imagem e o cinema como ferramenta crítica de análise social e política.",
+          relation: "O filme convoca o corpo filmado e o espectador para um mesmo campo de fricção ética, estética e perceptiva, estabelecendo um diálogo constante e transformador entre ambos.",
           pdf: "/documents/comolli-ver-poder.pdf"
         },
         {
