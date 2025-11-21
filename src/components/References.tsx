@@ -49,7 +49,7 @@ export function References() {
 
               {/* Descrição com Expansão no Hover */}
               <div className={`transition-all duration-500 overflow-hidden ${hoveredIndex === index ? 'max-h-96 opacity-100' : 'max-h-24 opacity-70'}`}>
-                <p className="nyx-small">
+                <p className="nyx-small text-justify">
                   {ref.description} {ref.relation}
                 </p>
               </div>
