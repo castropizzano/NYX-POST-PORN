@@ -59,6 +59,11 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
                   className="w-full h-full relative group cursor-pointer bg-[#1a1a1a]"
                   aria-label="Play trailer"
                 >
+                  <img 
+                    src="/images/trailer-thumbnail.png" 
+                    alt="Trailer thumbnail"
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute bottom-6 left-6 group-hover:opacity-80 transition-opacity">
                     <div className="w-12 h-12 bg-[#e8d5c4] flex items-center justify-center">
                       <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-black border-b-[8px] border-b-transparent ml-1" />
@@ -87,6 +92,11 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
                       className="w-full h-full relative group cursor-pointer bg-[#1a1a1a]"
                       aria-label="Play official video"
                     >
+                      <img 
+                        src="/images/official-thumbnail.png" 
+                        alt="Official cut thumbnail"
+                        className="w-full h-full object-cover"
+                      />
                       <div className="absolute bottom-6 left-6 group-hover:opacity-80 transition-opacity">
                         <div className="w-12 h-12 bg-[#e8d5c4] flex items-center justify-center">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-black border-b-[8px] border-b-transparent ml-1" />
@@ -117,6 +127,11 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
                       className="w-full h-full relative group cursor-pointer bg-[#1a1a1a]"
                       aria-label="Play multicam video"
                     >
+                      <img 
+                        src="/images/multicam-thumbnail.png" 
+                        alt="Multicam thumbnail"
+                        className="w-full h-full object-cover"
+                      />
                       <div className="absolute bottom-6 left-6 group-hover:opacity-80 transition-opacity">
                         <div className="w-12 h-12 bg-[#e8d5c4] flex items-center justify-center">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-black border-b-[8px] border-b-transparent ml-1" />
