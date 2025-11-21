@@ -11,12 +11,9 @@ export function VisualReferences() {
     <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
         <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8 text-center">
-          <h2 className="nyx-h2 mb-4">
-            {title}
+          <h2 className="nyx-h2">
+            {title} | Diálogos com NYX-POST-PORN
           </h2>
-          <p className="nyx-xs max-w-2xl mx-auto">
-            {subtitle}
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
