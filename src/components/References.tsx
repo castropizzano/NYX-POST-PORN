@@ -10,12 +10,8 @@ export function References() {
       <div className="max-w-4xl mx-auto">
         <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
           <h2 className="nyx-h2">
-            {title}
+            {title} | {stateOfArt}
           </h2>
-        </div>
-
-        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
-          <h3 className="nyx-h2">{stateOfArt}</h3>
         </div>
 
         {/* Grid de Cards */}
