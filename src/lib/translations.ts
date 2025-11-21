@@ -123,7 +123,7 @@ export const translations = {
           author: "Barney, Matthew",
           work: "Hoist (Destricted)",
           description: "Fragmentação corporal e fusão entre orgânico e mecânico na performance audiovisual contemporânea explorando limites do corpo.",
-          relation: "NYX incorpora a hibridização tecnológica dissolvendo fronteiras entre corpo e dispositivo de captura em processos de expansão sensorial.",
+          relation: "NYX incorpora a hibridização tecnológica radical dissolvendo fronteiras entre corpo e dispositivo de captura em processos de expansão sensorial profundos.",
           pdf: ""
         }
       ]
