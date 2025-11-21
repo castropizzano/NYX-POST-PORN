@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
+import { Separator } from '@/components/ui/separator';
 
 export function Credits() {
   const { language } = useLanguage();
@@ -11,17 +12,35 @@ export function Credits() {
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Ficha Técnica Section */}
         <div className="border border-[#9b7653]/20 rounded-lg p-8 md:p-12 bg-black/40">
-          <h2 className="nyx-h2 mb-8">{t.title}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+          <h2 className="nyx-h2 mb-12 text-center">{t.title}</h2>
+          <div className="max-w-2xl mx-auto space-y-0">
             {t.credits.map((credit, index) => (
               <div key={index}>
-                <h3 className="nyx-h2 mb-1">{credit.label}</h3>
-                <p className="nyx-small" dangerouslySetInnerHTML={{ __html: credit.value }} />
+                <div className="group py-4 px-2 hover:bg-[#9b7653]/5 transition-colors rounded">
+                  <div className="flex items-start justify-between gap-8">
+                    <h3 className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+                      {credit.label}
+                    </h3>
+                    <div 
+                      className="nyx-small text-right text-[#e8d5c4] flex-grow" 
+                      dangerouslySetInnerHTML={{ __html: credit.value }}
+                    />
+                  </div>
+                </div>
+                {index < t.credits.length && <Separator className="bg-[#9b7653]/10" />}
               </div>
             ))}
             <div>
-              <h3 className="nyx-h2 mb-1">{t.realization}</h3>
-              <p className="nyx-small">{t.realizationName}</p>
+              <div className="group py-4 px-2 hover:bg-[#9b7653]/5 transition-colors rounded">
+                <div className="flex items-start justify-between gap-8">
+                  <h3 className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+                    {t.realization}
+                  </h3>
+                  <p className="nyx-small text-right text-[#e8d5c4] flex-grow">
+                    {t.realizationName}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
