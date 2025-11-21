@@ -41,14 +41,14 @@ export function Filmmakers() {
         </div>
 
         {/* Filmmakers Biographies */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filmmakers.map((filmmaker, index) => (
-            <div key={index} className="space-y-3">
-              <div>
-                <h3 className="nyx-h2 mb-3">
+            <div key={index} className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40">
+              <div className="mb-4">
+                <h3 className="nyx-h2">
                   {filmmaker.name}
                 </h3>
-                <p className="nyx-xs mb-4">
+                <p className="nyx-xs mt-1">
                   {filmmaker.role}
                 </p>
               </div>
