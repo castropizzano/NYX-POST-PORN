@@ -49,7 +49,21 @@ export function Credits() {
                 <p className="nyx-small">{t.project}</p>
               </div>
               <div>
-                <h3 className="nyx-h2 mb-2">{t.projectLead}</h3>
+                <h3 className="nyx-h2 mb-2">{t.support}</h3>
+                <div className="space-y-1">
+                  {t.supportNames.map((person, index) => (
+                    <p key={index} className="nyx-small">
+                      <a
+                        href={person.lattes}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
+                      >
+                        {person.name}
+                      </a>
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
