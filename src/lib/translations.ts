@@ -103,7 +103,7 @@ export const translations = {
           author: "Vinhosa, Luciano",
           work: "Videoperformance: Corpo em Trânsito",
           description: "O vídeo como extensão da performance corporal e dispositivo de captura do corpo em processo criativo e transformador.",
-          relation: "NYX assume o gesto videoperformático como método artístico e político de resistência cultural propondo novas formas de presença.",
+          relation: "NYX assume o gesto videoperformático como método artístico e político de resistência cultural, propondo novas formas radicais de presença e existência no mundo.",
           pdf: "/documents/vinhosa-videoperformance.pdf"
         },
         {
