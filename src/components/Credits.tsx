@@ -156,6 +156,39 @@ export function Credits() {
                     </div>
                   </div>
 
+                  {/* Research Corpus */}
+                  <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
+                    <h4 className="text-[#e8d5c4] font-mono text-xs mb-4">{t.corpus}</h4>
+                    <div className="space-y-3">
+                      {t.docs.corpus.map((doc) => (
+                        <a
+                          key={doc.id}
+                          href={doc.file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block border border-[#9b7653]/20 rounded p-3 bg-black/40 hover:border-[#e8d5c4]/40 hover:bg-black/60 transition-colors group"
+                        >
+                          <p className="font-mono text-[#e8d5c4] text-xs mb-1 flex items-center justify-between">
+                            <span>
+                              <span className="text-[#9b7653]">[{doc.id}]</span> {doc.name}
+                            </span>
+                            <svg
+                              className="w-3 h-3 text-[#9b7653] group-hover:text-[#e8d5c4] group-hover:translate-y-0.5 transition-all"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </p>
+                          <p className="font-extralight text-[#9b7653] text-xs leading-relaxed">
+                            // {doc.desc}
+                          </p>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Certifications */}
                   <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60">
                     <h4 className="text-[#e8d5c4] font-mono text-xs mb-4">{t.certifications}</h4>
