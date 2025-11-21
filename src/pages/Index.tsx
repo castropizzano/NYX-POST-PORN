@@ -13,6 +13,7 @@ import { Footer } from '@/components/Footer';
 import AgeGate from '@/components/AgeGate';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { BackToTop } from '@/components/BackToTop';
+import { FaccBadge } from '@/components/FaccBadge';
 
 export default function Index() {
   const [ageVerified, setAgeVerified] = useState(false);
@@ -34,6 +35,7 @@ export default function Index() {
       <AgeGate isOpen={!ageVerified} onVerify={handleVerify} />
       {ageVerified && <LanguageSwitcher />}
       {ageVerified && <BackToTop />}
+      {ageVerified && <FaccBadge />}
       <main className="min-h-screen bg-black">
         {ageVerified && (
           <>
