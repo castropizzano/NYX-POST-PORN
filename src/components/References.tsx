@@ -35,7 +35,7 @@ export function References() {
                     href={ref.pdf}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono"
+                    className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
                     aria-label={`Download PDF: ${ref.work}`}
                   >
                     PDF
