@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
+import { Download } from 'lucide-react';
 
 export function References() {
   const { language } = useLanguage();
@@ -19,7 +20,20 @@ export function References() {
               <ul className="space-y-8 font-extralight leading-relaxed text-sm tracking-tight text-[#9b7653]">
                 {references.map((ref, index) => (
                   <li key={index} className="text-justify space-y-2">
-                    <strong className="text-[#e8d5c4] block">{ref.author}</strong>
+                    <div className="flex items-start justify-between gap-4">
+                      <strong className="text-[#e8d5c4] block flex-1">{ref.author}</strong>
+                      {ref.pdf && (
+                        <a
+                          href={ref.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[#9b7653] hover:text-[#e8d5c4] transition-colors flex-shrink-0"
+                          aria-label={`Download PDF: ${ref.work}`}
+                        >
+                          <Download size={18} />
+                        </a>
+                      )}
+                    </div>
                     <em className="block text-[#e8d5c4]/80">{ref.work}:</em>
                     <p>{ref.description} {ref.relation}</p>
                   </li>

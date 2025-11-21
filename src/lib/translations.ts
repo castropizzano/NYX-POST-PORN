@@ -85,19 +85,36 @@ export const translations = {
           author: "Mulvey, Laura",
           work: "Prazer Visual e Cinema Narrativo",
           description: "A crítica à escopofilia patriarcal e à necessidade de uma nova linguagem visual.",
-          relation: "NYX ressignifica o olhar, propondo um prazer visual que nasce do corpo expandido e da autonomia."
+          relation: "NYX ressignifica o olhar, propondo um prazer visual que nasce do corpo expandido e da autonomia.",
+          pdf: "/documents/mulvey-prazer-visual.pdf"
         },
         {
           author: "Comolli, Jean-Louis",
           work: "Ver e Poder",
           description: "A problematização do poder da imagem e o uso do cinema como ferramenta crítica.",
-          relation: "O filme convoca corpo filmado e espectador para um mesmo campo de fricção."
+          relation: "O filme convoca corpo filmado e espectador para um mesmo campo de fricção.",
+          pdf: "/documents/comolli-ver-poder.pdf"
         },
         {
           author: "Vinhosa, Luciano",
           work: "Videoperformance: Corpo em Trânsito",
           description: "O vídeo como extensão da performance corporal.",
-          relation: "NYX assume o gesto videoperformático como método."
+          relation: "NYX assume o gesto videoperformático como método.",
+          pdf: "/documents/vinhosa-videoperformance.pdf"
+        },
+        {
+          author: "Azevedo, Adriana",
+          work: "Sexorcismos Selvagens: Pós-Pornografia e Performance",
+          description: "O pós-pornô como ferramenta de desconstrução das tecnologias de produção subjetiva.",
+          relation: "NYX propõe novos modos de existência através da performance e da imagem.",
+          pdf: "/documents/azevedo-sexorcismos.pdf"
+        },
+        {
+          author: "Marinelli, Princesa Ricardo & Machado, Gabriel",
+          work: "Práticas Monstruosas na Invenção de um Mundo para Além do Humano",
+          description: "A dança e a imaginação como laboratório de práticas corporais monstruosas.",
+          relation: "NYX explora o corpo como território de transformação e invenção.",
+          pdf: "/documents/marinelli-machado-praticas-monstruosas.pdf"
         },
         {
           author: "Abramović, Marina",
@@ -151,6 +168,7 @@ export const translations = {
       documentation: "Documentação",
       mainDoc: "[MAIN DOC.]",
       projectFiles: "[PROJETO]",
+      corpus: "[CORPUS TEÓRICO]",
       certifications: "[CERTIFICAÇÕES]",
       archive: "[INTERNET ARCHIVE]",
       completeRepo: "[COMPLETE REPOSITORY]",
@@ -170,6 +188,13 @@ export const translations = {
           { id: "01", name: "CONCEITO.PDF", desc: "Documento conceitual do projeto", file: "/documents/conceito.pdf" },
           { id: "02", name: "ESTUDO-PT.PDF", desc: "Estudo acadêmico em português", file: "/documents/estudo-pt.pdf" },
           { id: "03", name: "STUDY-EN.PDF", desc: "Academic study in english", file: "/documents/study-en.pdf" }
+        ],
+        corpus: [
+          { id: "01", name: "MULVEY-PRAZER-VISUAL.PDF", desc: "Prazer Visual e Cinema Narrativo (p. 437-453)", file: "/documents/mulvey-prazer-visual.pdf" },
+          { id: "02", name: "COMOLLI-VER-PODER.PDF", desc: "Ver e Poder (p. 143-160)", file: "/documents/comolli-ver-poder.pdf" },
+          { id: "03", name: "VINHOSA-VIDEOPERFORMANCE.PDF", desc: "Videoperformance: Corpo em Trânsito (p. 293-303)", file: "/documents/vinhosa-videoperformance.pdf" },
+          { id: "04", name: "AZEVEDO-SEXORCISMOS.PDF", desc: "Sexorcismos Selvagens: Pós-Pornografia e Performance", file: "/documents/azevedo-sexorcismos.pdf" },
+          { id: "05", name: "MARINELLI-MACHADO.PDF", desc: "Práticas Monstruosas na Invenção de um Mundo para Além do Humano", file: "/documents/marinelli-machado-praticas-monstruosas.pdf" }
         ],
         certifications: [
           { id: "01", name: "CONSENTIMENTO.PDF", desc: "Carta de consentimento da performer", file: "/documents/consentimento.pdf" },
@@ -266,19 +291,36 @@ export const translations = {
           author: "Mulvey, Laura",
           work: "Visual Pleasure and Narrative Cinema",
           description: "The critique of patriarchal scopophilia and the need for a new visual language.",
-          relation: "NYX redefines the gaze, proposing visual pleasure from the expanded body and autonomy."
+          relation: "NYX redefines the gaze, proposing visual pleasure from the expanded body and autonomy.",
+          pdf: "/documents/mulvey-prazer-visual.pdf"
         },
         {
           author: "Comolli, Jean-Louis",
           work: "See and Power",
           description: "The problematization of image power and cinema as critical tool.",
-          relation: "The film summons both filmed body and spectator into the same field of friction."
+          relation: "The film summons both filmed body and spectator into the same field of friction.",
+          pdf: "/documents/comolli-ver-poder.pdf"
         },
         {
           author: "Vinhosa, Luciano",
           work: "Videoperformance: Body in Transit",
           description: "Video as extension of bodily performance.",
-          relation: "NYX assumes the videoperformative gesture as method."
+          relation: "NYX assumes the videoperformative gesture as method.",
+          pdf: "/documents/vinhosa-videoperformance.pdf"
+        },
+        {
+          author: "Azevedo, Adriana",
+          work: "Savage Sexorcisms: Post-Pornography and Performance",
+          description: "Post-porn as a tool for deconstructing technologies of subjective production.",
+          relation: "NYX proposes new modes of existence through performance and image.",
+          pdf: "/documents/azevedo-sexorcismos.pdf"
+        },
+        {
+          author: "Marinelli, Princesa Ricardo & Machado, Gabriel",
+          work: "Monstrous Practices in the Invention of a World Beyond the Human",
+          description: "Dance and imagination as a laboratory for monstrous bodily practices.",
+          relation: "NYX explores the body as a territory of transformation and invention.",
+          pdf: "/documents/marinelli-machado-praticas-monstruosas.pdf"
         },
         {
           author: "Abramović, Marina",
@@ -332,6 +374,7 @@ export const translations = {
       documentation: "Documentation",
       mainDoc: "[MAIN DOC.]",
       projectFiles: "[PROJECT]",
+      corpus: "[RESEARCH CORPUS]",
       certifications: "[CERTIFICATIONS]",
       archive: "[INTERNET ARCHIVE]",
       completeRepo: "[COMPLETE REPOSITORY]",
@@ -351,6 +394,13 @@ export const translations = {
           { id: "01", name: "CONCEITO.PDF", desc: "Project conceptual document", file: "/documents/conceito.pdf" },
           { id: "02", name: "ESTUDO-PT.PDF", desc: "Academic study in portuguese", file: "/documents/estudo-pt.pdf" },
           { id: "03", name: "STUDY-EN.PDF", desc: "Academic study in english", file: "/documents/study-en.pdf" }
+        ],
+        corpus: [
+          { id: "01", name: "MULVEY-VISUAL-PLEASURE.PDF", desc: "Visual Pleasure and Narrative Cinema (p. 437-453)", file: "/documents/mulvey-prazer-visual.pdf" },
+          { id: "02", name: "COMOLLI-SEE-POWER.PDF", desc: "See and Power (p. 143-160)", file: "/documents/comolli-ver-poder.pdf" },
+          { id: "03", name: "VINHOSA-VIDEOPERFORMANCE.PDF", desc: "Videoperformance: Body in Transit (p. 293-303)", file: "/documents/vinhosa-videoperformance.pdf" },
+          { id: "04", name: "AZEVEDO-SEXORCISMS.PDF", desc: "Savage Sexorcisms: Post-Pornography and Performance", file: "/documents/azevedo-sexorcismos.pdf" },
+          { id: "05", name: "MARINELLI-MACHADO.PDF", desc: "Monstrous Practices in the Invention of a World Beyond the Human", file: "/documents/marinelli-machado-praticas-monstruosas.pdf" }
         ],
         certifications: [
           { id: "01", name: "CONSENTIMENTO.PDF", desc: "Performer consent letter", file: "/documents/consentimento.pdf" },
