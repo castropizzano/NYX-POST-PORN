@@ -57,7 +57,7 @@ export const translations = {
       filmmakers: [
         {
           name: "Castro Pizzano",
-          role: "Idealização, Dir. de Fotografia, Montagem e Pós-Prod.",
+          role: "Idealização, Dir. de Foto, Montagem e Pós-Prod.",
           bio: "Mestrando do PPG-CINEAV da Unespar. Membro do Grupo de Pesquisa CineCriare. Fundador, diretor de arte e videomaker no CasaTreze Studio."
         },
         {
