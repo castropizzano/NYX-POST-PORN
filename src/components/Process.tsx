@@ -12,8 +12,6 @@ export function Process() {
           <h2 className="nyx-h2 mb-8">{t.title}</h2>
           <div className="space-y-8">
             <p className="nyx-small text-justified">{t.paragraph1}</p>
-            <p className="nyx-small text-justified">{t.paragraph2}</p>
-            <p className="nyx-small text-justified">{t.paragraph3}</p>
           </div>
         </div>
 
@@ -21,21 +19,14 @@ export function Process() {
           <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
             <h3 className="nyx-h2 mb-8">{t.visualStyle.title}</h3>
             <div className="space-y-4">
-              <p className="nyx-small">{t.visualStyle.lighting}</p>
-              <p className="nyx-small">{t.visualStyle.cameraMovement}</p>
-              <p className="nyx-small">{t.visualStyle.sounds}</p>
+              <p className="nyx-small">{t.visualStyle.text}</p>
             </div>
           </div>
 
           <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
             <h3 className="nyx-h2 mb-8">{t.performanceStages.title}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <p className="nyx-small">1. {t.performanceStages.stage1}</p>
-              <p className="nyx-small">2. {t.performanceStages.stage2}</p>
-              <p className="nyx-small">3. {t.performanceStages.stage3}</p>
-              <p className="nyx-small">4. {t.performanceStages.stage4}</p>
-              <p className="nyx-small">5. {t.performanceStages.stage5}</p>
-              <p className="nyx-small">6. {t.performanceStages.stage6}</p>
+            <div className="space-y-4">
+              <p className="nyx-small">{t.performanceStages.text}</p>
             </div>
           </div>
         </div>
