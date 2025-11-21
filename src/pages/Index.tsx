@@ -1,9 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Hero } from '@/components/Hero';
+import { FilmPlayer } from '@/components/FilmPlayer';
 import { Synopsis } from '@/components/Synopsis';
 import { Concept } from '@/components/Concept';
+import { Process } from '@/components/Process';
+import { Posters } from '@/components/Posters';
+import { Filmmakers } from '@/components/Filmmakers';
+import { References } from '@/components/References';
+import { Credits } from '@/components/Credits';
 import { Footer } from '@/components/Footer';
 import AgeGate from '@/components/AgeGate';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { BackToTop } from '@/components/BackToTop';
 
 export default function Index() {
   const [ageVerified, setAgeVerified] = useState(false);
@@ -23,12 +31,20 @@ export default function Index() {
   return (
     <>
       <AgeGate isOpen={!ageVerified} onVerify={handleVerify} />
+      {ageVerified && <LanguageSwitcher />}
+      {ageVerified && <BackToTop />}
       <main className="min-h-screen bg-black">
         {ageVerified && (
           <>
             <Hero />
+            <FilmPlayer ageVerified={ageVerified} />
             <Synopsis />
             <Concept />
+            <Process />
+            <Posters />
+            <Filmmakers />
+            <References />
+            <Credits />
             <Footer />
           </>
         )}
