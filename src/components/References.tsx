@@ -45,7 +45,7 @@ export function References() {
 
               {/* Descrição */}
               <div>
-                <p className="font-light text-[14px] leading-[1.6] text-[#9b7653] text-justify" style={{ fontFamily: 'TT Commons, system-ui, sans-serif' }}>
+                <p className="font-light text-[14.5px] leading-[1.6] text-[#9b7653] text-justify" style={{ fontFamily: 'TT Commons, system-ui, sans-serif' }}>
                   {ref.description} {ref.relation}
                 </p>
               </div>
