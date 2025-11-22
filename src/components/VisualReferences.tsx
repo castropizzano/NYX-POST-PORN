@@ -34,7 +34,7 @@ export function VisualReferences() {
                   />
                   
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Content Overlay */}
