@@ -9,7 +9,8 @@ export const translations = {
       description: "Este é um projeto artístico experimental que aborda temas adultos relacionados ao corpo, sexualidade e performance através de uma perspectiva pós-pornográfica",
       ageWarning: "INADEQUADO PARA MENORES DE 18 ANOS",
       emailPlaceholder: "seu@email.com",
-      confirmText: "Confirmo que tenho 18 anos ou mais e aceito visualizar conteúdo artístico de natureza experimental.",
+      confirmText: "Confirmo que tenho 18 anos ou mais e aceito visualizar conteúdo artístico de natureza experimental. Leia a",
+      privacyLink: "Política de Privacidade",
       enterButton: "ENTRAR"
     },
     synopsis: {
@@ -269,6 +270,131 @@ export const translations = {
           { id: "03", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Certificado oficial CineCriare", file: "/documents/cinecriare-certificado.pdf" }
         ]
       }
+    },
+    privacy: {
+      title: "Política de Privacidade",
+      lastUpdated: "Última atualização",
+      updateDate: "22 de novembro de 2025",
+      backToHome: "Voltar ao início",
+      introduction: {
+        title: "1. Introdução",
+        text: "Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações pessoais quando você acessa o site NYX-POST-PORN. Estamos comprometidos com a transparência e a proteção de seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018) e o Regulamento Geral de Proteção de Dados (GDPR) quando aplicável."
+      },
+      dataController: {
+        title: "2. Responsável pelos Dados",
+        project: "Projeto:",
+        responsible: "Responsável:",
+        email: "E-mail:",
+        location: "Localização:"
+      },
+      dataCollected: {
+        title: "3. Dados Coletados",
+        intro: "Ao acessar o site através do Age Gate, coletamos as seguintes informações:",
+        purpose: "Finalidade",
+        legalBasis: "Base Legal",
+        items: [
+          {
+            name: "Endereço de E-mail",
+            purpose: "Comunicação sobre o projeto artístico, envio de newsletter com atualizações sobre exibições, publicações acadêmicas e eventos relacionados ao filme.",
+            legalBasis: "Consentimento explícito (Art. 7º, I, LGPD). Ao inserir seu e-mail e confirmar que tem 18 anos ou mais, você consente com a coleta e uso deste dado."
+          },
+          {
+            name: "Endereço IP",
+            purpose: "Segurança e prevenção de spam através de rate limiting. Não utilizamos para rastreamento de comportamento ou localização precisa.",
+            legalBasis: "Legítimo interesse (Art. 7º, IX, LGPD) para garantir a segurança e integridade do sistema."
+          },
+          {
+            name: "User Agent (Navegador)",
+            purpose: "Garantir compatibilidade técnica do site e gerar estatísticas anônimas sobre dispositivos e navegadores utilizados pelos visitantes.",
+            legalBasis: "Legítimo interesse (Art. 7º, IX, LGPD) para otimização técnica da experiência do usuário."
+          },
+          {
+            name: "Timestamp (Data e Hora)",
+            purpose: "Auditoria de acessos e gestão do ciclo de vida dos dados coletados.",
+            legalBasis: "Legítimo interesse (Art. 7º, IX, LGPD) para cumprimento de obrigações legais e gestão adequada dos dados."
+          }
+        ]
+      },
+      dataUsage: {
+        title: "4. Como Utilizamos Seus Dados",
+        items: [
+          "Envio de comunicações sobre exibições do filme, publicações acadêmicas e eventos relacionados ao projeto",
+          "Prevenção de acesso automatizado e spam através de controle de taxa de requisições",
+          "Garantia de compatibilidade técnica do site com diferentes navegadores e dispositivos",
+          "Geração de estatísticas anônimas e agregadas sobre o público do projeto",
+          "Cumprimento de obrigações legais e regulatórias quando aplicável"
+        ]
+      },
+      dataSharing: {
+        title: "5. Compartilhamento de Dados",
+        text: "Seus dados pessoais NÃO são vendidos, alugados ou compartilhados com terceiros para fins comerciais ou de marketing. Os dados são armazenados de forma segura em nossa infraestrutura de backend (Lovable Cloud/Supabase) e acessados exclusivamente pela equipe autorizada do projeto para as finalidades descritas nesta política."
+      },
+      dataRetention: {
+        title: "6. Retenção de Dados",
+        text: "Seus dados pessoais serão mantidos por até 2 (dois) anos após a coleta ou até que você solicite a exclusão, o que ocorrer primeiro. Após esse período, os dados serão automaticamente excluídos de nossos sistemas. Você pode solicitar a exclusão de seus dados a qualquer momento através do e-mail de contato fornecido nesta política."
+      },
+      userRights: {
+        title: "7. Seus Direitos (LGPD Art. 18)",
+        intro: "De acordo com a LGPD, você tem os seguintes direitos em relação aos seus dados pessoais:",
+        items: [
+          {
+            right: "Confirmação e Acesso",
+            description: "Confirmar a existência de tratamento e acessar seus dados pessoais"
+          },
+          {
+            right: "Correção",
+            description: "Solicitar a correção de dados incompletos, inexatos ou desatualizados"
+          },
+          {
+            right: "Anonimização, Bloqueio ou Eliminação",
+            description: "Requerer a anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade"
+          },
+          {
+            right: "Portabilidade",
+            description: "Solicitar a portabilidade dos dados a outro fornecedor de serviço ou produto"
+          },
+          {
+            right: "Revogação do Consentimento",
+            description: "Revogar o consentimento dado para o tratamento de seus dados"
+          },
+          {
+            right: "Informação sobre Compartilhamento",
+            description: "Obter informações sobre entidades públicas e privadas com as quais compartilhamos dados"
+          },
+          {
+            right: "Oposição ao Tratamento",
+            description: "Opor-se ao tratamento realizado com fundamento em uma das hipóteses de dispensa de consentimento"
+          }
+        ],
+        exercise: "Para exercer qualquer um destes direitos, entre em contato através do e-mail: castropizzano@gmail.com"
+      },
+      security: {
+        title: "8. Segurança dos Dados",
+        text: "Adotamos medidas técnicas e organizacionais apropriadas para proteger seus dados pessoais contra acesso não autorizado, perda, destruição ou alteração. Estas medidas incluem:",
+        measures: [
+          "Criptografia de dados em trânsito (HTTPS/TLS)",
+          "Armazenamento seguro em infraestrutura confiável (Lovable Cloud/Supabase)",
+          "Controle de acesso restrito aos dados (RLS - Row Level Security)",
+          "Rate limiting para prevenção de ataques automatizados",
+          "Validação e sanitização de todos os dados de entrada no servidor",
+          "Monitoramento regular de segurança e vulnerabilidades"
+        ]
+      },
+      cookies: {
+        title: "9. Cookies e Tecnologias Similares",
+        text: "Este site utiliza apenas cookies essenciais para o funcionamento básico (como localStorage para preferência de idioma). NÃO utilizamos cookies de rastreamento, publicidade ou analytics de terceiros. As informações de contato e links para redes sociais exibidas no site (Instagram, e-mail) são informações públicas estáticas do projeto e não constituem coleta de dados pessoais."
+      },
+      changes: {
+        title: "10. Alterações nesta Política",
+        text: "Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou por razões operacionais, legais ou regulatórias. A data da última atualização será sempre indicada no topo desta página. Recomendamos que você revise esta política regularmente."
+      },
+      contact: {
+        title: "11. Contato",
+        text: "Se você tiver dúvidas sobre esta Política de Privacidade ou sobre como tratamos seus dados pessoais, entre em contato conosco:",
+        emailLabel: "E-mail",
+        instagramLabel: "Instagram"
+      },
+      footer: "Esta política de privacidade está em conformidade com a LGPD (Lei nº 13.709/2018) e o GDPR quando aplicável."
     }
   },
   en: {
@@ -281,7 +407,8 @@ export const translations = {
       description: "This is an experimental artistic project that addresses adult themes related to the body, sexuality and performance through a post-pornographic perspective",
       ageWarning: "UNSUITABLE FOR UNDER 18",
       emailPlaceholder: "your@email.com",
-      confirmText: "I confirm that I am 18 years or older and accept to view artistic content of an experimental nature.",
+      confirmText: "I confirm that I am 18 years or older and accept to view artistic content of an experimental nature. Read the",
+      privacyLink: "Privacy Policy",
       enterButton: "ENTER"
     },
     synopsis: {
@@ -542,6 +669,131 @@ export const translations = {
           { id: "03", name: "CINECRIARE-CERTIFICADO.PDF", desc: "Official CineCriare certificate", file: "/documents/cinecriare-certificado.pdf" }
         ]
       }
+    },
+    privacy: {
+      title: "Privacy Policy",
+      lastUpdated: "Last updated",
+      updateDate: "November 22, 2025",
+      backToHome: "Back to home",
+      introduction: {
+        title: "1. Introduction",
+        text: "This Privacy Policy describes how we collect, use, and protect your personal information when you access the NYX-POST-PORN website. We are committed to transparency and the protection of your personal data, in compliance with the Brazilian General Data Protection Law (LGPD - Law No. 13.709/2018) and the General Data Protection Regulation (GDPR) when applicable."
+      },
+      dataController: {
+        title: "2. Data Controller",
+        project: "Project:",
+        responsible: "Responsible:",
+        email: "Email:",
+        location: "Location:"
+      },
+      dataCollected: {
+        title: "3. Data Collected",
+        intro: "When accessing the site through the Age Gate, we collect the following information:",
+        purpose: "Purpose",
+        legalBasis: "Legal Basis",
+        items: [
+          {
+            name: "Email Address",
+            purpose: "Communication about the artistic project, sending newsletter with updates about screenings, academic publications and events related to the film.",
+            legalBasis: "Explicit consent (Art. 7, I, LGPD). By entering your email and confirming that you are 18 years or older, you consent to the collection and use of this data."
+          },
+          {
+            name: "IP Address",
+            purpose: "Security and spam prevention through rate limiting. We do not use it for behavior tracking or precise geolocation.",
+            legalBasis: "Legitimate interest (Art. 7, IX, LGPD) to ensure system security and integrity."
+          },
+          {
+            name: "User Agent (Browser)",
+            purpose: "Ensure technical compatibility of the site and generate anonymous statistics about devices and browsers used by visitors.",
+            legalBasis: "Legitimate interest (Art. 7, IX, LGPD) for technical optimization of user experience."
+          },
+          {
+            name: "Timestamp (Date and Time)",
+            purpose: "Access auditing and lifecycle management of collected data.",
+            legalBasis: "Legitimate interest (Art. 7, IX, LGPD) for compliance with legal obligations and proper data management."
+          }
+        ]
+      },
+      dataUsage: {
+        title: "4. How We Use Your Data",
+        items: [
+          "Sending communications about film screenings, academic publications and events related to the project",
+          "Prevention of automated access and spam through request rate control",
+          "Ensuring technical compatibility of the site with different browsers and devices",
+          "Generating anonymous and aggregated statistics about the project's audience",
+          "Compliance with legal and regulatory obligations when applicable"
+        ]
+      },
+      dataSharing: {
+        title: "5. Data Sharing",
+        text: "Your personal data is NOT sold, rented or shared with third parties for commercial or marketing purposes. Data is stored securely in our backend infrastructure (Lovable Cloud/Supabase) and accessed exclusively by the project's authorized team for the purposes described in this policy."
+      },
+      dataRetention: {
+        title: "6. Data Retention",
+        text: "Your personal data will be kept for up to 2 (two) years after collection or until you request deletion, whichever comes first. After this period, data will be automatically deleted from our systems. You can request deletion of your data at any time through the contact email provided in this policy."
+      },
+      userRights: {
+        title: "7. Your Rights (LGPD Art. 18)",
+        intro: "According to LGPD, you have the following rights regarding your personal data:",
+        items: [
+          {
+            right: "Confirmation and Access",
+            description: "Confirm the existence of processing and access your personal data"
+          },
+          {
+            right: "Correction",
+            description: "Request correction of incomplete, inaccurate or outdated data"
+          },
+          {
+            right: "Anonymization, Blocking or Deletion",
+            description: "Request anonymization, blocking or deletion of unnecessary, excessive or non-compliant data"
+          },
+          {
+            right: "Portability",
+            description: "Request portability of data to another service or product provider"
+          },
+          {
+            right: "Consent Revocation",
+            description: "Revoke consent given for data processing"
+          },
+          {
+            right: "Sharing Information",
+            description: "Obtain information about public and private entities with which we share data"
+          },
+          {
+            right: "Opposition to Processing",
+            description: "Object to processing carried out based on one of the consent waiver hypotheses"
+          }
+        ],
+        exercise: "To exercise any of these rights, contact us via email: castropizzano@gmail.com"
+      },
+      security: {
+        title: "8. Data Security",
+        text: "We adopt appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, destruction or alteration. These measures include:",
+        measures: [
+          "Data encryption in transit (HTTPS/TLS)",
+          "Secure storage on trusted infrastructure (Lovable Cloud/Supabase)",
+          "Restricted access control to data (RLS - Row Level Security)",
+          "Rate limiting for prevention of automated attacks",
+          "Validation and sanitization of all server input data",
+          "Regular security and vulnerability monitoring"
+        ]
+      },
+      cookies: {
+        title: "9. Cookies and Similar Technologies",
+        text: "This site only uses essential cookies for basic functionality (such as localStorage for language preference). We DO NOT use tracking, advertising or third-party analytics cookies. Contact information and social media links displayed on the site (Instagram, email) are static public information of the project and do not constitute personal data collection."
+      },
+      changes: {
+        title: "10. Changes to this Policy",
+        text: "We may update this Privacy Policy periodically to reflect changes in our practices or for operational, legal or regulatory reasons. The date of last update will always be indicated at the top of this page. We recommend that you review this policy regularly."
+      },
+      contact: {
+        title: "11. Contact",
+        text: "If you have questions about this Privacy Policy or how we handle your personal data, contact us:",
+        emailLabel: "Email",
+        instagramLabel: "Instagram"
+      },
+      footer: "This privacy policy complies with LGPD (Law No. 13.709/2018) and GDPR when applicable."
     }
   }
 };

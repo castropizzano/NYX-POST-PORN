@@ -154,7 +154,17 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
                 required
                 disabled={isSubmitting}
               />
-              <span className="nyx-small text-justify">{t.confirmText}</span>
+              <span className="nyx-small text-justify">
+                {t.confirmText}{' '}
+                <a 
+                  href="/privacy" 
+                  target="_blank"
+                  className="text-nyx-gold hover:text-nyx-cream underline transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {t.privacyLink}
+                </a>
+              </span>
             </label>
 
             <p className="nyx-small text-center">{t.ageWarning}</p>
