@@ -26,6 +26,23 @@ serve(async (req) => {
       );
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email) || email.length > 255) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid email format' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validate userAgent if provided
+    if (userAgent && (typeof userAgent !== 'string' || userAgent.length > 500)) {
+      return new Response(
+        JSON.stringify({ error: 'Invalid user agent' }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     // Get IP address from request headers
     const forwardedFor = req.headers.get('x-forwarded-for');
     const realIp = req.headers.get('x-real-ip');
