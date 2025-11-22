@@ -25,23 +25,24 @@ export function Posters() {
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
+    <section className="py-16 md:py-20 px-4 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
-          <h2 className="nyx-h2 mb-8">Posters</h2>
+        <div className="p-4 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
+          <h2 className="nyx-h2 mb-6 md:mb-8">Posters</h2>
           
-          <div className="relative">
+          <div className="relative touch-manipulation">
             <div className="relative w-full flex items-center justify-center bg-black">
               <img
                 src={posters[currentIndex].src}
                 alt={posters[currentIndex].alt}
                 className="w-full max-h-screen object-contain"
+                loading="lazy"
               />
             </div>
 
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-12 h-12 md:w-auto md:h-auto md:px-3 md:py-2 flex items-center justify-center bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-base md:text-sm font-mono touch-manipulation"
               aria-label="Previous poster"
             >
               ←
@@ -49,11 +50,27 @@ export function Posters() {
 
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 px-3 py-2 bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-sm font-mono"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-12 h-12 md:w-auto md:h-auto md:px-3 md:py-2 flex items-center justify-center bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-base md:text-sm font-mono touch-manipulation"
               aria-label="Next poster"
             >
               →
             </button>
+          </div>
+
+          {/* Indicadores de posição */}
+          <div className="flex justify-center gap-2 mt-4">
+            {posters.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all touch-manipulation ${
+                  index === currentIndex 
+                    ? 'bg-[#e8d5c4] w-6' 
+                    : 'bg-[#9b7653]/40 hover:bg-[#9b7653]/60'
+                }`}
+                aria-label={`Go to poster ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>

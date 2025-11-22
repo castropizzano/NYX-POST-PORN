@@ -6,35 +6,35 @@ export function References() {
   const { title, stateOfArt, references } = translations[language].references;
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
+    <section className="py-16 md:py-24 px-4 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
+        <div className="p-6 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-6 md:mb-8">
           <h2 className="nyx-h2">
             {title} | {stateOfArt}
           </h2>
         </div>
 
         {/* Grid de Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {references.map((ref, index) => (
             <div
               key={index}
-              className="border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+              className="border border-[#9b7653]/20 rounded-lg p-4 md:p-6 bg-black/40"
             >
               {/* Header com Autor e Botões */}
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="flex-1">
-                  <h4 className="nyx-h2">{ref.author}</h4>
-                  <p className="nyx-xs mt-1">{ref.work}</p>
+              <div className="flex items-start justify-between gap-3 md:gap-4 mb-3 md:mb-4">
+                <div className="flex-1 min-w-0">
+                  <h4 className="nyx-h2 break-words">{ref.author}</h4>
+                  <p className="nyx-xs mt-1 break-words">{ref.work}</p>
                 </div>
                 
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-shrink-0">
                   {ref.pdf && (
                     <a
                       href={ref.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                      className="min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center px-2 md:px-3 py-1 md:py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 touch-manipulation"
                       aria-label={`Download PDF: ${ref.work}`}
                     >
                       PDF
@@ -46,7 +46,7 @@ export function References() {
                       href={ref.imdb}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-shrink-0 px-3 py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105"
+                      className="min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center px-2 md:px-3 py-1 md:py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 touch-manipulation"
                       aria-label={`IMDb: ${ref.work}`}
                     >
                       IMDb
@@ -57,7 +57,7 @@ export function References() {
 
               {/* Descrição */}
               <div>
-                <p className="font-light text-[14.5px] leading-[1.6] text-[#9b7653] text-justify" style={{ fontFamily: 'TT Commons, system-ui, sans-serif' }}>
+                <p className="font-light text-[13px] md:text-[14.5px] leading-[1.6] text-[#9b7653] text-justify" style={{ fontFamily: 'TT Commons, system-ui, sans-serif' }}>
                   {ref.description} {ref.relation}
                 </p>
               </div>

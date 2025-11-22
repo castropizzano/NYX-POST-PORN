@@ -87,14 +87,14 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
   return (
     <Dialog open={isOpen} onOpenChange={() => {}}>
       <DialogContent
-        className="sm:max-w-md bg-black border border-nyx-gold text-nyx-cream rounded-none"
+        className="sm:max-w-md bg-black border border-nyx-gold text-nyx-cream rounded-none max-h-[90vh] overflow-y-auto"
         onPointerDownOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
       >
-        <div className="absolute top-4 right-4 flex items-center gap-2 text-sm">
+        <div className="absolute top-4 right-4 flex items-center gap-2 text-xs md:text-sm z-10">
           <button
             onClick={() => setLanguage('pt')}
-            className={`transition-colors ${
+            className={`transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center ${
               language === 'pt' ? 'text-nyx-cream' : 'text-nyx-gold hover:text-nyx-cream'
             }`}
           >
@@ -103,7 +103,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
           <span className="text-nyx-gold">|</span>
           <button
             onClick={() => setLanguage('en')}
-            className={`transition-colors ${
+            className={`transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center ${
               language === 'en' ? 'text-nyx-cream' : 'text-nyx-gold hover:text-nyx-cream'
             }`}
           >
@@ -111,7 +111,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
           </button>
         </div>
 
-        <div className="space-y-6 p-6">
+        <div className="space-y-4 md:space-y-6 p-4 md:p-6 pt-14 md:pt-6">
           <div className="space-y-2 text-center">
             <h2 className="nyx-h2">{t.title}</h2>
             <p className="nyx-xs">{t.subtitle}</p>
@@ -137,7 +137,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
             <Button
               type="submit"
               disabled={!confirmed || !email || isSubmitting}
-              className="w-full bg-nyx-gold hover:bg-nyx-gold-hover text-nyx-cream nyx-small rounded-none transition-all duration-200 disabled:bg-nyx-gold/30 disabled:text-nyx-gold/50 disabled:cursor-not-allowed"
+              className="w-full bg-nyx-gold hover:bg-nyx-gold-hover text-nyx-cream nyx-small rounded-none transition-all duration-200 disabled:bg-nyx-gold/30 disabled:text-nyx-gold/50 disabled:cursor-not-allowed min-h-[48px] touch-manipulation"
             >
               {isSubmitting 
                 ? (language === 'pt' ? 'Processando...' : 'Processing...') 
@@ -145,12 +145,12 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
               }
             </Button>
 
-            <label className="flex items-start gap-3 cursor-pointer">
+            <label className="flex items-start gap-3 cursor-pointer touch-manipulation">
               <input
                 type="checkbox"
                 checked={confirmed}
                 onChange={(e) => setConfirmed(e.target.checked)}
-                className="mt-1 accent-nyx-gold"
+                className="mt-1 accent-nyx-gold min-w-[20px] min-h-[20px]"
                 required
                 disabled={isSubmitting}
               />
@@ -159,7 +159,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
                 <a 
                   href="/privacy" 
                   target="_blank"
-                  className="text-nyx-gold hover:text-nyx-cream underline transition-colors"
+                  className="text-nyx-gold hover:text-nyx-cream underline transition-colors touch-manipulation"
                   onClick={(e) => e.stopPropagation()}
                 >
                   {t.privacyLink}
