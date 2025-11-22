@@ -53,7 +53,7 @@ export function Hero() {
               </div>
             </div>
 
-            <h1 className="text-[clamp(2rem,5vw,3.5rem)] md:text-[clamp(3rem,6vw,4.5rem)] font-light tracking-tight leading-tight text-nyx-cream mb-1">
+            <h1 className="nyx-h2 mb-1">
               NYX-POST-PORN
             </h1>
             <p className="nyx-xs">
