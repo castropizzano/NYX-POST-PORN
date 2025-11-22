@@ -16,8 +16,40 @@ export function VisitorsDashboard() {
   const [visitors, setVisitors] = useState<Visitor[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [checkingPermissions, setCheckingPermissions] = useState(true);
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  const checkAdminRole = async () => {
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      if (!user) {
+        setIsAdmin(false);
+        return;
+      }
+
+      const { data: roles, error } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', user.id)
+        .eq('role', 'admin')
+        .maybeSingle();
+
+      if (error) {
+        console.error('Error checking admin role:', error);
+        setIsAdmin(false);
+        return;
+      }
+
+      setIsAdmin(!!roles);
+    } catch (error) {
+      console.error('Error in checkAdminRole:', error);
+      setIsAdmin(false);
+    } finally {
+      setCheckingPermissions(false);
+    }
+  };
 
   const fetchVisitors = async () => {
     try {
@@ -26,7 +58,18 @@ export function VisitorsDashboard() {
         .select('*')
         .order('accessed_at', { ascending: false });
 
-      if (error) throw error;
+      if (error) {
+        // Se erro for de permissão, mostrar mensagem específica
+        if (error.message.includes('row-level security')) {
+          toast({
+            title: 'Acesso negado',
+            description: 'Você precisa ser administrador para visualizar visitantes.',
+            variant: 'destructive',
+          });
+          return;
+        }
+        throw error;
+      }
       setVisitors(data || []);
     } catch (error) {
       console.error('Error fetching visitors:', error);
@@ -42,8 +85,14 @@ export function VisitorsDashboard() {
   };
 
   useEffect(() => {
-    fetchVisitors();
+    checkAdminRole();
   }, []);
+
+  useEffect(() => {
+    if (!checkingPermissions && isAdmin) {
+      fetchVisitors();
+    }
+  }, [checkingPermissions, isAdmin]);
 
   const handleRefresh = () => {
     setIsRefreshing(true);
@@ -85,6 +134,53 @@ export function VisitorsDashboard() {
   };
 
   const uniqueEmails = new Set(visitors.map(v => v.email)).size;
+
+  if (checkingPermissions) {
+    return (
+      <div className="min-h-screen bg-black text-nyx-cream flex items-center justify-center">
+        <p className="nyx-small text-nyx-gold">Verificando permissões...</p>
+      </div>
+    );
+  }
+
+  if (!isAdmin) {
+    return (
+      <div className="min-h-screen bg-black text-nyx-cream py-12 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+          <Button
+            onClick={() => navigate('/')}
+            variant="outline"
+            className="border-nyx-gold text-nyx-gold hover:bg-nyx-gold hover:text-black mb-8"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Voltar ao Site
+          </Button>
+
+          <div className="p-12 bg-nyx-gold/5 border border-nyx-gold/20 text-center space-y-6">
+            <h2 className="nyx-h2 text-nyx-gold">Acesso Negado</h2>
+            <p className="nyx-small">
+              Você precisa ser <span className="text-nyx-gold font-semibold">administrador</span> para acessar o dashboard de visitantes.
+            </p>
+            <div className="bg-black/30 p-6 border border-nyx-gold/30 text-left">
+              <p className="nyx-small text-nyx-cream/80 mb-4">
+                Para se tornar admin, execute este comando no backend:
+              </p>
+              <code className="block bg-black p-4 text-nyx-gold text-sm overflow-x-auto">
+                INSERT INTO public.user_roles (user_id, role)<br />
+                SELECT id, 'admin'::public.app_role<br />
+                FROM auth.users<br />
+                WHERE email = 'seu-email@exemplo.com'<br />
+                ON CONFLICT (user_id, role) DO NOTHING;
+              </code>
+              <p className="nyx-small text-nyx-cream/60 mt-4">
+                Substitua 'seu-email@exemplo.com' pelo seu email de login
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-black text-nyx-cream py-12 px-6 md:px-12">
