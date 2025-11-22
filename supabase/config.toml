@@ -1,1 +1,4 @@
 project_id = "rlzdjzfumnzwxtgodgsf"
+
+[functions.submit-age-gate]
+verify_jwt = false
