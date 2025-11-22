@@ -9,38 +9,40 @@ export function Credits() {
   const repoUrl = "https://github.com/castropizzano/NYX-POST-PORN";
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
-      <div className="max-w-4xl mx-auto space-y-16">
+    <section className="py-16 md:py-24 px-4 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
+      <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
         {/* Ficha Técnica Section - Editorial Layout */}
         <div>
-          <div className="p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
+          <div className="p-6 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-6 md:mb-8">
             <h2 className="nyx-h2">{t.title}</h2>
           </div>
 
           {/* Asymmetric Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             {/* Performance - Full Width Highlight */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-8 bg-black/60"
+              className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-6 md:p-8 bg-black/60"
             >
-              <h3 className="nyx-h2 mb-6">
+              <h3 className="nyx-h2 mb-4 md:mb-6">
                 {t.departments[0].name}
               </h3>
-              {t.departments[0].credits.map((credit, index) => (
-                <div key={index} className="flex items-start justify-between gap-8">
-                  <p className="nyx-meta uppercase text-[#9b7653] tracking-wider">
-                    {credit.label}
-                  </p>
-                  <p 
-                    className="nyx-small text-right text-[#e8d5c4] flex-grow" 
-                    dangerouslySetInnerHTML={{ __html: credit.value }}
-                  />
-                </div>
-              ))}
+              <div className="space-y-3">
+                {t.departments[0].credits.map((credit, index) => (
+                  <div key={index} className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-8">
+                    <p className="nyx-meta uppercase text-[#9b7653] tracking-wider">
+                      {credit.label}
+                    </p>
+                    <p 
+                      className="nyx-small md:text-right text-[#e8d5c4] md:flex-grow" 
+                      dangerouslySetInnerHTML={{ __html: credit.value }}
+                    />
+                  </div>
+                ))}
+              </div>
             </motion.div>
 
             {/* Creative Direction - Larger Card */}
@@ -49,20 +51,20 @@ export function Credits() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="md:col-span-7 border border-[#9b7653]/20 rounded-lg p-6 bg-black/40"
+              className="md:col-span-7 border border-[#9b7653]/20 rounded-lg p-4 md:p-6 bg-black/40"
             >
-              <h3 className="nyx-h2 mb-6 pb-3 border-b border-[#9b7653]/20">
+              <h3 className="nyx-h2 mb-4 md:mb-6 pb-3 border-b border-[#9b7653]/20">
                 {t.departments[1].name}
               </h3>
               <div className="space-y-4">
                 {t.departments[1].credits.map((credit, index) => (
                   <div key={index}>
-                    <div className="flex items-start justify-between gap-6">
-                      <p className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-6">
+                      <p className="nyx-meta uppercase text-[#9b7653] tracking-wider md:flex-shrink-0">
                         {credit.label}
                       </p>
                       <p 
-                        className="nyx-small text-right text-[#e8d5c4] flex-grow" 
+                        className="nyx-small md:text-right text-[#e8d5c4] md:flex-grow" 
                         dangerouslySetInnerHTML={{ __html: credit.value }}
                       />
                     </div>
@@ -184,10 +186,10 @@ export function Credits() {
         </div>
 
         {/* Program Section */}
-        <div className="border border-[#9b7653]/20 rounded-lg p-8 md:p-12 bg-black/40">
-          <h2 className="nyx-h2 mb-8">{t.program}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
+        <div className="border border-[#9b7653]/20 rounded-lg p-6 md:p-12 bg-black/40">
+          <h2 className="nyx-h2 mb-6 md:mb-8">{t.program}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="space-y-4 md:space-y-6">
               <div>
                 <h3 className="nyx-h2 mb-2">{t.ppgCineav}</h3>
                 <p className="nyx-small">{t.ppgCineavFull}</p>
@@ -200,7 +202,7 @@ export function Credits() {
                 </p>
               </div>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div>
                 <h3 className="nyx-h2 mb-2">{t.research}</h3>
                 <p className="nyx-small">{t.project}</p>
@@ -214,7 +216,7 @@ export function Credits() {
                         href={person.lattes}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4]"
+                        className="hover:text-[#e8d5c4] transition-colors underline decoration-[#9b7653]/40 hover:decoration-[#e8d5c4] touch-manipulation"
                       >
                         {person.name}
                       </a>
@@ -227,9 +229,9 @@ export function Credits() {
         </div>
 
         {/* Documentation Section */}
-        <div className="border border-[#9b7653]/20 rounded-lg p-8 md:p-12 bg-black/40">
-          <h2 className="nyx-h2 mb-8">{t.documentation}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="border border-[#9b7653]/20 rounded-lg p-6 md:p-12 bg-black/40">
+          <h2 className="nyx-h2 mb-6 md:mb-8">{t.documentation}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Left Column */}
             <div className="space-y-6">
               {/* Main Documentation */}

@@ -93,26 +93,26 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
       </div>
 
       {/* Controls */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
         {/* Play/Pause Button */}
         <button
           onClick={togglePlay}
-          className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group"
+          className="flex-shrink-0 w-full sm:w-12 h-12 flex items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group touch-manipulation"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
-          <span className="nyx-meta text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
+          <span className="nyx-meta text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors text-lg">
             {isPlaying ? '⏸' : '▶'}
           </span>
         </button>
 
         {/* Progress Bar */}
-        <div className="flex-1 flex items-center gap-3">
-          <span className="nyx-meta tabular-nums min-w-[40px]">
+        <div className="flex-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
+          <span className="nyx-meta tabular-nums sm:min-w-[40px] text-center sm:text-left">
             {formatTime(currentTime)}
           </span>
           
           <div
-            className="flex-1 h-1 bg-[#9b7653]/20 cursor-pointer group relative"
+            className="flex-1 h-8 sm:h-1 bg-[#9b7653]/20 cursor-pointer group relative touch-manipulation"
             onClick={handleProgressClick}
           >
             <div
@@ -120,12 +120,12 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
               style={{ width: `${progress}%` }}
             />
             <div
-              className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-[#e8d5c4] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ left: `calc(${progress}% - 6px)` }}
+              className="absolute top-1/2 -translate-y-1/2 w-4 h-4 sm:w-3 sm:h-3 bg-[#e8d5c4] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+              style={{ left: `calc(${progress}% - ${progress === 0 ? '0px' : '8px'})` }}
             />
           </div>
           
-          <span className="nyx-meta tabular-nums min-w-[40px]">
+          <span className="nyx-meta tabular-nums sm:min-w-[40px] text-center sm:text-left">
             {formatTime(duration)}
           </span>
         </div>
@@ -133,10 +133,10 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
         {/* Volume Control */}
         <button
           onClick={toggleMute}
-          className="flex-shrink-0 w-10 h-10 flex items-center justify-center hover:bg-[#9b7653]/10 transition-colors nyx-meta"
+          className="flex-shrink-0 w-full sm:w-10 h-10 flex items-center justify-center hover:bg-[#9b7653]/10 transition-colors nyx-meta touch-manipulation"
           aria-label={isMuted ? 'Unmute' : 'Mute'}
         >
-          {isMuted || volume === 0 ? '🔇' : '🔊'}
+          <span className="text-lg">{isMuted || volume === 0 ? '🔇' : '🔊'}</span>
         </button>
       </div>
     </motion.div>
