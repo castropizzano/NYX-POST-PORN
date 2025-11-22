@@ -154,7 +154,7 @@ export const translations = {
           title: "Shame",
           year: "2011",
           directors: "Steve McQueen",
-          description: "Drama sobre dependência sexual em Nova York. McQueen utiliza planos-sequência e enquadramentos claustrofóbicos para criar experiência visceral da solidão urbana e vulnerabilidade masculina.",
+          description: "Drama sobre dependência sexual em Nova York. McQueen utiliza planos-sequência e enquadramentos claustrofóbicos para criar experiência visceral da solidão urbana e vulnerabilidade.",
           image: "/images/ref-shame.png",
           imdb: "https://www.imdb.com/title/tt1723811/"
         },
@@ -286,12 +286,12 @@ export const translations = {
     },
     synopsis: {
       title: "Synopsis",
-      text: "\"NYX-POST-PORN\" is an audiovisual work that investigates the relationship between body, camera and aesthetics in the context of post-porn. The film deconstructs the objectification of the female body and proposes a new sensory and ethical approach to visual pleasure."
+      text: "\"NYX-POST-PORN\" is an audiovisual work that investigates the relationship between body, camera and aesthetics in the context of post-porn. The film deconstructs the objectification of the female body and proposes a new sensory and ethical approach to visual pleasure. Capturing fragments of the body in performance, the project questions the boundaries of the gaze and offers an immersive experience of self-knowledge and bodily expansion, proposing a new paradigm of spectatorship in contemporary cinema."
     },
     concept: {
       title: "Central Concept",
       paragraphs: [
-        "\"NYX-POST-PORN\" is a work that aims to dismantle the conventional narratives of traditional pornography, inserting itself in the field of post-porn. The NYX project seeks to subvert this structure, proposing a new paradigm of visual pleasure based on the deconstruction of the objectified body and the creation of an immersive sensory experience, where the viewer is challenged to participate in a new ethical relationship with the filmed body. The camera, instead of dominating the body, creates an intimate relationship with the performer, promoting an organic and collaborative dialogue between body and image."
+        "\"NYX-POST-PORN\" is a work that aims to dismantle the conventional narratives of traditional pornography, inserting itself in the field of post-porn. Laura Mulvey, in her text \"Visual Pleasure and Narrative Cinema\", approaches traditional visual pleasure as a patriarchal construction that objectifies women for the male gaze, highlighting scopophilia as a central mechanism of this process. The NYX project seeks to subvert this structure, proposing a new paradigm of visual pleasure based on the deconstruction of the objectified body and the creation of an immersive sensory experience, where the viewer is challenged to participate in a new ethical relationship with the filmed body. The camera, instead of dominating the body, creates an intimate relationship with the performer, promoting an organic and collaborative dialogue between body and image."
       ],
       nameSection: {
         title: "About the Name",
@@ -305,7 +305,7 @@ export const translations = {
       paragraph1: "The creative process of \"NYX-POST-PORN\" is guided by the exploration of the expanded body and the collective dynamic between the performer and the team. The work proposes a corporeal performance that involves female masturbation as a poetic act of self-discovery and empowerment. The interaction between body and camera is fluid, naturalizing the performative act and deconstructing the taboo of female sexuality. The stages of the creative process range from the energetic activation of the team, through the preparation of the scenario with lights and sensory elements, to the capture of the fragmented performance and the subsequent account of the experience lived by the collective body. This collaborative process is essential for creating an immersive and collective experience, where each team member actively participates in the aesthetic and emotional construction of the work.",
       visualStyle: {
         title: "Visual Style and Tone",
-        text: "Soft and diffused lighting, creating an ethereal and sensory atmosphere. Fluid and organic camera movement, creating a sense of intimacy and expansion. Natural body sounds, amplified breathing, composed soundtrack in official version and ambient sound in multicam version."
+        text: "Soft and diffused lighting, creating an ethereal and sensory atmosphere. Fluid and organic camera movement, creating a sense of intimacy and expansion. Natural body sounds, amplified breathing, composed soundtrack in official version and ambient sound, reflections in multicam version."
       },
       performanceStages: {
         title: "Performance Stages",
@@ -334,13 +334,13 @@ export const translations = {
         {
           name: "Castro Pizzano",
           role: "Idealization, Dir. of Photo, Editing and Post-Prod.",
-          lattes: "http://lattes.cnpq.br/5523516994010198",
-          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare Research Group. Founder, designer, art director and videomaker at CasaTreze Studio."
+          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare Research Group. Founder, designer, art director and videomaker at CasaTreze Studio.",
+          lattes: "http://lattes.cnpq.br/5523516994010198"
         },
         {
           name: "Patrícia Ressureição",
           role: "Corporal Dir. and Collective Dir.",
-          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Professional actress, filmmaker, photographer and cultural producer. CAPES/DS scholar.",
+          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Professional actress, presenter, model, filmmaker, photographer and cultural producer. CAPES/DS scholar.",
           lattes: "http://lattes.cnpq.br/4634695086782866"
         },
         {
@@ -352,7 +352,7 @@ export const translations = {
         {
           name: "Ana Pupo",
           role: "Art Dir., Makeup and Production",
-          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Postgraduate in Cultural Anthropology. Visual Arts graduate.",
+          bio: "Master's student at PPG-CINEAV, Unespar. Member of CineCriare. Postgraduate in Cultural Anthropology. Visual Arts graduate from Embap.",
           lattes: "http://lattes.cnpq.br/6198230125234271"
         }
       ],
@@ -427,7 +427,7 @@ export const translations = {
           title: "Shame",
           year: "2011",
           directors: "Steve McQueen",
-          description: "Drama about sexual addiction in New York. McQueen employs sequence shots and claustrophobic framing to create visceral experience of urban loneliness and male vulnerability.",
+          description: "Drama about sexual addiction in New York. McQueen employs sequence shots and claustrophobic framing to create visceral experience of urban loneliness and vulnerability.",
           image: "/images/ref-shame.png",
           imdb: "https://www.imdb.com/title/tt1723811/"
         },
@@ -500,7 +500,7 @@ export const translations = {
       project: "Body and Movement Project",
       support: "Support",
       supportNames: [
-        { name: "Prof. Dr. Cristiane Wosniak", lattes: "http://lattes.cnpq.br/8707636250586166" },
+        { name: "Profa. Dra. Cristiane Wosniak", lattes: "http://lattes.cnpq.br/8707636250586166" },
         { name: "Prof. Dr. Fábio Noronha", lattes: "http://lattes.cnpq.br/8001117846968595" }
       ],
       realization: "Production",
@@ -530,10 +530,10 @@ export const translations = {
           { id: "03", name: "STUDY-EN.PDF", desc: "Academic study in english", file: "/documents/study-en.pdf" }
         ],
         corpus: [
-          { id: "01", name: "MULVEY-VISUAL-PLEASURE.PDF", desc: "Visual Pleasure and Narrative Cinema (p. 437-453)", file: "/documents/mulvey-prazer-visual.pdf" },
-          { id: "02", name: "COMOLLI-SEE-POWER.PDF", desc: "See and Power (p. 143-160)", file: "/documents/comolli-ver-poder.pdf" },
+          { id: "01", name: "MULVEY-PRAZER-VISUAL.PDF", desc: "Visual Pleasure and Narrative Cinema (p. 437-453)", file: "/documents/mulvey-prazer-visual.pdf" },
+          { id: "02", name: "COMOLLI-VER-PODER.PDF", desc: "See and Power (p. 143-160)", file: "/documents/comolli-ver-poder.pdf" },
           { id: "03", name: "VINHOSA-VIDEOPERFORMANCE.PDF", desc: "Videoperformance: Body in Transit (p. 293-303)", file: "/documents/vinhosa-videoperformance.pdf" },
-          { id: "04", name: "AZEVEDO-SEXORCISMS.PDF", desc: "Savage Sexorcisms: Post-Pornography and Performance", file: "/documents/azevedo-sexorcismos.pdf" },
+          { id: "04", name: "AZEVEDO-SEXORCISMOS.PDF", desc: "Savage Sexorcisms: Post-Pornography and Performance", file: "/documents/azevedo-sexorcismos.pdf" },
           { id: "05", name: "MARINELLI-MACHADO.PDF", desc: "Monstrous Practices in the Invention of a World Beyond the Human", file: "/documents/marinelli-machado-praticas-monstruosas.pdf" }
         ],
         certifications: [
