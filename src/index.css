@@ -135,7 +135,11 @@
 .text-justified {
   text-align: justify;
   text-align-last: left;
+  text-justify: inter-word;
+  word-spacing: 0;
   hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
 }
 
 /* Mobile Typography */
