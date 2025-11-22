@@ -41,15 +41,32 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
     setIsSubmitting(true);
 
     try {
-      // Salvar no banco de dados
-      const { error } = await supabase
-        .from('age_gate_visitors')
-        .insert({
+      // Call edge function with rate limiting
+      const { data, error } = await supabase.functions.invoke('submit-age-gate', {
+        body: {
           email: emailValidation.data,
-          user_agent: navigator.userAgent,
-        });
+          userAgent: navigator.userAgent,
+        },
+      });
 
-      if (error) throw error;
+      if (error) {
+        // Handle rate limit error specifically
+        if (error.message?.includes('Too many submissions') || error.message?.includes('429')) {
+          toast({
+            title: language === 'pt' ? 'Limite excedido' : 'Rate limit exceeded',
+            description: language === 'pt' 
+              ? 'Você fez muitas tentativas. Por favor, aguarde antes de tentar novamente.' 
+              : 'Too many attempts. Please wait before trying again.',
+            variant: 'destructive',
+          });
+          return;
+        }
+        throw error;
+      }
+
+      if (!data?.success) {
+        throw new Error('Submission failed');
+      }
 
       // Sucesso: permitir acesso
       onVerify();
