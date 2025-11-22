@@ -75,7 +75,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
             <Button
               type="submit"
               disabled={!confirmed || !email}
-              className="w-full bg-[#9b7653] hover:bg-[#7d5d42] text-black nyx-small rounded-none"
+              className="w-full bg-[#9b7653] hover:bg-[#b8885f] text-[#e8d5c4] nyx-small rounded-none transition-all duration-200 disabled:bg-[#9b7653]/30 disabled:text-[#9b7653]/50 disabled:cursor-not-allowed"
             >
               {t.enterButton}
             </Button>
