@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
-import { Download, RefreshCw, ArrowLeft } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Download, RefreshCw, ArrowLeft, Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
 
@@ -18,6 +19,9 @@ export function VisitorsDashboard() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [checkingPermissions, setCheckingPermissions] = useState(true);
+  const [emailFilter, setEmailFilter] = useState('');
+  const [userAgentFilter, setUserAgentFilter] = useState('');
+  const [dateFilter, setDateFilter] = useState('');
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -133,7 +137,22 @@ export function VisitorsDashboard() {
     });
   };
 
+  // Filter visitors based on search criteria
+  const filteredVisitors = visitors.filter(visitor => {
+    const emailMatch = visitor.email.toLowerCase().includes(emailFilter.toLowerCase());
+    const userAgentMatch = !userAgentFilter || (visitor.user_agent?.toLowerCase().includes(userAgentFilter.toLowerCase()) ?? false);
+    const dateMatch = !dateFilter || new Date(visitor.accessed_at).toLocaleDateString('pt-BR').includes(dateFilter);
+    return emailMatch && userAgentMatch && dateMatch;
+  });
+
   const uniqueEmails = new Set(visitors.map(v => v.email)).size;
+  const hasActiveFilters = emailFilter || userAgentFilter || dateFilter;
+
+  const clearFilters = () => {
+    setEmailFilter('');
+    setUserAgentFilter('');
+    setDateFilter('');
+  };
 
   if (checkingPermissions) {
     return (
@@ -201,6 +220,7 @@ export function VisitorsDashboard() {
               <h1 className="nyx-h2 mb-2">Dashboard de Visitantes</h1>
               <p className="nyx-small text-nyx-gold">
                 Total: {visitors.length} acessos | {uniqueEmails} emails únicos
+                {hasActiveFilters && ` | Exibindo: ${filteredVisitors.length}`}
               </p>
             </div>
 
@@ -226,15 +246,72 @@ export function VisitorsDashboard() {
           </div>
         </div>
 
+        {/* Filters */}
+        <div className="mb-6 p-4 bg-nyx-gold/5 border border-nyx-gold/20 space-y-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-2 text-nyx-gold">
+              <Search className="w-4 h-4" />
+              <span className="nyx-small font-semibold">Filtros de Busca</span>
+            </div>
+            {hasActiveFilters && (
+              <Button
+                onClick={clearFilters}
+                variant="ghost"
+                size="sm"
+                className="text-nyx-gold hover:text-nyx-cream hover:bg-nyx-gold/10"
+              >
+                <X className="w-4 h-4 mr-1" />
+                Limpar Filtros
+              </Button>
+            )}
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label className="nyx-xs text-nyx-gold/70 mb-2 block">Email</label>
+              <Input
+                placeholder="Buscar por email..."
+                value={emailFilter}
+                onChange={(e) => setEmailFilter(e.target.value)}
+                className="bg-black border-nyx-gold/30 text-nyx-cream placeholder:text-nyx-gold/50 focus:border-nyx-gold"
+              />
+            </div>
+            
+            <div>
+              <label className="nyx-xs text-nyx-gold/70 mb-2 block">Navegador</label>
+              <Input
+                placeholder="Buscar por navegador..."
+                value={userAgentFilter}
+                onChange={(e) => setUserAgentFilter(e.target.value)}
+                className="bg-black border-nyx-gold/30 text-nyx-cream placeholder:text-nyx-gold/50 focus:border-nyx-gold"
+              />
+            </div>
+            
+            <div>
+              <label className="nyx-xs text-nyx-gold/70 mb-2 block">Data</label>
+              <Input
+                placeholder="DD/MM/AAAA"
+                value={dateFilter}
+                onChange={(e) => setDateFilter(e.target.value)}
+                className="bg-black border-nyx-gold/30 text-nyx-cream placeholder:text-nyx-gold/50 focus:border-nyx-gold"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Table */}
         <div className="border border-nyx-gold/20 bg-nyx-gold/5 overflow-hidden">
           {isLoading ? (
             <div className="p-12 text-center">
               <p className="nyx-small text-nyx-gold">Carregando visitantes...</p>
             </div>
-          ) : visitors.length === 0 ? (
+          ) : filteredVisitors.length === 0 ? (
             <div className="p-12 text-center">
-              <p className="nyx-small text-nyx-gold">Nenhum visitante registrado ainda.</p>
+              <p className="nyx-small text-nyx-gold">
+                {hasActiveFilters 
+                  ? 'Nenhum visitante encontrado com os filtros aplicados.' 
+                  : 'Nenhum visitante registrado ainda.'}
+              </p>
             </div>
           ) : (
             <div className="overflow-x-auto">
@@ -248,7 +325,7 @@ export function VisitorsDashboard() {
                   </tr>
                 </thead>
                 <tbody>
-                  {visitors.map((visitor, index) => (
+                  {filteredVisitors.map((visitor, index) => (
                     <tr 
                       key={visitor.id} 
                       className="border-b border-nyx-gold/10 hover:bg-nyx-gold/10 transition-colors"
@@ -280,12 +357,9 @@ export function VisitorsDashboard() {
           <h3 className="nyx-small font-semibold text-nyx-gold mb-3">
             ℹ️ Informações Importantes
           </h3>
-          <ul className="space-y-2 nyx-small text-nyx-cream/80">
-            <li>• Os dados são coletados automaticamente quando visitantes acessam o Age Gate</li>
-            <li>• Todos os emails são armazenados com segurança e protegidos por RLS (Row Level Security)</li>
-            <li>• Use o botão "Exportar CSV" para baixar a lista completa para newsletters</li>
-            <li>• Para acessar este dashboard, você precisa estar autenticado no sistema</li>
-          </ul>
+          <p className="nyx-small text-nyx-cream/80 leading-relaxed">
+            Os dados são coletados automaticamente quando visitantes acessam o Age Gate. Todos os emails são armazenados com segurança e protegidos por RLS (Row Level Security). Use o botão "Exportar CSV" para baixar a lista completa para newsletters. Para acessar este dashboard, você precisa estar autenticado no sistema.
+          </p>
         </div>
       </div>
     </div>
