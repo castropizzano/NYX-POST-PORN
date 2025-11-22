@@ -2,6 +2,7 @@
 
 > Uma experiência cinemática digital que explora os limites da narrativa audiovisual e da performance diante da câmera.
 
+[![Version](https://img.shields.io/badge/version-1.3.0-gold)](https://nyx-post-porn.lovable.app)
 [![Lovable](https://img.shields.io/badge/Built%20with-Lovable-ff69b4)](https://lovable.dev)
 [![React](https://img.shields.io/badge/React-18.3-61dafb?logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178c6?logo=typescript)](https://www.typescriptlang.org)
@@ -110,19 +111,14 @@ Small (Legendas):        16px / Light / #9b7653
 ### Instalação
 
 ```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/nyx-post-porn.git
-cd nyx-post-porn
+# Clone o repositório via GitHub
+# (conecte seu projeto ao GitHub através do botão GitHub no topo do Lovable)
 
 # Instale as dependências
 npm install
-# ou
-bun install
 
 # Inicie o servidor de desenvolvimento
 npm run dev
-# ou
-bun dev
 ```
 
 O site estará disponível em `http://localhost:8080`
@@ -262,8 +258,7 @@ Para licenciamento ou colaborações, entre em contato com as realizadoras.
 ## 🌐 Links
 
 - **Website:** [nyx-post-porn.lovable.app](https://nyx-post-porn.lovable.app)
-- **GitHub:** [github.com/seu-usuario/nyx-post-porn](https://github.com/seu-usuario/nyx-post-porn)
-- **Contato:** [email das realizadoras]
+- **Contato:** Para licenciamento ou colaborações, acesse o site oficial
 
 ---
 
