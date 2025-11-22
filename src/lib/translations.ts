@@ -154,7 +154,7 @@ export const translations = {
           title: "Shame",
           year: "2011",
           directors: "Steve McQueen",
-          description: "Drama sobre dependência sexual em Nova York. McQueen utiliza planos-sequência e enquadramentos claustrofóbicos para criar experiência visceral da solidão urbana e vulnerabilidade.",
+          description: "Drama sobre dependência sexual em Nova York. Steve McQueen utiliza planos-sequência e enquadramentos claustrofóbicos para criar experiência visceral da solidão urbana e vulnerabilidade.",
           image: "/images/ref-shame.png",
           imdb: "https://www.imdb.com/title/tt1723811/"
         },
@@ -162,7 +162,7 @@ export const translations = {
           title: "Love",
           year: "2015",
           directors: "Gaspar Noé",
-          description: "Experiência sensorial em 3D que dissolve fronteiras entre cinema narrativo e performance erótica. Noé usa cenas explícitas como linguagem para explorar memória, perda e intimidade de forma hipnótica.",
+          description: "Experiência sensorial em 3D que dissolve fronteiras entre cinema narrativo e performance erótica. Noé usa cenas explícitas para explorar memória, perda e intimidade de forma hipnótica.",
           image: "/images/ref-love.png",
           imdb: "https://www.imdb.com/title/tt3774694/"
         }
@@ -427,7 +427,7 @@ export const translations = {
           title: "Shame",
           year: "2011",
           directors: "Steve McQueen",
-          description: "Drama about sexual addiction in New York. McQueen employs sequence shots and claustrophobic framing to create visceral experience of urban loneliness and vulnerability.",
+          description: "Drama about sexual addiction in New York. Steve McQueen employs sequence shots and claustrophobic framing to create visceral experience of urban loneliness and vulnerability.",
           image: "/images/ref-shame.png",
           imdb: "https://www.imdb.com/title/tt1723811/"
         },
@@ -435,7 +435,7 @@ export const translations = {
           title: "Love",
           year: "2015",
           directors: "Gaspar Noé",
-          description: "Sensory experience in 3D dissolving boundaries between narrative cinema and erotic performance. Noé uses explicit scenes as language to explore memory, loss and intimacy hypnotically.",
+          description: "Sensory experience in 3D dissolving boundaries between narrative cinema and erotic performance. Noé uses explicit scenes to explore memory, loss and intimacy hypnotically.",
           image: "/images/ref-love.png",
           imdb: "https://www.imdb.com/title/tt3774694/"
         }
