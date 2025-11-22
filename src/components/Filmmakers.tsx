@@ -53,16 +53,14 @@ export function Filmmakers() {
               viewport={{ once: true }}
               className="border border-[#9b7653]/20 rounded-lg p-8 bg-black/40"
             >
-              <div className="flex items-start justify-between gap-8 mb-6">
+              <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex-1">
-                  <div className="flex justify-between items-start gap-4 mb-4">
-                    <p className="nyx-xs flex-shrink-0">
-                      {filmmakers[0].role}
-                    </p>
-                    <p className="text-right text-[#e8d5c4] font-light text-sm md:text-base">
-                      {filmmakers[0].name}
-                    </p>
-                  </div>
+                  <h3 className="nyx-h2 mb-2">
+                    {filmmakers[0].name}
+                  </h3>
+                  <p className="nyx-xs mt-1">
+                    {filmmakers[0].role}
+                  </p>
                 </div>
                 
                 {filmmakers[0].lattes && (
