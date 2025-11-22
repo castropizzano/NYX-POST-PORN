@@ -64,7 +64,7 @@ export function VisualReferences() {
                   </div>
                   
                   <div className={`transition-all duration-500 ${hoveredIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
-                    <p className="nyx-small">
+                    <p className="nyx-small text-justify">
                       {film.description}
                     </p>
                   </div>
