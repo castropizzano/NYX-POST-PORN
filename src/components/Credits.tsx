@@ -27,7 +27,7 @@ export function Credits() {
               viewport={{ once: true }}
               className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-8 bg-black/60"
             >
-              <h3 className="text-3xl font-bold text-[#e8d5c4] mb-6 tracking-tight uppercase">
+              <h3 className="nyx-h2 mb-6">
                 {t.departments[0].name}
               </h3>
               {t.departments[0].credits.map((credit, index) => (
@@ -36,7 +36,7 @@ export function Credits() {
                     {credit.label}
                   </p>
                   <p 
-                    className="text-2xl font-light text-[#e8d5c4] text-right" 
+                    className="nyx-small text-right text-[#e8d5c4] flex-grow" 
                     dangerouslySetInnerHTML={{ __html: credit.value }}
                   />
                 </div>
@@ -175,7 +175,7 @@ export function Credits() {
                 <h3 className="nyx-meta uppercase text-[#9b7653] tracking-wider flex-shrink-0">
                   {t.realization}
                 </h3>
-                <p className="text-2xl font-light text-[#e8d5c4] text-right">
+                <p className="nyx-h2 text-right text-[#e8d5c4]">
                   {t.realizationName}
                 </p>
               </div>
