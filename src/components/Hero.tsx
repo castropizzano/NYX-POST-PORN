@@ -28,24 +28,24 @@ export function Hero() {
           <div>
             {/* Badge PT/EN - QUADRADO - Acima do título */}
             <div className="mb-4">
-              <div className="inline-flex gap-0 items-center backdrop-blur-sm bg-black/40 border border-[#9b7653]/30 rounded-md px-4 py-2 hover:border-[#e8d5c4]/50 transition-all duration-300">
+              <div className="inline-flex gap-0 items-center backdrop-blur-sm bg-black/40 border border-nyx-gold/30 rounded-md px-4 py-2 hover:border-nyx-cream/50 transition-all duration-300">
                 <button
                   onClick={() => setLanguage('pt')}
                   className={`px-3 py-1 text-sm font-light transition-all duration-300 rounded-md ${
                     language === 'pt'
-                      ? 'bg-[#9b7653]/20 text-[#e8d5c4]'
-                      : 'text-[#9b7653] hover:text-[#e8d5c4]'
+                      ? 'bg-nyx-gold/20 text-nyx-cream'
+                      : 'text-nyx-gold hover:text-nyx-cream'
                   }`}
                 >
                   PT
                 </button>
-                <span className="text-[#9b7653] px-1">|</span>
+                <span className="text-nyx-gold px-1">|</span>
                 <button
                   onClick={() => setLanguage('en')}
                   className={`px-3 py-1 text-sm font-light transition-all duration-300 rounded-md ${
                     language === 'en'
-                      ? 'bg-[#9b7653]/20 text-[#e8d5c4]'
-                      : 'text-[#9b7653] hover:text-[#e8d5c4]'
+                      ? 'bg-nyx-gold/20 text-nyx-cream'
+                      : 'text-nyx-gold hover:text-nyx-cream'
                   }`}
                 >
                   EN
@@ -53,7 +53,7 @@ export function Hero() {
               </div>
             </div>
 
-            <h1 className="nyx-h2 mb-1">
+            <h1 className="text-[clamp(2rem,5vw,3.5rem)] md:text-[clamp(3rem,6vw,4.5rem)] font-light tracking-tight leading-tight text-nyx-cream mb-1">
               NYX-POST-PORN
             </h1>
             <p className="nyx-xs">
