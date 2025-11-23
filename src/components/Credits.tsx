@@ -17,7 +17,7 @@ export function Credits() {
             <h2 className="nyx-h2">{t.title}</h2>
           </div>
 
-          {/* Asymmetric Grid Layout */}
+          {/* Grid simplificado - 1 coluna no mobile */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
             {/* Performance - Full Width Highlight */}
             <motion.div 
@@ -25,7 +25,7 @@ export function Credits() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-6 md:p-8 bg-black/60"
+              className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-4 md:p-6 lg:p-8 bg-black/60"
             >
               <h3 className="nyx-h2 mb-4 md:mb-6">
                 {t.departments[0].name}
@@ -235,7 +235,7 @@ export function Credits() {
             {/* Left Column */}
             <div className="space-y-6">
               {/* Main Documentation */}
-              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 min-h-[500px] flex flex-col">
+              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 md:min-h-[500px] flex flex-col">
                 <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.mainDoc}</h4>
                 <div className="space-y-3">
                   {t.docs.main.map((doc) => {
@@ -315,7 +315,7 @@ export function Credits() {
             {/* Right Column */}
             <div className="space-y-6">
               {/* Research Corpus */}
-              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 min-h-[500px] flex flex-col">
+              <div className="border border-[#9b7653]/30 rounded-md p-4 bg-black/60 md:min-h-[500px] flex flex-col">
                 <h4 className="nyx-meta text-[#e8d5c4] mb-4">{t.corpus}</h4>
                 <div className="space-y-3">
                   {t.docs.corpus.map((doc) => (
