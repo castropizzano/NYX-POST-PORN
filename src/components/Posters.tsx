@@ -42,7 +42,7 @@ export function Posters() {
 
             <button
               onClick={goToPrevious}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-12 h-12 md:w-auto md:h-auto md:px-3 md:py-2 flex items-center justify-center bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-base md:text-sm font-mono touch-manipulation"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-14 h-14 md:w-12 md:h-12 flex items-center justify-center bg-black/80 text-[#e8d5c4] hover:text-white hover:bg-black/90 transition-all backdrop-blur-sm border border-[#9b7653]/40 hover:border-[#e8d5c4]/60 rounded-md text-2xl md:text-xl font-mono touch-manipulation active:scale-95 shadow-lg"
               aria-label="Previous poster"
             >
               ←
@@ -50,23 +50,23 @@ export function Posters() {
 
             <button
               onClick={goToNext}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-12 h-12 md:w-auto md:h-auto md:px-3 md:py-2 flex items-center justify-center bg-black/60 text-[#e8d5c4] hover:text-white hover:bg-black/80 transition-all backdrop-blur-sm border border-[#9b7653]/20 hover:border-[#e8d5c4]/40 rounded text-base md:text-sm font-mono touch-manipulation"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-14 h-14 md:w-12 md:h-12 flex items-center justify-center bg-black/80 text-[#e8d5c4] hover:text-white hover:bg-black/90 transition-all backdrop-blur-sm border border-[#9b7653]/40 hover:border-[#e8d5c4]/60 rounded-md text-2xl md:text-xl font-mono touch-manipulation active:scale-95 shadow-lg"
               aria-label="Next poster"
             >
               →
             </button>
           </div>
 
-          {/* Indicadores de posição */}
-          <div className="flex justify-center gap-2 mt-4">
+          {/* Indicadores de posição - Mobile Optimized */}
+          <div className="flex justify-center gap-3 mt-6">
             {posters.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all touch-manipulation ${
+                className={`min-w-[44px] min-h-[12px] rounded-full transition-all touch-manipulation ${
                   index === currentIndex 
-                    ? 'bg-[#e8d5c4] w-6' 
-                    : 'bg-[#9b7653]/40 hover:bg-[#9b7653]/60'
+                    ? 'bg-[#e8d5c4] w-12 md:w-8' 
+                    : 'bg-[#9b7653]/40 hover:bg-[#9b7653]/60 w-3 md:w-2'
                 }`}
                 aria-label={`Go to poster ${index + 1}`}
               />
