@@ -95,7 +95,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
   return (
     <Dialog open={isOpen} onOpenChange={() => {}}>
       <DialogContent
-        className="sm:max-w-md bg-black border border-nyx-gold text-nyx-cream rounded-none max-h-[90vh] overflow-y-auto"
+        className="sm:max-w-md bg-black border border-nyx-gold text-nyx-cream rounded-none max-h-[85vh] overflow-y-auto p-4 md:p-6"
         onPointerDownOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
       >
@@ -119,14 +119,14 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
           </button>
         </div>
 
-        <div className="space-y-4 md:space-y-6 p-4 md:p-6 pt-14 md:pt-6">
+        <div className="space-y-4 md:space-y-6 pt-14 md:pt-6">
           <div className="space-y-2 text-center">
             <h2 className="nyx-h2">{t.title}</h2>
             <p className="nyx-xs">{t.subtitle}</p>
           </div>
 
           <div className="space-y-4">
-            <p className="nyx-small text-justify">{t.description}</p>
+            <p className="nyx-small text-left md:text-justify leading-relaxed">{t.description}</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -138,20 +138,20 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={isSubmitting}
-                className="bg-black border-nyx-gold text-nyx-cream placeholder:text-nyx-gold/50 rounded-none"
+                className="bg-black border-nyx-gold text-nyx-cream placeholder:text-nyx-gold/50 rounded-none min-h-[48px]"
               />
             </div>
 
-            <label className="flex items-start gap-3 cursor-pointer touch-manipulation">
+            <label className="flex items-start gap-3 cursor-pointer touch-manipulation min-h-[48px]">
               <input
                 type="checkbox"
                 checked={confirmed}
                 onChange={(e) => setConfirmed(e.target.checked)}
-                className="mt-1 accent-nyx-gold min-w-[20px] min-h-[20px]"
+                className="mt-1 accent-nyx-gold min-w-[24px] min-h-[24px]"
                 required
                 disabled={isSubmitting}
               />
-              <span className="nyx-small text-justify">
+              <span className="nyx-small text-left md:text-justify leading-relaxed">
                 {t.confirmText}{' '}
                 <a 
                   href="/privacy" 
@@ -169,7 +169,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
             <Button
               type="submit"
               disabled={!confirmed || !email || isSubmitting}
-              className="w-full bg-black hover:bg-nyx-gold text-white hover:text-black border border-nyx-gold nyx-small rounded-none transition-all duration-200 disabled:bg-black/50 disabled:text-white/50 disabled:border-nyx-gold/30 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] touch-manipulation"
+              className="w-full bg-black hover:bg-nyx-gold text-white hover:text-black border border-nyx-gold nyx-small rounded-none transition-all duration-200 disabled:bg-black/50 disabled:text-white/50 disabled:border-nyx-gold/30 disabled:opacity-50 disabled:cursor-not-allowed min-h-[52px] touch-manipulation"
             >
               {isSubmitting 
                 ? (language === 'pt' ? 'Processando...' : 'Processing...') 

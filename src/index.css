@@ -14,6 +14,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overscroll-behavior-y: none; /* Previne bounce indesejado */
+  }
+
+  /* Safe area para dispositivos com notch */
+  @supports(padding: max(0px)) {
+    body {
+      padding-left: max(0px, env(safe-area-inset-left));
+      padding-right: max(0px, env(safe-area-inset-right));
+    }
   }
 
   :root {
@@ -95,6 +104,11 @@
     touch-action: manipulation;
   }
 
+  button:active, a:active {
+    opacity: 0.8;
+    transition: opacity 0.1s ease;
+  }
+
   /* Better scrolling on iOS */
   .overflow-scroll, .overflow-auto {
     -webkit-overflow-scrolling: touch;
@@ -104,6 +118,25 @@
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* Scrollbar customization */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   /* Chrome-specific font rendering improvements */
@@ -208,9 +241,15 @@
   
   .nyx-small {
     font-size: var(--font-small-mobile);
+    line-height: 1.7; /* Melhor legibilidade no mobile */
   }
 
   .nyx-meta {
     font-size: var(--font-meta-mobile);
+  }
+
+  /* Desabilitar justificação no mobile por padrão */
+  .text-justified {
+    text-align: left;
   }
 }

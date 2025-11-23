@@ -14,8 +14,8 @@ export function References() {
           </h2>
         </div>
 
-        {/* Grid de Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        {/* Grid de Cards - 1 coluna no mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
           {references.map((ref, index) => (
             <div
               key={index}
@@ -28,13 +28,13 @@ export function References() {
                   <p className="nyx-xs mt-1 break-words">{ref.work}</p>
                 </div>
                 
-                <div className="flex gap-2 flex-shrink-0">
+                <div className="flex gap-2.5 md:gap-2 flex-shrink-0">
                   {ref.pdf && (
                     <a
                       href={ref.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center px-2 md:px-3 py-1 md:py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 touch-manipulation"
+                      className="min-w-[48px] min-h-[48px] md:min-w-0 md:min-h-0 flex items-center justify-center px-3 md:px-3 py-2 md:py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 touch-manipulation"
                       aria-label={`Download PDF: ${ref.work}`}
                     >
                       PDF
@@ -46,7 +46,7 @@ export function References() {
                       href={ref.imdb}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center px-2 md:px-3 py-1 md:py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 touch-manipulation"
+                      className="min-w-[48px] min-h-[48px] md:min-w-0 md:min-h-0 flex items-center justify-center px-3 md:px-3 py-2 md:py-1.5 rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 touch-manipulation"
                       aria-label={`IMDb: ${ref.work}`}
                     >
                       IMDb
@@ -57,7 +57,7 @@ export function References() {
 
               {/* Descrição */}
               <div>
-                <p className="nyx-small text-justify">
+                <p className="nyx-small text-left md:text-justify leading-relaxed">
                   {ref.description} {ref.relation}
                 </p>
               </div>
