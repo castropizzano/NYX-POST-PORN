@@ -7,13 +7,17 @@ import { translations } from '@/lib/translations';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
+import { logError } from '@/lib/logger';
 
 interface AgeGateProps {
   isOpen: boolean;
   onVerify: () => void;
 }
 
-const emailSchema = z.string().email().trim().max(255);
+const ageGateSchema = z.object({
+  email: z.string().email().trim().max(255),
+  userAgent: z.string().max(500).optional(),
+});
 
 export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
   const [email, setEmail] = useState('');
@@ -27,12 +31,16 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
     e.preventDefault();
     if (!confirmed || !email) return;
 
-    // Validação de email
-    const emailValidation = emailSchema.safeParse(email);
-    if (!emailValidation.success) {
+    // Validação completa
+    const validation = ageGateSchema.safeParse({
+      email,
+      userAgent: navigator.userAgent,
+    });
+
+    if (!validation.success) {
       toast({
-        title: language === 'pt' ? 'Email inválido' : 'Invalid email',
-        description: language === 'pt' ? 'Por favor, insira um email válido.' : 'Please enter a valid email.',
+        title: language === 'pt' ? 'Dados inválidos' : 'Invalid data',
+        description: language === 'pt' ? 'Por favor, verifique os dados inseridos.' : 'Please check the data entered.',
         variant: 'destructive',
       });
       return;
@@ -44,8 +52,8 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
       // Call edge function with rate limiting
       const { data, error } = await supabase.functions.invoke('submit-age-gate', {
         body: {
-          email: emailValidation.data,
-          userAgent: navigator.userAgent,
+          email: validation.data.email,
+          userAgent: validation.data.userAgent,
         },
       });
 
@@ -71,7 +79,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
       // Sucesso: permitir acesso
       onVerify();
     } catch (error) {
-      console.error('Error saving visitor:', error);
+      logError('AgeGate:submit', error);
       toast({
         title: language === 'pt' ? 'Erro' : 'Error',
         description: language === 'pt' 

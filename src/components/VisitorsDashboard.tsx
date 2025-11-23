@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Download, RefreshCw, ArrowLeft, Search, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
+import { logError } from '@/lib/logger';
 
 interface Visitor {
   id: string;
@@ -41,14 +42,14 @@ export function VisitorsDashboard() {
         .maybeSingle();
 
       if (error) {
-        console.error('Error checking admin role:', error);
+        logError('Dashboard:checkAdminRole', error);
         setIsAdmin(false);
         return;
       }
 
       setIsAdmin(!!roles);
     } catch (error) {
-      console.error('Error in checkAdminRole:', error);
+      logError('Dashboard:checkAdminRole:catch', error);
       setIsAdmin(false);
     } finally {
       setCheckingPermissions(false);
@@ -76,7 +77,7 @@ export function VisitorsDashboard() {
       }
       setVisitors(data || []);
     } catch (error) {
-      console.error('Error fetching visitors:', error);
+      logError('Dashboard:fetchVisitors', error);
       toast({
         title: 'Erro ao carregar visitantes',
         description: 'Não foi possível carregar a lista de visitantes.',
@@ -180,19 +181,9 @@ export function VisitorsDashboard() {
             <p className="nyx-small">
               Você precisa ser <span className="text-nyx-gold font-semibold">administrador</span> para acessar o dashboard de visitantes.
             </p>
-            <div className="bg-black/30 p-6 border border-nyx-gold/30 text-left">
-              <p className="nyx-small text-nyx-cream/80 mb-4">
-                Para se tornar admin, execute este comando no backend:
-              </p>
-              <code className="block bg-black p-4 text-nyx-gold text-sm overflow-x-auto">
-                INSERT INTO public.user_roles (user_id, role)<br />
-                SELECT id, 'admin'::public.app_role<br />
-                FROM auth.users<br />
-                WHERE email = 'seu-email@exemplo.com'<br />
-                ON CONFLICT (user_id, role) DO NOTHING;
-              </code>
-              <p className="nyx-small text-nyx-cream/60 mt-4">
-                Substitua 'seu-email@exemplo.com' pelo seu email de login
+            <div className="bg-black/30 p-6 border border-nyx-gold/30">
+              <p className="nyx-small text-nyx-cream/80 text-center">
+                Entre em contato com o administrador do sistema para solicitar acesso administrativo.
               </p>
             </div>
           </div>
