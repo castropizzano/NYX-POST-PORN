@@ -99,7 +99,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
         onPointerDownOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
       >
-        <div className="absolute top-4 right-4 flex items-center gap-2 text-xs md:text-sm z-10">
+        <div className="absolute top-4 left-4 flex items-center gap-2 text-xs md:text-sm z-10">
           <button
             onClick={() => setLanguage('pt')}
             className={`transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center ${
@@ -145,7 +145,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
             <Button
               type="submit"
               disabled={!confirmed || !email || isSubmitting}
-              className="w-full bg-nyx-gold hover:bg-nyx-gold-hover text-nyx-cream nyx-small rounded-none transition-all duration-200 disabled:bg-nyx-gold/30 disabled:text-nyx-gold/50 disabled:cursor-not-allowed min-h-[48px] touch-manipulation"
+              className="w-full bg-nyx-gold hover:bg-nyx-gold-hover text-black nyx-small rounded-none transition-all duration-200 disabled:bg-nyx-gold/30 disabled:text-nyx-gold/70 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] touch-manipulation"
             >
               {isSubmitting 
                 ? (language === 'pt' ? 'Processando...' : 'Processing...') 
