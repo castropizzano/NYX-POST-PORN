@@ -8,7 +8,7 @@ const corsHeaders = {
 
 // Rate limit configuration
 const RATE_LIMIT_WINDOW_MINUTES = 60;
-const MAX_SUBMISSIONS_PER_WINDOW = 3;
+const MAX_SUBMISSIONS_PER_WINDOW = 10; // Temporarily increased for testing - REVERT TO 3 BEFORE PRODUCTION
 
 serve(async (req) => {
   // Handle CORS preflight requests
