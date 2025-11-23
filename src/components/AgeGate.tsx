@@ -95,6 +95,7 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
   return (
     <Dialog open={isOpen} onOpenChange={() => {}}>
       <DialogContent
+        hideCloseButton
         className="sm:max-w-md bg-black border border-nyx-gold text-nyx-cream rounded-none max-h-[85vh] overflow-y-auto p-4 md:p-6"
         onPointerDownOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
