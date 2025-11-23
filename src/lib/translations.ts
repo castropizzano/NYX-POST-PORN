@@ -247,7 +247,10 @@ export const translations = {
         main: [
           { id: "01", name: "README.MD", desc: "Manifesto e estrutura do projeto" },
           { id: "02", name: "LICENSE.MD", desc: "Licença CC BY-NC-SA 4.0" },
-          { id: "03", name: "CITATION.CFF", desc: "Citação automatizada do GitHub" }
+          { id: "03", name: "CITATION.CFF", desc: "Citação automatizada do GitHub" },
+          { id: "04", name: "METHODOLOGY.MD", desc: "Métodos e procedimentos de pesquisa" },
+          { id: "05", name: "PHILOSOPHY.MD", desc: "Justificativa das escolhas conceituais" },
+          { id: "06", name: "COPYRIGHT.MD", desc: "Ética e transparência da co-criação" }
         ],
         project: [
           { id: "01", name: "CONCEITO.PDF", desc: "Documento conceitual do projeto", file: "/documents/conceito.pdf" },
@@ -643,7 +646,10 @@ export const translations = {
         main: [
           { id: "01", name: "README.MD", desc: "Manifesto and project structure" },
           { id: "02", name: "LICENSE.MD", desc: "CC BY-NC-SA 4.0 License" },
-          { id: "03", name: "CITATION.CFF", desc: "GitHub automated citation" }
+          { id: "03", name: "CITATION.CFF", desc: "GitHub automated citation" },
+          { id: "04", name: "METHODOLOGY.MD", desc: "Research methods and procedures" },
+          { id: "05", name: "PHILOSOPHY.MD", desc: "Rationale for conceptual choices" },
+          { id: "06", name: "COPYRIGHT.MD", desc: "Ethics and transparency of co-creation" }
         ],
         project: [
           { id: "01", name: "CONCEITO.PDF", desc: "Project conceptual document", file: "/documents/conceito.pdf" },
