@@ -31,32 +31,28 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
     <section className="py-16 md:py-20 px-4 md:px-12 lg:px-16 bg-black">
       <div className="max-w-6xl mx-auto">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <div className="relative mb-6 md:mb-8">
-            <TabsList className="w-full bg-transparent border-b border-[#9b7653]/30 rounded-none h-auto p-0 justify-start overflow-x-auto scrollbar-hide">
-              <TabsTrigger
-                value="trailer"
-                className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-5 py-3 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap touch-manipulation min-h-[48px]"
-              >
-                TRAILER
-              </TabsTrigger>
-              <TabsTrigger
-                value="official"
-                className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-5 py-3 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap touch-manipulation min-h-[48px] disabled:opacity-50"
-                disabled={!ageVerified}
-              >
-                OFFICIAL CUT {!ageVerified && <span className="ml-2 text-base">🔒</span>}
-              </TabsTrigger>
-              <TabsTrigger
-                value="multicam"
-                className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-5 py-3 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap touch-manipulation min-h-[48px] disabled:opacity-50"
-                disabled={!ageVerified}
-              >
-                MULTICAM {!ageVerified && <span className="ml-2 text-base">🔒</span>}
-              </TabsTrigger>
-            </TabsList>
-            {/* Scroll Indicator Gradient */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-black to-transparent pointer-events-none md:hidden" />
-          </div>
+          <TabsList className="w-full bg-transparent border-b border-[#9b7653]/30 rounded-none h-auto p-0 mb-6 md:mb-8 justify-start overflow-x-auto">
+            <TabsTrigger
+              value="trailer"
+              className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-4 py-2.5 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap"
+            >
+              TRAILER
+            </TabsTrigger>
+            <TabsTrigger
+              value="official"
+              className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-4 py-2.5 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap"
+              disabled={!ageVerified}
+            >
+              OFFICIAL CUT {!ageVerified && <span className="ml-2 nyx-meta">🔒</span>}
+            </TabsTrigger>
+            <TabsTrigger
+              value="multicam"
+              className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-4 py-2.5 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap"
+              disabled={!ageVerified}
+            >
+              MULTICAM {!ageVerified && <span className="ml-2 nyx-meta">🔒</span>}
+            </TabsTrigger>
+          </TabsList>
 
           <TabsContent value="trailer" className="mt-0">
             <div className="aspect-video bg-black overflow-hidden relative">
@@ -73,8 +69,8 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
                     loading="lazy"
                   />
                   <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 group-hover:opacity-80 transition-opacity">
-                    <div className="w-20 h-20 md:w-16 md:h-16 bg-[#e8d5c4] flex items-center justify-center shadow-2xl">
-                      <div className="w-0 h-0 border-t-[12px] md:border-t-[10px] border-t-transparent border-l-[20px] md:border-l-[16px] border-l-black border-b-[12px] md:border-b-[10px] border-b-transparent ml-1" />
+                    <div className="w-14 h-14 md:w-12 md:h-12 bg-[#e8d5c4] flex items-center justify-center">
+                      <div className="w-0 h-0 border-t-[10px] md:border-t-[8px] border-t-transparent border-l-[16px] md:border-l-[14px] border-l-black border-b-[10px] md:border-b-[8px] border-b-transparent ml-1" />
                     </div>
                   </div>
                 </button>
@@ -107,8 +103,8 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
                         loading="lazy"
                       />
                       <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 group-hover:opacity-80 transition-opacity">
-                        <div className="w-20 h-20 md:w-16 md:h-16 bg-[#e8d5c4] flex items-center justify-center shadow-2xl">
-                          <div className="w-0 h-0 border-t-[12px] md:border-t-[10px] border-t-transparent border-l-[20px] md:border-l-[16px] border-l-black border-b-[12px] md:border-b-[10px] border-b-transparent ml-1" />
+                        <div className="w-14 h-14 md:w-12 md:h-12 bg-[#e8d5c4] flex items-center justify-center">
+                          <div className="w-0 h-0 border-t-[10px] md:border-t-[8px] border-t-transparent border-l-[16px] md:border-l-[14px] border-l-black border-b-[10px] md:border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
                     </button>
@@ -143,8 +139,8 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
                         loading="lazy"
                       />
                       <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 group-hover:opacity-80 transition-opacity">
-                        <div className="w-20 h-20 md:w-16 md:h-16 bg-[#e8d5c4] flex items-center justify-center shadow-2xl">
-                          <div className="w-0 h-0 border-t-[12px] md:border-t-[10px] border-t-transparent border-l-[20px] md:border-l-[16px] border-l-black border-b-[12px] md:border-b-[10px] border-b-transparent ml-1" />
+                        <div className="w-14 h-14 md:w-12 md:h-12 bg-[#e8d5c4] flex items-center justify-center">
+                          <div className="w-0 h-0 border-t-[10px] md:border-t-[8px] border-t-transparent border-l-[16px] md:border-l-[14px] border-l-black border-b-[10px] md:border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
                     </button>
@@ -165,29 +161,11 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 md:px-0">
-        <div className="text-center nyx-meta mt-6 md:mt-8 space-y-1">
-          {activeTab === 'trailer' && (
-            <>
-              <p className="text-sm md:text-base">{t.filmPlayer.trailer}</p>
-              <p className="text-xs">{t.filmPlayer.duration}: {durations.trailer} | {t.filmPlayer.digital} | {t.filmPlayer.color}</p>
-              <p className="text-xs">{t.filmPlayer.stereoSound} | 2024 | {t.filmPlayer.brazil}</p>
-            </>
-          )}
-          {activeTab === 'official' && (
-            <>
-              <p className="text-sm md:text-base">{t.filmPlayer.officialCut}</p>
-              <p className="text-xs">{t.filmPlayer.duration}: {durations.official} | {t.filmPlayer.digital} | {t.filmPlayer.color}</p>
-              <p className="text-xs">{t.filmPlayer.stereoSound} | 2024 | {t.filmPlayer.brazil}</p>
-            </>
-          )}
-          {activeTab === 'multicam' && (
-            <>
-              <p className="text-sm md:text-base">{t.filmPlayer.multicam}</p>
-              <p className="text-xs">{t.filmPlayer.duration}: {durations.multicam} | {t.filmPlayer.digital} | {t.filmPlayer.color}</p>
-              <p className="text-xs">{t.filmPlayer.stereoSound} | 2024 | {t.filmPlayer.brazil}</p>
-            </>
-          )}
-        </div>
+        <p className="text-center nyx-meta mt-6 md:mt-8 text-xs md:text-sm">
+          {activeTab === 'trailer' && `${t.filmPlayer.trailer} ${t.filmPlayer.duration}: ${durations.trailer} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
+          {activeTab === 'official' && `${t.filmPlayer.officialCut} ${t.filmPlayer.duration}: ${durations.official} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
+          {activeTab === 'multicam' && `${t.filmPlayer.multicam} ${t.filmPlayer.duration}: ${durations.multicam} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
+        </p>
       </div>
     </section>
   );
