@@ -1,274 +1,330 @@
-# NYX-POST-PORN
+---
+Project: NYX-POST-PORN - Corpo Expandido
+Type: README
+Version: 1.3.0
+Last Update: 2025-11-23
+Institution: PPG-CINEAV/UNESPAR
+Research Group: CineCriare
+---
 
-> Uma experiência cinemática digital que explora os limites da narrativa audiovisual e da performance diante da câmera.
+# NYX-POST-PORN: Corpo Expandido
 
-[![Version](https://img.shields.io/badge/version-1.3.0-gold)](https://nyx-post-porn.lovable.app)
-[![Lovable](https://img.shields.io/badge/Built%20with-Lovable-ff69b4)](https://lovable.dev)
-[![React](https://img.shields.io/badge/React-18.3-61dafb?logo=react)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178c6?logo=typescript)](https://www.typescriptlang.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?logo=tailwind-css)](https://tailwindcss.com)
+> *"A câmera não domina o corpo. Ela cria uma relação íntima com a performer, promovendo um diálogo orgânico entre corpo e imagem."*
+
+<div align="center">
+
+[![Version](https://img.shields.io/badge/version-1.3.0-gold.svg)](https://github.com/castrobreno/nyx-post-porn-release)
+[![PPG-CINEAV](https://img.shields.io/badge/PPG--CINEAV-UNESPAR-black.svg)](https://unespar.edu.br)
+[![CineCriare](https://img.shields.io/badge/CineCriare-Research-gold.svg)](https://unespar.edu.br)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-black.svg)](LICENSE.md)
+
+[**Website Oficial**](https://nyx-post-porn.lovable.app) • [**Documentação**](CONCEPT.md) • [**Internet Archive**](https://archive.org/details/nyx-post-porn)
+
+</div>
 
 ---
 
-## 🎬 Sobre o Projeto
+## 🌙 Manifesto Artístico
 
-**NYX-POST-PORN** é um filme experimental de longa-metragem que investiga a performatividade da sexualidade diante da câmera, questionando a objetificação do corpo através da linguagem cinematográfica. Este website é a plataforma oficial do projeto, oferecendo uma experiência imersiva que reflete a estética dark e cinematográfica da obra.
+**NYX-POST-PORN** é uma experiência cinemática experimental que subverte o *male gaze* patriarcal e propõe um novo paradigma de prazer visual através da desconstrução do corpo objetificado.
 
-### 🎥 Sinopse
+O filme investiga a relação entre **corpo, câmera e estética** no contexto do pós-pornô, capturando fragmentos do corpo em performance para questionar as fronteiras do olhar e oferecer uma experiência imersiva de autoconhecimento e expansão corporal.
 
-Uma videochamada de sexo que se transforma em reflexão sobre desejo, poder e espetáculo. NYX-POST-PORN propõe uma desconstrução da pornografia tradicional através de uma narrativa que expõe os mecanismos de representação do corpo e do sexo no cinema.
+### Propósito da Obra
 
-**[🔗 Acesse o site](https://nyx-post-porn.lovable.app)**
+- **Desconstrução da Escopofilia Patriarcal**: Crítica ao olhar masculino dominante no cinema tradicional
+- **Corpo Expandido**: Performance corporal como ato político de autodescoberta e empoderamento
+- **Prazer Visual Ético**: Nova relação sensorial com o corpo filmado, baseada em intimidade e diálogo
+- **Pós-Pornografia**: Subversão das narrativas convencionais da pornografia mainstream
 
 ---
 
-## ✨ Características
+## 📚 Fundamentação Teórica
 
-- 🔞 **Age Gate** - Sistema de verificação de idade 18+ com persistência local
-- 🌍 **Bilíngue** - Interface completa em Português e Inglês
-- 🎨 **Design Cinematográfico** - Paleta escura com detalhes em ouro/creme
-- 📱 **100% Responsivo** - Experiência otimizada para mobile, tablet e desktop
-- ♿ **Acessível** - Hierarquia semântica e navegação por teclado
-- ⚡ **Performance** - Build otimizado com Vite + lazy loading
-- 🎭 **Micro-interações** - Animações sutis com Framer Motion
-- 📄 **Documentação Completa** - Referências teóricas e visuais integradas
+NYX-POST-PORN dialoga com teoria crítica do cinema e estudos visuais contemporâneos:
+
+| Teórico/a | Conceito-Chave | Aplicação em NYX |
+|-----------|----------------|------------------|
+| **Laura Mulvey** | *Prazer Visual e Cinema Narrativo* | Crítica à objetificação do corpo feminino; proposta de prazer visual ético nascido do corpo autônomo |
+| **Jean-Louis Comolli** | *Ver e Poder* | Cinema como ferramenta crítica; convocação do espectador para campo de fricção ética e estética |
+| **Luciano Vinhosa** | *Videoperformance* | Vídeo como extensão da performance; gesto videoperformático como resistência cultural |
+| **Adriana Azevedo** | *Pós-Pornografia* | Desconstrução das tecnologias de controle do desejo; práticas radicais de liberdade corporal |
+
+📖 **Referências completas**: Veja [CONCEPT.md](CONCEPT.md) para aprofundamento teórico
+
+---
+
+## 🎓 Contexto Acadêmico
+
+**Instituição**: UNESPAR – Universidade Estadual do Paraná | Faculdade de Artes do Paraná (FAP)  
+**Programa**: PPG-CINEAV (Programa de Pós-Graduação em Cinema e Artes do Vídeo)  
+**Grupo de Pesquisa**: [CineCriare](https://www.instagram.com/cinecriarefap/) – Corpo e Movimento  
+**Orientação**: Profa. Dra. Cristiane Wosniak | Prof. Dr. Fábio Noronha
+
+### Equipe Realizadora
+
+Todos os realizadores são mestrandos do PPG-CINEAV/UNESPAR:
+
+- **Flávia Massali** – Performer
+- **Castro Pizzano** – Idealização, Dir. de Fotografia, Montagem e Pós-Produção ([Lattes](http://lattes.cnpq.br/5523516994010198))
+- **Patrícia Ressureição** – Dir. Corporal e Dir. Coletiva ([Lattes](http://lattes.cnpq.br/4634695086782866))
+- **Murilo Castro** – Produção, Still e Making Of ([Lattes](http://lattes.cnpq.br/5118575339218967))
+- **Ana Pupo** – Dir. de Arte, Maquiagem e Produção ([Lattes](http://lattes.cnpq.br/6198230125234271))
+
+**Trilha Sonora Original**: Dan Guinski "Non-Grata" – *Breeze*
+
+📄 **Detalhes completos**: Veja [ACADEMIC.md](ACADEMIC.md) para contexto institucional
+
+---
+
+## 🎬 Sobre o Website
+
+Este website oficial foi projetado como **extensão digital da obra**, refletindo a estética dark e cinematográfica do filme através de:
+
+### Experiência Digital
+
+- 🔞 **Age Gate como Limiar Ritual**: Não apenas verificação etária, mas entrada consciente na experiência imersiva
+- 🌍 **Interface Bilíngue (PT/EN)**: Acessibilidade internacional para festivais e publicações acadêmicas
+- 🎨 **Design Cinematográfico**: Paleta cromática (preto/ouro/creme) conectada ao conceito NYX (noite/corpo)
+- 📱 **Responsividade Total**: Experiência consistente em dispositivos móveis e desktop
+- ♿ **Acessibilidade**: Navegação por teclado, leitores de tela, contraste adequado
+- ⚡ **Performance Otimizada**: Carregamento rápido, lazy loading de imagens, animações suaves
+- ✨ **Micro-interações**: Transições fluidas que reforçam a atmosfera sensorial
+- 📖 **Documentação Integrada**: Referências teóricas, processo criativo e ficha técnica completa
+
+---
+
+## 🎭 Processo Criativo Coletivo
+
+A obra propõe **performance corporal** que envolve masturbação feminina como ato poético de empoderamento. A interação entre corpo e câmera é fluida, desconstruindo o tabu da sexualidade feminina através de captura fragmentada.
+
+### Seis Momentos da Performance
+
+1. **O Corpo como Paisagem** – Estabelecimento do território corporal
+2. **Toques e Respiração** – Ativação sensorial inicial
+3. **Respiração e Tensão** – Construção de intensidade
+4. **Fragmentação do Ato** – Desconstrução da linearidade narrativa
+5. **Clímax Fragmentado** – Dissolução das fronteiras corpo/câmera
+6. **Pós-Clímax** – Reflexão e retorno
+
+### Estilo Visual
+
+- **Iluminação**: Suave e difusa, criando atmosfera etérea
+- **Movimento de Câmera**: Fluido e orgânico, intimidade expandida
+- **Som**: Respiração ampliada, trilha original, reflexões ambientes
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
-### Frontend Core
-- **[React 18](https://react.dev)** - Biblioteca UI com hooks modernos
-- **[TypeScript](https://www.typescriptlang.org)** - Type safety e developer experience
-- **[Vite](https://vitejs.dev)** - Build tool ultrarrápido
-- **[React Router](https://reactrouter.com)** - Roteamento client-side
+### Core
+- **React 18** + **TypeScript** – Type-safe component architecture
+- **Vite** – Lightning-fast build tool
+- **React Router** – Client-side routing
 
 ### Styling & UI
-- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS framework
-- **[shadcn/ui](https://ui.shadcn.com)** - Componentes acessíveis e customizáveis
-- **[Radix UI](https://www.radix-ui.com)** - Primitivos de UI headless
-- **[Framer Motion](https://www.framer.com/motion)** - Animações declarativas
+- **Tailwind CSS** – Utility-first design system
+- **shadcn/ui** – Customizable component library
+- **Radix UI** – Accessible primitives
+- **Framer Motion** – Smooth animations
 
-### Developer Tools
-- **[ESLint](https://eslint.org)** - Linting de código
-- **[PostCSS](https://postcss.org)** - Transformação CSS
-- **[Lucide React](https://lucide.dev)** - Ícones SVG otimizados
+### Backend (Lovable Cloud)
+- **Supabase** – PostgreSQL database, Authentication, Edge Functions
+- **Row Level Security (RLS)** – Data protection
+- **Rate Limiting** – Abuse prevention
 
 ---
 
-## 🎨 Sistema de Design
+## 🎨 Design System
 
-### Paleta de Cores
+### Paleta Cromática
 
 ```css
-/* Cores Primárias */
---background: #0C0C0C      /* Deep Black */
---cream: #e8d5c4           /* Cream - Títulos e destaques */
---gold: #9b7653            /* Gold - Textos e bordas */
+/* Noite (NYX) */
+--background: #000000  /* Preto absoluto - mistério primordial */
 
-/* Gradientes */
---gradient-overlay: linear-gradient(to-b, black/20, transparent, black)
---gradient-radial: radial-gradient(circle at center, black/0, black/60)
+/* Corpo (Pele) */
+--foreground: #f5f1e8  /* Creme claro - corporalidade */
+--accent: #9b7653     /* Dourado terroso - calor humano */
+
+/* Gradientes Conceituais */
+--gradient-primary: linear-gradient(135deg, #9b7653, #d4af37)
+--shadow-glow: 0 0 40px rgba(212, 175, 55, 0.3)
 ```
 
 ### Tipografia
 
-**Família:** [TT Commons](https://fonts.google.com/specimen/TT+Commons) (Google Fonts)
-
-```css
-/* Hierarquia */
-H1 (Títulos principais): 36px / Bold / Uppercase / #e8d5c4
-H2/H3 (Subtítulos):      24px / Semibold / #e8d5c4
-Body (Textos):           24px / Regular / #9b7653 / line-height 1.8
-Small (Legendas):        16px / Light / #9b7653
-```
-
-**Mobile Adjustments:**
-- H1: 28px
-- H2/Body: 18px
-- Small: 14px
-
-### Componentes Reutilizáveis
-
-```tsx
-// Classes utilitárias customizadas
-.nyx-h1      → Títulos principais (36px bold uppercase)
-.nyx-h2      → Subtítulos (24px semibold)
-.nyx-body    → Textos (24px regular, line-height 1.8)
-.nyx-small   → Legendas (16px light)
-.nyx-xs      → Notas (14px light)
-```
+- **Display**: TT Commons – Sans-serif geométrica moderna
+- **Hierarquia**:
+  - `nyx-h1`: 3.5rem (mobile: 2.5rem) – Títulos principais
+  - `nyx-h2`: 2rem (mobile: 1.5rem) – Seções
+  - `nyx-body`: 1.125rem – Corpo de texto
+  - `nyx-small`: 0.875rem – Metadados
 
 ---
 
-## 🚀 Começando
+## 🚀 Desenvolvimento Local
 
 ### Pré-requisitos
-
-- **Node.js** 18+ ou **Bun** 1.0+
-- npm, yarn ou bun
+- Node.js 18+ ou Bun
 
 ### Instalação
 
 ```bash
-# Clone o repositório via GitHub
-# (conecte seu projeto ao GitHub através do botão GitHub no topo do Lovable)
+# Clone o repositório
+git clone https://github.com/castrobreno/nyx-post-porn-release.git
+cd nyx-post-porn-release
 
-# Instale as dependências
+# Instale dependências
 npm install
+# ou
+bun install
 
-# Inicie o servidor de desenvolvimento
+# Inicie servidor de desenvolvimento
 npm run dev
+# ou
+bun dev
 ```
 
-O site estará disponível em `http://localhost:8080`
+Acesse: `http://localhost:5173`
 
 ### Build para Produção
 
 ```bash
-# Gere a build otimizada
 npm run build
-
-# Preview da build de produção
 npm run preview
 ```
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
 ```
-nyx-post-porn/
+nyx-post-porn-release/
 ├── public/
-│   ├── images/          # Imagens estáticas (hero, posters, referências)
-│   ├── audio/           # Trilha sonora do filme
-│   ├── documents/       # PDFs das referências teóricas
-│   └── robots.txt
+│   ├── audio/              # Trilha sonora
+│   ├── documents/          # PDFs acadêmicos e certificações
+│   └── images/             # Assets visuais
 ├── src/
-│   ├── components/
-│   │   ├── ui/          # Componentes shadcn/ui
-│   │   ├── AgeGate.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Synopsis.tsx
-│   │   ├── Concept.tsx
-│   │   ├── Process.tsx
-│   │   ├── Filmmakers.tsx
-│   │   ├── References.tsx
-│   │   ├── VisualReferences.tsx
-│   │   ├── Credits.tsx
-│   │   ├── Footer.tsx
+│   ├── components/         # Componentes React
+│   │   ├── ui/            # shadcn/ui components
+│   │   ├── AgeGate.tsx    # Portal de entrada
+│   │   ├── Hero.tsx       # Seção principal
+│   │   ├── Synopsis.tsx   # Sinopse do filme
+│   │   ├── Concept.tsx    # Conceito artístico
 │   │   └── ...
-│   ├── contexts/
-│   │   └── LanguageContext.tsx  # Gerenciamento de idiomas
-│   ├── lib/
-│   │   ├── translations.ts      # Conteúdo bilíngue
-│   │   └── utils.ts
-│   ├── pages/
-│   │   ├── Index.tsx
-│   │   └── NotFound.tsx
-│   ├── hooks/
-│   ├── App.tsx
-│   ├── index.css        # Design system & tokens
-│   └── main.tsx
-├── tailwind.config.ts   # Configuração Tailwind + tokens
-├── vite.config.ts
-└── package.json
+│   ├── contexts/          # React Context (i18n)
+│   ├── lib/               # Utilitários
+│   │   └── translations.ts # Sistema bilíngue
+│   ├── pages/             # Páginas principais
+│   └── integrations/      # Supabase client
+├── supabase/
+│   └── functions/         # Edge Functions
+├── CONCEPT.md             # Fundamentação artística
+├── ACADEMIC.md            # Contexto institucional
+├── SECURITY.md            # Documentação de segurança
+└── README.md              # Este arquivo
 ```
 
 ---
 
-## 🎯 Funcionalidades Principais
+## 🎪 Exibições e Certificações
 
-### 1. Age Gate Inteligente
-- Verificação 18+ obrigatória
-- Persistência com `localStorage`
-- Formulário de data de nascimento com validação
-- Animações de transição suaves
+- ✅ **FACC/UFRJ** – Faculdade de Comunicação, Universidade Federal do Rio de Janeiro
+- ✅ **CineCriare** – Certificado oficial do grupo de pesquisa
+- ✅ **Internet Archive** – Repositório permanente de preservação digital
 
-### 2. Sistema de Internacionalização
-- Context API para gerenciamento de idioma
-- Suporte PT-BR e EN-US
-- Traduções completas (UI + conteúdo editorial)
-- Persistência da preferência do usuário
-
-### 3. Seções do Site
-
-**Hero** - Imagem full-screen com título overlay  
-**Sinopse** - Apresentação narrativa do filme  
-**Conceito** - Fundamentação teórica e artística  
-**Processo Criativo** - Making of e metodologia  
-**Realizadores** - Biografias + trilha sonora  
-**Pôsteres** - Galeria de materiais gráficos  
-**Documentação** - Referências teóricas com PDFs  
-**Referências Visuais** - Filmes que inspiraram o projeto  
-**Créditos** - Ficha técnica completa  
-
-### 4. Experiência Visual
-
-- **Hover Effects:** P&B → Colorido nas imagens
-- **Lazy Loading:** Imagens otimizadas
-- **Smooth Scrolling:** Navegação fluida entre seções
-- **Micro-interações:** Feedback visual em todos os elementos
+📺 **Histórico completo**: Veja [EXHIBITION.md](EXHIBITION.md)
 
 ---
 
-## 🎓 Referências Teóricas
+## 📖 Documentação Complementar
 
-O projeto dialoga com textos fundamentais de teoria do cinema e estudos visuais:
-
-- **Laura Mulvey** - *Prazer Visual e Cinema Narrativo*
-- **Jean-Louis Comolli** - *Ver e Poder*
-- **Luciana Vinhosa** - *Videoperformance: Limites do Corpo*
-- **Carol Azevedo** - *Sexorcismos: Blasfêmia e Transgressão*
-- **Marinelli & Machado** - *Práticas Monstruosas*
-
-📄 PDFs disponíveis para download no site.
+| Documento | Descrição |
+|-----------|-----------|
+| [CONCEPT.md](CONCEPT.md) | Fundamentação filosófica e artística detalhada |
+| [ACADEMIC.md](ACADEMIC.md) | Contexto institucional, equipe e orientação |
+| [EXHIBITION.md](EXHIBITION.md) | Histórico de exibições e certificações |
+| [SECURITY.md](SECURITY.md) | Arquitetura de segurança e proteção de dados |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Guia para contribuições ao projeto |
 
 ---
 
-## 👥 Créditos
+## 🔒 Segurança e Privacidade
 
-### Realizadores
-**Alessandra Marques** - Direção, Produção, Roteiro, Montagem, Desenho de Som  
-Artista visual e cineasta experimental, investiga corpo, memória e dispositivos tecnológicos.
+Este projeto implementa múltiplas camadas de segurança para proteger dados sensíveis de visitantes:
 
-**Marina Lins** - Performance, Produção  
-Performer e pesquisadora, explora corporalidades marginais e políticas do visível.
+- **Row Level Security (RLS)** no banco de dados
+- **Rate Limiting** (3 submissões/hora/IP)
+- **Validação client-side + server-side** (Zod schemas)
+- **HTTPS obrigatório** em produção
+- **Conformidade LGPD/GDPR**
 
-### Trilha Sonora
-**Victor Torres** - Composição Original  
-Compositor e sound designer, cria paisagens sonoras para cinema experimental.
-
----
-
-## 📜 Licença
-
-**Todos os direitos reservados © 2024 Alessandra Marques & Marina Lins**
-
-O código-fonte deste website está disponível para fins educacionais e de portfólio.  
-O conteúdo audiovisual, textual e artístico do filme **NYX-POST-PORN** é protegido por direitos autorais.
-
-**Uso permitido:** Visualização do código, estudo, referência técnica.  
-**Uso proibido:** Redistribuição comercial, reutilização de assets, cópia de conteúdo editorial.
-
-Para licenciamento ou colaborações, entre em contato com as realizadoras.
+🛡️ **Detalhes técnicos**: Veja [SECURITY.md](SECURITY.md)
 
 ---
 
-## 🌐 Links
+## 📜 Licença e Uso Ético
 
-- **Website:** [nyx-post-porn.lovable.app](https://nyx-post-porn.lovable.app)
-- **Contato:** Para licenciamento ou colaborações, acesse o site oficial
+### Conteúdo Artístico
+© 2024 Realizadores NYX-POST-PORN. Todos os direitos reservados.
+
+**Conteúdo audiovisual, textual e artístico** do filme é protegido por direitos autorais. Para licenciamento, colaborações ou uso em contextos acadêmicos/culturais, entre em contato:
+
+📧 **Email**: [castropizzano@gmail.com](mailto:castropizzano@gmail.com)  
+📷 **Instagram**: [@nyxpostporn](https://www.instagram.com/nyxpostporn/)
+
+### Código-fonte do Website
+O código-fonte deste website está disponível para fins **educacionais e de pesquisa** sob licença [CC BY-NC-SA 4.0](LICENSE.md).
+
+**Permitido**:
+- ✅ Uso em contextos educacionais e acadêmicos
+- ✅ Estudo da arquitetura técnica
+- ✅ Adaptações com atribuição e compartilhamento igual
+
+**Proibido**:
+- ❌ Uso comercial sem autorização
+- ❌ Apropriação do conteúdo artístico
+- ❌ Remoção de créditos
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições técnicas ao website são bem-vindas! Veja [CONTRIBUTING.md](CONTRIBUTING.md) para:
+- Diretrizes de código
+- Processo de pull requests
+- Tipos de contribuições aceitas
+- Código de conduta
+
+---
+
+## 📞 Contato
+
+**Realização**: CasaTrezeStudio®  
+**Email**: [castropizzano@gmail.com](mailto:castropizzano@gmail.com)  
+**Instagram**: [@nyxpostporn](https://www.instagram.com/nyxpostporn/)  
+**Localização**: Curitiba, PR – Brasil
+
+**Orientação Acadêmica**:
+- Profa. Dra. Cristiane Wosniak – [Lattes](http://lattes.cnpq.br/8707636250586166)
+- Prof. Dr. Fábio Noronha – [Lattes](http://lattes.cnpq.br/8001117846968595)
 
 ---
 
 ## 🙏 Agradecimentos
 
-Agradecimentos especiais:
-- **FACC/UFRJ** - Faculdade de Comunicação
-- **CineCriare** - Laboratório de cinema experimental
-- **Lovable Platform** - Ferramenta de desenvolvimento
+**Apoio Institucional**: PPG-CINEAV/UNESPAR, Grupo CineCriare  
+**Apoio Técnico**: Gi Fiatcoski, Lucas Lage, Andrey H. Percegona  
+**Performer**: Flávia Massali – pela coragem e entrega artística  
+**Comunidade**: A todos que apoiam pesquisa artística experimental no Brasil
 
 ---
 
-**Construído com [Lovable](https://lovable.dev)** - A plataforma de desenvolvimento full-stack impulsionada por IA.
+<div align="center">
+
+**NYX-POST-PORN** é uma obra em progresso, um convite à reflexão sobre corpo, prazer e poder no cinema contemporâneo.
+
+*Desenvolvido com* 🖤 *por mestrandos do PPG-CINEAV/UNESPAR*
+
+</div>

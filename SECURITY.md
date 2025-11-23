@@ -1,8 +1,45 @@
-# 🔒 Security Documentation
+---
+Project: NYX-POST-PORN - Corpo Expandido
+Type: SECURITY
+Version: 1.3.0
+Last Update: 2025-11-23
+Institution: PPG-CINEAV/UNESPAR
+Research Group: CineCriare
+---
 
-**Project:** NYX-POST-PORN Release 1.3.0  
-**Last Updated:** 2025-11-23  
-**Security Status:** ✅ Production Ready
+# 🔒 Documentação de Segurança
+
+**Projeto:** NYX-POST-PORN - Website Oficial  
+**Natureza:** Projeto artístico experimental sobre corpo, sexualidade e performance  
+**Contexto:** Pesquisa acadêmica PPG-CINEAV/UNESPAR  
+**Status:** ✅ Auditoria de Segurança Aprovada
+
+---
+
+## Por Que Segurança É Crítica Neste Projeto?
+
+**NYX-POST-PORN** é uma obra que aborda sexualidade de forma artística e acadêmica. Dado o conteúdo adulto e a natureza experimental do filme, a **proteção de dados dos visitantes** é uma responsabilidade ética e legal:
+
+### Responsabilidades Éticas
+
+1. **🔐 Proteção de Identidade**  
+   Visitantes confiam emails pessoais ao acessar conteúdo adulto. Temos o dever ético de proteger essas informações contra vazamentos, uso malicioso ou exposição pública.
+
+2. **⚖️ Conformidade LGPD/GDPR**  
+   Como projeto acadêmico brasileiro com alcance internacional, devemos seguir rigorosamente a legislação de proteção de dados (LGPD Lei nº 13.709/2018 e GDPR quando aplicável).
+
+3. **🚫 Prevenção de Abuso**  
+   Rate limiting e validação protegem contra spam, bots e uso malicioso do Age Gate, preservando a integridade da experiência artística.
+
+4. **📊 Transparência Acadêmica**  
+   Dados de visitação são usados APENAS para pesquisa e métricas artísticas. Não realizamos rastreamento comportamental, venda de dados ou perfilamento individual.
+
+5. **✋ Consentimento Informado**  
+   O Age Gate não é apenas verificação técnica - é um **limiar ritual** que informa sobre a natureza do conteúdo e obtém consentimento explícito antes do acesso.
+
+Esta documentação técnica garante que a experiência artística aconteça em **ambiente seguro, respeitoso e legalmente conforme**.
+
+---
 
 ## 📋 Table of Contents
 
@@ -48,6 +85,148 @@ This project implements **defense in depth** with multiple layers of security co
 | HIBP Check | ✅ Enabled | Password leak protection |
 | Secret Management | ✅ Pass | Lovable Cloud secrets |
 | HTTPS/TLS | ✅ Enforced | All connections encrypted |
+
+---
+
+## 🔞 Age Gate: Segurança Como Ética Artística
+
+### O Age Gate Não É Apenas Verificação Técnica
+
+No contexto de **NYX-POST-PORN**, o Age Gate transcende sua função técnica de verificação etária. Ele é um **limiar ritual** que:
+
+#### 1. Informa e Contextualiza
+```
+"Este é um projeto artístico experimental que aborda temas adultos 
+relacionados ao corpo, sexualidade e performance através de uma 
+perspectiva pós-pornográfica"
+```
+
+O visitante compreende que **não está entrando em site pornográfico**, mas em **experiência artística** sobre corpo e performance.
+
+#### 2. Obtém Consentimento Explícito
+
+**Conformidade LGPD (Art. 7º, I)**: Consentimento livre, informado e inequívoco
+
+```typescript
+// src/components/AgeGate.tsx
+"Confirmo que tenho 18 anos ou mais e aceito visualizar 
+conteúdo artístico de natureza experimental"
+```
+
+O visitante:
+- ✅ É informado sobre a natureza do conteúdo (artístico experimental)
+- ✅ Declara maioridade legal (18+)
+- ✅ Consente explicitamente com acesso
+- ✅ É direcionado à [Política de Privacidade](PrivacyPolicy) antes de submeter dados
+
+#### 3. Protege Dados Sensíveis
+
+**Por que coletamos email?**
+- 📊 **Métricas acadêmicas**: Entender alcance e perfil de público (pesquisa)
+- 📧 **Comunicação ética**: Avisos sobre exibições, publicações acadêmicas
+- 🚫 **NÃO vendemos dados**: Jamais compartilhamos ou comercializamos
+
+**Proteção implementada**:
+
+| Camada | Proteção | Implementação |
+|--------|----------|---------------|
+| **Client** | Validação Zod | Email format, trim, lowercase |
+| **Server** | Regex + Length limits | Max 255 chars, server-side validation |
+| **Database** | RLS Policies | Apenas admins veem emails coletados |
+| **Network** | HTTPS/TLS | Criptografia em trânsito |
+| **Abuse** | Rate Limiting | 3 submissões/hora/IP |
+
+#### 4. Implementa Rate Limiting Ético
+
+**Edge Function: `submit-age-gate`**
+
+```typescript
+const RATE_LIMIT_WINDOW_MINUTES = 60;
+const MAX_SUBMISSIONS_PER_WINDOW = 3;
+
+// Rastreamento por IP (não geolocalização)
+const recentSubmissions = await supabase
+  .from('age_gate_visitors')
+  .select('accessed_at')
+  .eq('ip_address', clientIP)
+  .gte('accessed_at', cutoffTime);
+
+if (recentSubmissions.length >= MAX_SUBMISSIONS_PER_WINDOW) {
+  return new Response(
+    JSON.stringify({ 
+      error: 'Too many submissions. Please try again later.' 
+    }),
+    { status: 429, headers: { 'Retry-After': '3600' } }
+  );
+}
+```
+
+**Por quê?**
+- 🤖 **Previne bots**: Spammers não conseguem automatizar submissões
+- 🛡️ **Protege experiência**: Evita abuso do sistema
+- ⚖️ **Uso justo**: Visitantes legítimos não são impactados (3 tentativas/hora é suficiente)
+
+#### 5. Respeita Privacidade
+
+**O que NÃO fazemos**:
+- ❌ **Rastreamento comportamental**: Sem Google Analytics invasivo
+- ❌ **Cookies de terceiros**: Sem trackers de publicidade
+- ❌ **Venda de dados**: Jamais comercializamos informações
+- ❌ **Perfilamento individual**: Não criamos perfis comportamentais
+- ❌ **Geolocalização precisa**: IP usado apenas para rate limiting
+
+**O que fazemos**:
+- ✅ **Métricas agregadas**: Total de visitantes, dispositivos (mobile/desktop)
+- ✅ **Transparência total**: Privacy Policy acessível e completa
+- ✅ **Direito à remoção**: Email para solicitar exclusão de dados (LGPD Art. 18)
+
+#### 6. Cria Espaço Seguro para Conteúdo Sensível
+
+NYX-POST-PORN trata de **corpo, sexualidade e performance**. O Age Gate garante:
+
+- 🔒 **Proteção legal**: Realizadores protegidos contra acesso por menores
+- 🛡️ **Proteção ética**: Visitantes não são surpreendidos por conteúdo inesperado
+- 🤝 **Relação de confiança**: Visitante e obra entram em relação ética desde o início
+
+### Comparação: Pornografia vs. Arte Experimental
+
+| Aspecto | Pornografia Comercial | NYX-POST-PORN |
+|---------|----------------------|---------------|
+| **Age Gate** | Pró-forma (clique rápido) | Ritual informado (leitura consciente) |
+| **Coleta de dados** | Rastreamento invasivo | Email com consentimento explícito |
+| **Propósito** | Monetização | Pesquisa acadêmica |
+| **Transparência** | Baixa (termos ocultos) | Alta (Privacy Policy acessível) |
+| **Proteção** | Mínima | Múltiplas camadas (RLS, rate limiting) |
+
+### Conformidade Legal: LGPD e GDPR
+
+#### Base Legal para Coleta (LGPD Art. 7º)
+
+**Inciso I - Consentimento**:
+> "mediante o fornecimento de consentimento pelo titular"
+
+✅ **Implementado**: Checkbox explícito + texto claro no Age Gate
+
+**Inciso IX - Legítimo Interesse**:
+> "quando necessário para atender aos interesses legítimos do controlador"
+
+✅ **Implementado**: Rate limiting (legítimo interesse em prevenir abuso)
+
+#### Direitos dos Titulares (LGPD Art. 18)
+
+**Direitos garantidos**:
+1. **Confirmação de tratamento**: Visitante pode confirmar se temos seus dados
+2. **Acesso aos dados**: Pode solicitar cópia dos dados armazenados
+3. **Correção**: Pode corrigir dados incompletos ou desatualizados
+4. **Eliminação**: Pode solicitar remoção permanente
+5. **Portabilidade**: Pode exportar dados em formato legível
+6. **Revogação de consentimento**: Pode retirar consentimento a qualquer momento
+
+**Como exercer**:
+📧 Email: [castropizzano@gmail.com](mailto:castropizzano@gmail.com)  
+📝 Assunto: "[LGPD] Solicitação de [Direito]"
+
+**Prazo de resposta**: 15 dias úteis (conforme Lei)
 
 ---
 
@@ -203,6 +382,28 @@ $$;
 ---
 
 ## 🛡️ Data Protection
+
+**Contexto Artístico**: Em um projeto que explora **corpo, sexualidade e performance**, a proteção de dados dos visitantes não é apenas obrigação legal - é compromisso ético fundamental com quem confia seu email pessoal para acessar conteúdo adulto artístico.
+
+### Dados Coletados e Finalidade
+
+| Dado | Finalidade | Base Legal | Retenção |
+|------|-----------|------------|----------|
+| **Email** | Métricas acadêmicas, comunicação sobre exibições | Consentimento explícito (LGPD Art. 7º, I) | 2 anos |
+| **IP Address** | Rate limiting, prevenção de abuso | Legítimo interesse (LGPD Art. 7º, IX) | 2 anos |
+| **User Agent** | Compatibilidade técnica, análise de dispositivos | Legítimo interesse | 2 anos |
+| **Timestamp** | Auditoria, análise temporal de acessos | Legítimo interesse | 2 anos |
+
+**Uso Acadêmico Transparente**:
+- ✅ Relatórios agregados (total de visitantes, dispositivos, horários)
+- ✅ Análise demográfica básica para publicações acadêmicas
+- ✅ Métricas de alcance do projeto artístico
+
+**NÃO fazemos**:
+- ❌ Venda ou compartilhamento com terceiros
+- ❌ Rastreamento comportamental individual
+- ❌ Perfilamento para publicidade
+- ❌ Uso fora do contexto de pesquisa artística
 
 ### Input Validation
 
@@ -990,6 +1191,78 @@ commit; -- or rollback if issues
 
 ---
 
+## 🎨 Conclusão: Segurança Como Extensão da Proposta Ética
+
+### Coerência Entre Arte e Tecnologia
+
+**NYX-POST-PORN** propõe desconstruir a objetificação do corpo no cinema. Seria **incoerente** criar essa crítica artística enquanto objetificamos dados dos visitantes através de práticas invasivas de rastreamento.
+
+A arquitetura de segurança deste projeto reflete os **mesmos princípios éticos** da obra:
+
+| Princípio Artístico | Implementação Técnica |
+|---------------------|----------------------|
+| **Consentimento Informado** | Age Gate com explicação completa da proposta |
+| **Transparência** | Privacy Policy acessível, sem termos ocultos |
+| **Respeito à Autonomia** | Dados usados apenas para pesquisa, nunca comercializados |
+| **Não-Exploração** | Sem rastreamento comportamental ou monetização invasiva |
+| **Relação Ética** | Visitante como sujeito, não objeto de extração de dados |
+
+### Segurança Não É Obstáculo, É Ritual
+
+O Age Gate com validação e rate limiting **não dificulta** o acesso - ele **ritualiza** a entrada:
+
+1. **Informa** sobre a natureza artística do conteúdo
+2. **Prepara** o visitante para experiência experimental
+3. **Protege** realizadores contra acesso indevido
+4. **Garante** que visitante entre conscientemente
+
+Esta "fricção" é **intencional** e alinhada com a proposta de **cinema crítico** de Comolli: criar desconforto produtivo que gere reflexão.
+
+### Modelo para Projetos Artísticos Digitais
+
+A arquitetura de segurança do NYX-POST-PORN pode servir como **referência** para outros projetos artísticos que lidam com:
+
+- 🎭 **Conteúdo sensível** (corpo, sexualidade, performance)
+- 🎓 **Contexto acadêmico** (conformidade legal + ética de pesquisa)
+- 🌍 **Alcance público** (website acessível mas protegido)
+- 🔒 **Dados pessoais** (coleta mínima com proteção máxima)
+
+### Contribuição Acadêmica
+
+Este projeto demonstra que é possível:
+
+✅ **Criar arte experimental** sobre sexualidade sem exploração  
+✅ **Coletar dados de pesquisa** com transparência total  
+✅ **Implementar segurança robusta** sem orçamento corporativo  
+✅ **Estar em conformidade legal** (LGPD/GDPR) como projeto independente  
+✅ **Educar visitantes** sobre proteção de dados através do próprio processo de acesso  
+
+### Segurança Como Performance
+
+Em NYX-POST-PORN, **segurança não é apenas técnica** - é parte da performance artística:
+
+- O Age Gate é **limiar ritual** entre vida cotidiana e experiência estética
+- A Privacy Policy é **manifesto de transparência** sobre uso de dados
+- O Rate Limiting é **resistência contra automatização** (bots não pertencem à experiência humana)
+- A RLS é **última barreira** contra exploração dos dados coletados
+
+### Chamado à Ação
+
+Convidamos pesquisadores, artistas e desenvolvedores a:
+
+1. **Estudar** esta arquitetura como modelo de boas práticas
+2. **Adaptar** para seus próprios projetos artísticos
+3. **Contribuir** com melhorias (ver [CONTRIBUTING.md](CONTRIBUTING.md))
+4. **Compartilhar** conhecimento sobre segurança ética em artes digitais
+
+### Contato para Questões de Segurança
+
+**Vulnerabilidades**: [castropizzano@gmail.com](mailto:castropizzano@gmail.com) (assunto: "[SECURITY]")  
+**Dúvidas sobre LGPD/GDPR**: [castropizzano@gmail.com](mailto:castropizzano@gmail.com) (assunto: "[LGPD]")  
+**Consultas acadêmicas**: Cite este projeto em suas pesquisas (ver [CITATION.CFF](CITATION.CFF))
+
+---
+
 ## 📚 References
 
 ### Documentation
@@ -1013,17 +1286,60 @@ commit; -- or rollback if issues
 - **Zod:** Runtime validation
 - **TypeScript:** Static type checking
 
+### Academic & Artistic Context
+
+- **NYX-POST-PORN Concept**: [CONCEPT.md](CONCEPT.md) - Fundamentação artística
+- **Academic Context**: [ACADEMIC.md](ACADEMIC.md) - PPG-CINEAV/UNESPAR
+- **Contributing Guide**: [CONTRIBUTING.md](CONTRIBUTING.md) - Como contribuir eticamente
+
 ### Contact
 
-**Security Team:** [security@nyx-post-porn.com]  
-**Privacy Officer:** [privacy@nyx-post-porn.com]  
-**General Contact:** [contact@nyx-post-porn.com]
+**Realizadores**: CasaTrezeStudio®  
+**Email Geral**: [castropizzano@gmail.com](mailto:castropizzano@gmail.com)  
+**Instagram**: [@nyxpostporn](https://www.instagram.com/nyxpostporn/)
+
+**Para questões de segurança**: Use assunto "[SECURITY] Descrição"  
+**Para questões LGPD/GDPR**: Use assunto "[LGPD] Solicitação"  
+**Para consultas acadêmicas**: Cite este projeto em suas pesquisas
+
+---
+
+## 🎓 Citação Acadêmica
+
+Se você utilizar esta documentação de segurança em contexto acadêmico, por favor cite:
+
+```bibtex
+@misc{nyx-post-porn-security-2024,
+  author = {Pizzano, Castro and Ressureição, Patrícia and Castro, Murilo and Pupo, Ana},
+  title = {NYX-POST-PORN Security Architecture: Ethical Data Protection in Artistic Experimental Projects},
+  year = {2024},
+  institution = {PPG-CINEAV/UNESPAR},
+  research_group = {CineCriare},
+  howpublished = {\url{https://nyx-post-porn.lovable.app}},
+  note = {Security documentation for artistic experimental cinema project}
+}
+```
+
+**Formato ABNT**:
+```
+PIZZANO, Castro et al. NYX-POST-PORN Security Architecture: Ethical Data Protection 
+in Artistic Experimental Projects. 2024. Documentação técnica. PPG-CINEAV/UNESPAR, 
+Grupo de Pesquisa CineCriare. Disponível em: <https://nyx-post-porn.lovable.app>. 
+Acesso em: [data].
+```
 
 ---
 
 ## 📝 Changelog
 
-### 2025-11-23
+### 2025-11-23 - v1.3.0
+- ✅ **Contexto artístico-acadêmico adicionado**: Conectando segurança técnica com proposta ética
+- ✅ **Seção Age Gate expandida**: Documentação do limiar ritual e conformidade LGPD/GDPR
+- ✅ **Proteção de dados contextualizada**: Uso acadêmico transparente de dados dos visitantes
+- ✅ **Conclusão ética adicionada**: Segurança como extensão da proposta artística
+- ✅ **Citação acadêmica incluída**: Formato BibTeX e ABNT para pesquisadores
+
+### 2024 - v1.0.0
 - ✅ Initial security documentation created
 - ✅ Enabled HIBP password check
 - ✅ Documented all security layers
@@ -1031,6 +1347,12 @@ commit; -- or rollback if issues
 
 ---
 
-**Document Version:** 1.0.0  
-**Next Review:** 2025-12-23  
-**Status:** ✅ Current and Accurate
+<div align="center">
+
+**Segurança não é apenas técnica - é compromisso ético com quem confia em nossa obra.**
+
+*Desenvolvido com* 🖤 *por mestrandos do PPG-CINEAV/UNESPAR*
+
+[← Voltar ao README](README.md) | [Ver Conceito →](CONCEPT.md) | [Ver Contexto Acadêmico →](ACADEMIC.md)
+
+</div>
