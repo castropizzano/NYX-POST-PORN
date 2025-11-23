@@ -13,6 +13,7 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   :root {
@@ -79,6 +80,8 @@
     font-family: 'TT Commons', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1;
     touch-action: manipulation;
   }
 
@@ -101,6 +104,19 @@
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* Chrome-specific font rendering improvements */
+  @supports (-webkit-appearance: none) {
+    body {
+      font-weight: 400;
+    }
+    
+    .nyx-h1, .nyx-h2, .nyx-xs, .nyx-small, .nyx-meta {
+      font-weight: inherit;
+      -webkit-font-smoothing: subpixel-antialiased;
+      text-rendering: geometricPrecision;
+    }
   }
 }
 
