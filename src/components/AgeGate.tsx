@@ -142,17 +142,6 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
               />
             </div>
 
-            <Button
-              type="submit"
-              disabled={!confirmed || !email || isSubmitting}
-              className="w-full bg-nyx-gold hover:bg-nyx-gold-hover text-black nyx-small rounded-none transition-all duration-200 disabled:bg-nyx-gold/30 disabled:text-nyx-gold/70 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] touch-manipulation"
-            >
-              {isSubmitting 
-                ? (language === 'pt' ? 'Processando...' : 'Processing...') 
-                : t.enterButton
-              }
-            </Button>
-
             <label className="flex items-start gap-3 cursor-pointer touch-manipulation">
               <input
                 type="checkbox"
@@ -176,6 +165,17 @@ export default function AgeGate({ isOpen, onVerify }: AgeGateProps) {
             </label>
 
             <p className="nyx-small text-center">{t.ageWarning}</p>
+
+            <Button
+              type="submit"
+              disabled={!confirmed || !email || isSubmitting}
+              className="w-full bg-black hover:bg-nyx-gold text-white hover:text-black border border-nyx-gold nyx-small rounded-none transition-all duration-200 disabled:bg-black/50 disabled:text-white/50 disabled:border-nyx-gold/30 disabled:opacity-50 disabled:cursor-not-allowed min-h-[48px] touch-manipulation"
+            >
+              {isSubmitting 
+                ? (language === 'pt' ? 'Processando...' : 'Processing...') 
+                : t.enterButton
+              }
+            </Button>
           </form>
         </div>
       </DialogContent>
