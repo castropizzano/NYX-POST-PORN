@@ -27,18 +27,21 @@ export function BackToTop() {
   };
 
   return (
-    <div className={`fixed bottom-6 md:bottom-8 right-0 z-50 transition-all duration-300 ${
+    <div className={`fixed bottom-6 md:bottom-8 right-4 md:right-8 lg:right-16 z-50 transition-all duration-300 ${
       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
     }`}>
-      <div className="max-w-6xl mx-auto px-4 md:px-12 lg:px-16 flex justify-end">
-        <button
-          onClick={scrollToTop}
-          className="nyx-h2 text-[#e8d5c4] hover:text-white transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
-          aria-label="Voltar ao topo"
-        >
+      <button
+        onClick={scrollToTop}
+        className="group flex flex-col items-center justify-center min-w-[56px] min-h-[56px] backdrop-blur-sm bg-black/60 border border-[#9b7653]/40 hover:border-[#e8d5c4] hover:bg-black/80 transition-all duration-300 shadow-lg hover:shadow-xl touch-manipulation"
+        aria-label="Voltar ao topo"
+      >
+        <span className="nyx-h2 text-[#e8d5c4] group-hover:text-white transition-colors leading-none">
           ↑
-        </button>
-      </div>
+        </span>
+        <span className="nyx-meta text-[10px] mt-0.5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
+          TOPO
+        </span>
+      </button>
     </div>
   );
 }
