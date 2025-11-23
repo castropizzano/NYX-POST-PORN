@@ -32,13 +32,13 @@ export function BackToTop() {
     }`}>
       <button
         onClick={scrollToTop}
-        className="group flex flex-col items-center justify-center min-w-[56px] min-h-[56px] backdrop-blur-sm bg-black/60 border border-[#9b7653]/40 hover:border-[#e8d5c4] hover:bg-black/80 transition-all duration-300 shadow-lg hover:shadow-xl touch-manipulation"
+        className="group flex flex-col items-center justify-center min-w-[56px] min-h-[56px] md:backdrop-blur-none md:bg-transparent bg-black/60 backdrop-blur-sm border border-[#9b7653]/40 hover:border-[#e8d5c4] hover:bg-black/80 transition-all duration-300 md:shadow-none shadow-lg hover:shadow-xl touch-manipulation"
         aria-label="Voltar ao topo"
       >
         <span className="nyx-h2 text-[#e8d5c4] group-hover:text-white transition-colors leading-none">
           ↑
         </span>
-        <span className="nyx-meta text-[10px] mt-0.5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
+        <span className="md:hidden nyx-meta text-[10px] mt-0.5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors">
           TOPO
         </span>
       </button>
