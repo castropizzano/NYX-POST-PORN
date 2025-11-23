@@ -1,28 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
 
 export function Footer() {
   const { language } = useLanguage();
 
-  const content = {
-    pt: {
-      rights: "© 2025 NYX-POST-PORN. Todos os direitos reservados.",
-      selection: "Seleção Oficial FACC* 2025",
-      privacy: "Política de Privacidade"
-    },
-    en: {
-      rights: "© 2025 NYX-POST-PORN. All rights reserved.",
-      selection: "Official Selection FACC* 2025",
-      privacy: "Privacy Policy"
-    }
-  };
-
-  const t = content[language];
-
   return (
     <footer className="py-12 md:py-16 px-4 md:px-12 lg:px-16 bg-black border-t border-[#9b7653]/20">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center space-y-4 md:space-y-6">
+        <div className="text-center">
           <div className="flex justify-center">
             <img
               src="/images/facc-badge.png"
@@ -30,14 +14,6 @@ export function Footer() {
               className="w-24 h-24 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain opacity-90"
               loading="lazy"
             />
-          </div>
-          <div className="flex justify-center">
-            <Link
-              to="/privacy"
-              className="nyx-small text-nyx-gold hover:text-nyx-cream transition-colors underline touch-manipulation inline-block min-h-[44px] flex items-center"
-            >
-              {t.privacy}
-            </Link>
           </div>
         </div>
       </div>
