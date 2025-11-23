@@ -1,0 +1,100 @@
+cff-version: 1.2.0
+title: 'NYX-POST-PORN: Corpo Expandido'
+message: >-
+  Se você usar este projeto em sua pesquisa acadêmica,
+  por favor cite-o usando os metadados deste arquivo.
+type: software
+authors:
+  - family-names: Pizzano
+    given-names: Castro
+    affiliation: 'UNESPAR - Programa de Pós-Graduação em Cinema e Artes do Vídeo'
+    orcid: 'https://orcid.org/0009-0001-8593-6492'
+    website: 'http://lattes.cnpq.br/9554868200510712'
+  - family-names: Ressureição
+    given-names: Patrícia
+    affiliation: 'UNESPAR - Programa de Pós-Graduação em Cinema e Artes do Vídeo'
+    website: 'http://lattes.cnpq.br/4843831985914880'
+  - family-names: Castro
+    given-names: Murilo
+    affiliation: 'UNESPAR - Programa de Pós-Graduação em Cinema e Artes do Vídeo'
+  - family-names: Pupo
+    given-names: Ana
+    affiliation: 'UNESPAR - Programa de Pós-Graduação em Cinema e Artes do Vídeo'
+  - family-names: Massali
+    given-names: Flávia
+    affiliation: 'UNESPAR - Programa de Pós-Graduação em Cinema e Artes do Vídeo'
+repository-code: 'https://github.com/[USERNAME]/nyx-post-porn-release'
+url: 'https://nyxpostporn.com.br'
+abstract: >-
+  NYX-POST-PORN: Corpo Expandido é uma experiência cinemática experimental
+  que subverte o male gaze patriarcal através da desconstrução do corpo
+  objetificado. O projeto propõe um novo paradigma de prazer visual baseado
+  na fragmentação, no movimento orgânico e na subversão das convenções da
+  pornografia tradicional. Desenvolvido como pesquisa no Programa de
+  Pós-Graduação em Cinema e Artes do Vídeo (PPG-CINEAV) da UNESPAR,
+  o trabalho articula teoria feminista do cinema (Laura Mulvey), filosofia
+  da imagem (Jean-Louis Comolli), videoperformance (Luciano Vinhosa) e
+  pós-pornografia (Adriana Azevedo). Este repositório contém o website
+  oficial do projeto, uma extensão digital da obra que proporciona experiência
+  imersiva com design cinematográfico e arquitetura técnica robusta.
+keywords:
+  - post-porn
+  - pós-pornografia
+  - experimental cinema
+  - cinema experimental
+  - video performance
+  - videoperformance
+  - feminist film theory
+  - teoria feminista do cinema
+  - body art
+  - arte corporal
+  - digital art
+  - arte digital
+  - male gaze
+  - scopophilia
+  - escopofilia
+  - visual pleasure
+  - prazer visual
+  - performance art
+  - arte performática
+  - UNESPAR
+  - PPG-CINEAV
+  - CineCriare
+license: CC-BY-NC-SA-4.0
+version: 1.3.0
+date-released: '2025-11-23'
+references:
+  - type: article
+    authors:
+      - family-names: Mulvey
+        given-names: Laura
+    title: 'Visual Pleasure and Narrative Cinema'
+    year: 1975
+    journal: Screen
+    volume: 16
+    issue: 3
+    pages: 6-18
+  - type: book
+    authors:
+      - family-names: Comolli
+        given-names: Jean-Louis
+    title: 'Ver e Poder: A inocência perdida - cinema, televisão, ficção, documentário'
+    year: 2008
+    publisher: 'Editora UFMG'
+    city: 'Belo Horizonte'
+  - type: article
+    authors:
+      - family-names: Vinhosa
+        given-names: Luciano
+    title: 'Videoperformance: entre o corpo e a imagem'
+    year: 2015
+  - type: article
+    authors:
+      - family-names: Azevedo
+        given-names: Adriana
+    title: 'Sexorcismos: o corpo performático na arte contemporânea'
+    year: 2018
+contact:
+  - email: contato@casatrezestudio.com
+    name: 'CasaTreze Studio'
+    website: 'https://nyxpostporn.com.br'
