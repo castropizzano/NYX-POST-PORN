@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Volume2, VolumeX } from 'lucide-react';
 
 interface AudioPlayerProps {
   src: string;
@@ -133,10 +134,14 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
         {/* Volume Control - escondido no mobile */}
         <button
           onClick={toggleMute}
-          className="hidden md:flex flex-shrink-0 w-10 h-10 items-center justify-center hover:bg-[#9b7653]/10 transition-colors nyx-meta touch-manipulation"
+          className="hidden md:flex flex-shrink-0 w-10 h-10 items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group touch-manipulation"
           aria-label={isMuted ? 'Unmute' : 'Mute'}
         >
-          <span className="text-lg">{isMuted || volume === 0 ? '🔇' : '🔊'}</span>
+          {isMuted || volume === 0 ? (
+            <VolumeX className="w-5 h-5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors" />
+          ) : (
+            <Volume2 className="w-5 h-5 text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors" />
+          )}
         </button>
       </div>
     </motion.div>
