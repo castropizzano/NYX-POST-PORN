@@ -93,12 +93,12 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
         <p className="nyx-xs">{artist}</p>
       </div>
 
-      {/* Controls - Layout simplificado e vertical no mobile */}
-      <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-4">
+      {/* Controls - Layout horizontal no mobile e desktop */}
+      <div className="flex items-center gap-3 md:gap-4">
         {/* Play/Pause Button - maior no mobile */}
         <button
           onClick={togglePlay}
-          className="flex-shrink-0 w-full md:w-12 h-14 md:h-12 flex items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group touch-manipulation shadow-lg md:shadow-none"
+          className="flex-shrink-0 w-14 h-14 md:w-12 md:h-12 flex items-center justify-center border border-[#9b7653]/40 hover:border-[#9b7653] hover:bg-[#9b7653]/10 transition-all duration-300 group touch-manipulation shadow-lg md:shadow-none"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
           <span className="nyx-meta text-[#9b7653] group-hover:text-[#e8d5c4] transition-colors text-xl md:text-lg">
@@ -106,14 +106,14 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
           </span>
         </button>
 
-        {/* Progress Bar - altura reduzida no mobile */}
-        <div className="flex-1 flex flex-col md:flex-row items-stretch md:items-center gap-2 md:gap-3">
-          <span className="nyx-meta tabular-nums md:min-w-[40px] text-center md:text-left">
+        {/* Progress Bar e tempo */}
+        <div className="flex-1 flex flex-col gap-2">
+          <span className="nyx-meta tabular-nums text-center md:text-left">
             {formatTime(currentTime)}
           </span>
           
           <div
-            className="flex-1 h-6 md:h-1 bg-[#9b7653]/20 cursor-pointer group relative touch-manipulation"
+            className="w-full h-6 md:h-1 bg-[#9b7653]/20 cursor-pointer group relative touch-manipulation"
             onClick={handleProgressClick}
           >
             <div
@@ -126,7 +126,7 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
             />
           </div>
           
-          <span className="hidden md:block nyx-meta tabular-nums md:min-w-[40px]">
+          <span className="hidden md:block nyx-meta tabular-nums">
             {formatTime(duration)}
           </span>
         </div>
