@@ -10,7 +10,7 @@ export function Process() {
         <div className="p-4 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
           <h2 className="nyx-h2 mb-4 md:mb-8">{t.title}</h2>
           <div className="space-y-4 md:space-y-8">
-            <p className="nyx-small text-left md:text-justified leading-relaxed md:leading-normal">{t.paragraph1}</p>
+            <p className="nyx-small text-justify md:text-left leading-relaxed md:leading-normal">{t.paragraph1}</p>
           </div>
         </div>
 
@@ -18,14 +18,14 @@ export function Process() {
           <div className="p-4 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
             <h3 className="nyx-h2 mb-4 md:mb-8">{t.visualStyle.title}</h3>
             <div className="space-y-4">
-              <p className="nyx-small text-left md:text-justify leading-relaxed md:leading-normal">{t.visualStyle.text}</p>
+              <p className="nyx-small text-justify md:text-left leading-relaxed md:leading-normal">{t.visualStyle.text}</p>
             </div>
           </div>
 
           <div className="p-4 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20">
             <h3 className="nyx-h2 mb-4 md:mb-8">{t.performanceStages.title}</h3>
             <div className="space-y-4">
-              <p className="nyx-small text-left md:text-justified leading-relaxed md:leading-normal">{t.performanceStages.text}</p>
+              <p className="nyx-small text-justify md:text-left leading-relaxed md:leading-normal">{t.performanceStages.text}</p>
             </div>
           </div>
         </div>

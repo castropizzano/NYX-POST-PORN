@@ -73,7 +73,7 @@ export function VisualReferences() {
                         ? 'max-h-96 opacity-100' 
                         : 'max-h-0 opacity-0 md:max-h-40 md:group-hover:max-h-96 md:group-hover:opacity-100'
                     }`}>
-                      <p className="nyx-small text-left md:text-justified leading-relaxed">
+                      <p className="nyx-small text-justify md:text-left leading-relaxed">
                         {film.description}
                       </p>
                     </div>
