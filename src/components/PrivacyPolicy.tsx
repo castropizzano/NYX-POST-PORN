@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.introduction.title}</h2>
-            <p className="nyx-body text-justify">{t.introduction.text}</p>
+            <p className="nyx-body text-justify md:text-left">{t.introduction.text}</p>
           </section>
 
           <section className="space-y-4">
@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.dataCollected.title}</h2>
-            <p className="nyx-body text-justify">{t.dataCollected.intro}</p>
+            <p className="nyx-body text-justify md:text-left">{t.dataCollected.intro}</p>
             <div className="space-y-4">
               {t.dataCollected.items.map((item, index) => (
                 <div key={index} className="border-l-2 border-nyx-gold/30 pl-4">
@@ -66,28 +66,28 @@ export default function PrivacyPolicy() {
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.dataSharing.title}</h2>
-            <p className="nyx-body text-justify">{t.dataSharing.text}</p>
+            <p className="nyx-body text-justify md:text-left">{t.dataSharing.text}</p>
           </section>
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.dataRetention.title}</h2>
-            <p className="nyx-body text-justify">{t.dataRetention.text}</p>
+            <p className="nyx-body text-justify md:text-left">{t.dataRetention.text}</p>
           </section>
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.userRights.title}</h2>
-            <p className="nyx-body text-justify mb-4">{t.userRights.intro}</p>
+            <p className="nyx-body text-justify md:text-left mb-4">{t.userRights.intro}</p>
             <ul className="nyx-body space-y-2 list-disc list-inside">
               {t.userRights.items.map((item, index) => (
                 <li key={index}><strong>{item.right}:</strong> {item.description}</li>
               ))}
             </ul>
-            <p className="nyx-body text-justify mt-4">{t.userRights.exercise}</p>
+            <p className="nyx-body text-justify md:text-left mt-4">{t.userRights.exercise}</p>
           </section>
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.security.title}</h2>
-            <p className="nyx-body text-justify">{t.security.text}</p>
+            <p className="nyx-body text-justify md:text-left">{t.security.text}</p>
             <ul className="nyx-body space-y-2 list-disc list-inside">
               {t.security.measures.map((measure, index) => (
                 <li key={index}>{measure}</li>
@@ -97,17 +97,17 @@ export default function PrivacyPolicy() {
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.cookies.title}</h2>
-            <p className="nyx-body text-justify">{t.cookies.text}</p>
+            <p className="nyx-body text-justify md:text-left">{t.cookies.text}</p>
           </section>
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.changes.title}</h2>
-            <p className="nyx-body text-justify">{t.changes.text}</p>
+            <p className="nyx-body text-justify md:text-left">{t.changes.text}</p>
           </section>
 
           <section className="space-y-4">
             <h2 className="nyx-h2">{t.contact.title}</h2>
-            <p className="nyx-body text-justify mb-4">{t.contact.text}</p>
+            <p className="nyx-body text-justify md:text-left mb-4">{t.contact.text}</p>
             <div className="nyx-body space-y-2">
               <p><strong>{t.contact.emailLabel}:</strong> castropizzano@gmail.com</p>
               <p><strong>{t.contact.instagramLabel}:</strong> @castropizzano</p>
