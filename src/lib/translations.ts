@@ -45,7 +45,7 @@ export const translations = {
       trailer: "TRAILER",
       officialCut: "OFFICIAL CUT",
       multicam: "MULTICAM",
-      duration: "Duration",
+      duration: "Duração",
       digital: "Digital",
       color: "Color",
       stereoSound: "Stereo Sound",
