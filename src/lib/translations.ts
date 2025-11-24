@@ -47,9 +47,9 @@ export const translations = {
       multicam: "MULTICAM",
       duration: "Duração",
       digital: "Digital",
-      color: "Color",
-      stereoSound: "Stereo Sound",
-      brazil: "Brazil"
+      color: "Colorido",
+      stereoSound: "Som Estéreo",
+      brazil: "Brasil"
     },
     filmmakers: {
       title: "Realizadores",
