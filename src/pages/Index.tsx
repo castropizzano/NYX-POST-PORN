@@ -38,10 +38,7 @@ export default function Index() {
         {ageVerified && (
           <>
             <Hero />
-            <div className="relative">
-              <FaccBadge />
-              <FilmPlayer ageVerified={ageVerified} />
-            </div>
+            <FilmPlayer ageVerified={ageVerified} />
             <Synopsis />
             <Concept />
             <Process />
