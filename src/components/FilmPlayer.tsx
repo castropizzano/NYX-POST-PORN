@@ -37,7 +37,7 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
             <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none md:hidden"></div>
             <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none md:hidden"></div>
             
-            <TabsList className="w-full bg-transparent border-b border-[#9b7653]/30 rounded-none h-auto p-0 justify-start overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+            <TabsList className="w-full bg-transparent border-b border-[#9b7653]/30 rounded-none h-auto p-0 justify-center md:justify-start overflow-x-auto snap-x snap-mandatory scrollbar-hide">
               <TabsTrigger
                 value="trailer"
                 className="data-[state=active]:border-b-2 data-[state=active]:border-[#9b7653] rounded-none bg-transparent text-[#9b7653] data-[state=active]:text-[#e8d5c4] px-4 py-3 md:px-6 md:py-3 text-sm md:text-base whitespace-nowrap min-h-[52px] md:min-h-0 snap-center touch-manipulation"
