@@ -21,14 +21,16 @@ export function Hero() {
         {/* Gradient Overlay - apenas no desktop */}
         <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black" />
 
-        {/* Badge FACC - apenas desktop */}
-        <div className="hidden md:block absolute top-8 right-8 lg:top-10 lg:right-10 z-30">
-          <img
-            src="/images/facc-badge.png"
-            alt="FACC 2025 - Selección Oficial"
-            className="w-40 h-40 lg:w-48 lg:h-48 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
-            loading="lazy"
-          />
+        {/* Badge FACC - apenas desktop - alinhado com container */}
+        <div className="hidden md:block absolute top-8 lg:top-10 left-0 right-0 z-30">
+          <div className="max-w-6xl mx-auto px-12 lg:px-0 flex justify-end">
+            <img
+              src="/images/facc-badge.png"
+              alt="FACC 2025 - Selección Oficial"
+              className="w-40 h-40 lg:w-48 lg:h-48 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg"
+              loading="lazy"
+            />
+          </div>
         </div>
 
         {/* Conteúdo - desktop no bottom da imagem */}
