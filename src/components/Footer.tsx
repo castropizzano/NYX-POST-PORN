@@ -11,7 +11,7 @@ export function Footer() {
             <img
               src="/images/facc-badge.png"
               alt="FACC 2025 - Selección Oficial"
-              className="w-20 h-20 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain opacity-90"
+              className="w-[30px] h-[30px] object-contain opacity-90"
               loading="lazy"
             />
           </div>
