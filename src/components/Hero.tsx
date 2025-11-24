@@ -23,7 +23,7 @@ export function Hero() {
 
         {/* Badge FACC - apenas desktop - alinhado com container */}
         <div className="hidden md:block absolute top-8 lg:top-10 left-0 right-0 z-30">
-          <div className="max-w-6xl mx-auto px-4 md:px-12 lg:px-16 flex justify-end">
+          <div className="max-w-6xl mx-auto pr-4 md:pr-12 lg:pr-16 flex justify-end">
             <img
               src="/images/facc-badge.png"
               alt="FACC 2025 - Selección Oficial"
