@@ -56,7 +56,7 @@ export function Filmmakers() {
                 index === 0 ? 'sm:col-span-2' : ''
               }`}
             >
-              <div className="flex flex-col sm:flex-row items-start justify-between gap-3 md:gap-4 mb-4">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4 mb-4">
                 <div className="flex-1">
                   <h3 className="nyx-h2 mb-2">
                     {filmmaker.name}
@@ -71,16 +71,31 @@ export function Filmmakers() {
                     href={filmmaker.lattes}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 px-3 py-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 whitespace-nowrap touch-manipulation"
+                    className="hidden md:flex flex-shrink-0 px-3 py-2 items-center justify-center rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 whitespace-nowrap touch-manipulation"
                     aria-label={index === 0 ? "Instagram Flávia Massali" : `Lattes ${filmmaker.name}`}
                   >
                     {index === 0 ? 'INSTAGRAM' : 'LATTES'}
                   </a>
                 )}
               </div>
-              <p className="nyx-small text-justify leading-relaxed">
+              
+              <p className="nyx-small text-justify leading-relaxed mb-4 md:mb-0">
                 {filmmaker.bio}
               </p>
+              
+              {filmmaker.lattes && (
+                <div className="flex justify-end md:hidden mt-4">
+                  <a
+                    href={filmmaker.lattes}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 whitespace-nowrap touch-manipulation"
+                    aria-label={index === 0 ? "Instagram Flávia Massali" : `Lattes ${filmmaker.name}`}
+                  >
+                    {index === 0 ? 'INSTAGRAM' : 'LATTES'}
+                  </a>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
