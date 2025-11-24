@@ -76,41 +76,30 @@ export function Hero() {
       </div>
 
       {/* Conteúdo mobile - abaixo do poster */}
-      <div className="md:hidden bg-black px-4 py-6">
-        <div>
-          {/* Badge PT/EN - mobile */}
-          <div className="mb-4">
-            <div className="inline-flex gap-0 items-center bg-black border border-nyx-gold/40 rounded-md px-3 py-1.5">
-              <button
-                onClick={() => setLanguage('pt')}
-                className={`px-3 py-2 text-xs font-light transition-all duration-300 rounded-md min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation ${
-                  language === 'pt'
-                    ? 'bg-nyx-gold/20 text-nyx-cream'
-                    : 'text-nyx-gold hover:text-nyx-cream'
-                }`}
-              >
-                PT
-              </button>
-              <span className="text-nyx-gold px-1">|</span>
-              <button
-                onClick={() => setLanguage('en')}
-                className={`px-3 py-2 text-xs font-light transition-all duration-300 rounded-md min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation ${
-                  language === 'en'
-                    ? 'bg-nyx-gold/20 text-nyx-cream'
-                    : 'text-nyx-gold hover:text-nyx-cream'
-                }`}
-              >
-                EN
-              </button>
-            </div>
-          </div>
-
-          <h1 className="nyx-h2 mb-1">
-            NYX-POST-PORN
-          </h1>
-          <p className="nyx-xs text-nyx-gold">
-            {t.subtitle}
-          </p>
+      <div className="md:hidden bg-black px-4 py-6 flex justify-center">
+        {/* Badge PT/EN - mobile centralizado */}
+        <div className="inline-flex gap-0 items-center bg-black border border-nyx-gold/40 rounded-md px-3 py-1.5">
+          <button
+            onClick={() => setLanguage('pt')}
+            className={`px-3 py-2 text-xs font-light transition-all duration-300 rounded-md min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation ${
+              language === 'pt'
+                ? 'bg-nyx-gold/20 text-nyx-cream'
+                : 'text-nyx-gold hover:text-nyx-cream'
+            }`}
+          >
+            PT
+          </button>
+          <span className="text-nyx-gold px-1">|</span>
+          <button
+            onClick={() => setLanguage('en')}
+            className={`px-3 py-2 text-xs font-light transition-all duration-300 rounded-md min-w-[48px] min-h-[48px] flex items-center justify-center touch-manipulation ${
+              language === 'en'
+                ? 'bg-nyx-gold/20 text-nyx-cream'
+                : 'text-nyx-gold hover:text-nyx-cream'
+            }`}
+          >
+            EN
+          </button>
         </div>
       </div>
     </section>
