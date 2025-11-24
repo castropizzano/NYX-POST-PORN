@@ -25,7 +25,7 @@ export function Credits() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="md:col-span-12 border-2 border-[#e8d5c4]/40 rounded-lg p-4 md:p-6 lg:p-8 bg-black/60"
+              className="md:col-span-12 border border-[#9b7653]/20 rounded-lg p-4 md:p-6 lg:p-8 bg-black/60"
             >
               <h3 className="nyx-h2 mb-4 md:mb-6">
                 {t.departments[0].name}
