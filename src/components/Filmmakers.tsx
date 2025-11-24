@@ -42,84 +42,47 @@ export function Filmmakers() {
           />
         </div>
 
-        {/* Filmmakers Biographies */}
-        <div className="space-y-6">
-          {/* Performer - Full Width Card */}
-          {filmmakers[0] && (
+        {/* Filmmakers Biographies - Grid unificado */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+          {/* Todos os filmmakers no mesmo grid */}
+          {filmmakers.map((filmmaker, index) => (
             <motion.div
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="border border-[#9b7653]/20 rounded-lg p-4 md:p-8 bg-black/40"
+              className={`border border-[#9b7653]/20 rounded-lg p-4 md:p-6 bg-black/40 ${
+                index === 0 ? 'sm:col-span-2' : ''
+              }`}
             >
               <div className="flex flex-col sm:flex-row items-start justify-between gap-3 md:gap-4 mb-4">
                 <div className="flex-1">
                   <h3 className="nyx-h2 mb-2">
-                    {filmmakers[0].name}
+                    {filmmaker.name}
                   </h3>
                   <p className="nyx-xs mt-1">
-                    {filmmakers[0].role}
+                    {filmmaker.role}
                   </p>
                 </div>
                 
-                {filmmakers[0].lattes && (
+                {filmmaker.lattes && (
                   <a
-                    href={filmmakers[0].lattes}
+                    href={filmmaker.lattes}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-shrink-0 px-3 py-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 whitespace-nowrap touch-manipulation"
-                    aria-label="Instagram Flávia Massali"
+                    aria-label={index === 0 ? "Instagram Flávia Massali" : `Lattes ${filmmaker.name}`}
                   >
-                    INSTAGRAM
+                    {index === 0 ? 'INSTAGRAM' : 'LATTES'}
                   </a>
                 )}
               </div>
               <p className="nyx-small text-justify leading-relaxed">
-                {filmmakers[0].bio}
+                {filmmaker.bio}
               </p>
             </motion.div>
-          )}
-
-          {/* Other Filmmakers - 1 coluna mobile, 2 desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-            {filmmakers.slice(1).map((filmmaker, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="border border-[#9b7653]/20 rounded-lg p-4 md:p-6 bg-black/40"
-              >
-                <div className="flex flex-col sm:flex-row items-start justify-between gap-3 md:gap-4 mb-4">
-                  <div className="flex-1">
-                    <h3 className="nyx-h2 mb-2">
-                      {filmmaker.name}
-                    </h3>
-                    <p className="nyx-xs mt-1">
-                      {filmmaker.role}
-                    </p>
-                  </div>
-                  
-                  {filmmaker.lattes && (
-                    <a
-                      href={filmmaker.lattes}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0 px-3 py-2 min-h-[48px] min-w-[48px] flex items-center justify-center rounded-md bg-[#9b7653]/10 text-[#9b7653] border border-[#9b7653]/20 text-xs font-mono transition-all duration-300 hover:bg-[#e8d5c4]/20 hover:text-[#e8d5c4] hover:border-[#e8d5c4]/40 hover:scale-105 whitespace-nowrap touch-manipulation"
-                      aria-label={`Lattes ${filmmaker.name}`}
-                    >
-                      LATTES
-                    </a>
-                  )}
-                </div>
-                <p className="nyx-small text-justify leading-relaxed">
-                  {filmmaker.bio}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
