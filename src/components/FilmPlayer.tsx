@@ -174,19 +174,16 @@ export function FilmPlayer({ ageVerified }: FilmPlayerProps) {
         <p className="text-center nyx-meta mt-6 md:mt-8 text-xs md:text-sm leading-relaxed">
           {activeTab === 'trailer' && (
             <>
-              <span className="hidden md:inline">{t.filmPlayer.trailer} </span>
               {`${t.filmPlayer.duration}: ${durations.trailer} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
             </>
           )}
           {activeTab === 'official' && (
             <>
-              <span className="hidden md:inline">{t.filmPlayer.officialCut} </span>
               {`${t.filmPlayer.duration}: ${durations.official} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
             </>
           )}
           {activeTab === 'multicam' && (
             <>
-              <span className="hidden md:inline">{t.filmPlayer.multicam} </span>
               {`${t.filmPlayer.duration}: ${durations.multicam} | ${t.filmPlayer.digital} | ${t.filmPlayer.color} | ${t.filmPlayer.stereoSound} | 2024 | ${t.filmPlayer.brazil}`}
             </>
           )}
