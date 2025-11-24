@@ -4,7 +4,7 @@ export function FaccBadge() {
       <img
         src="/images/facc-badge.png"
         alt="FACC 2025 - Selección Oficial"
-        className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+        className="w-[84px] h-[84px] object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
         loading="lazy"
       />
     </div>
