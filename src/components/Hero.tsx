@@ -1,14 +1,16 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/translations';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export function Hero() {
   const { language, setLanguage } = useLanguage();
   const t = translations[language].hero;
+  const isMobile = useIsMobile();
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <img
-        src="/images/nyx-hero.jpg"
+        src={isMobile ? "/images/nyx-hero-mobile.png" : "/images/nyx-hero.jpg"}
         alt="NYX-POST-PORN"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
