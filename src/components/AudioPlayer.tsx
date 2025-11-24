@@ -125,7 +125,7 @@ export function AudioPlayer({ src, title, artist }: AudioPlayerProps) {
             />
           </div>
           
-          <span className="nyx-meta tabular-nums md:min-w-[40px] text-center md:text-left">
+          <span className="hidden md:block nyx-meta tabular-nums md:min-w-[40px]">
             {formatTime(duration)}
           </span>
         </div>

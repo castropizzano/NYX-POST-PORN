@@ -13,7 +13,8 @@ export function VisualReferences() {
       <div className="max-w-4xl mx-auto">
         <div className="p-4 md:p-8 bg-[#9b7653]/5 border border-[#9b7653]/20 mb-8">
           <h2 className="nyx-h2">
-            {title} | Diálogos com NYX-POST-PORN
+            <span className="md:hidden">{title}</span>
+            <span className="hidden md:inline">{title} | Diálogos com NYX-POST-PORN</span>
           </h2>
         </div>
 
@@ -33,7 +34,9 @@ export function VisualReferences() {
                   <img
                     src={film.image}
                     alt={`${film.title} (${film.year})`}
-                    className="w-full h-full object-cover transition-all duration-500 md:grayscale md:group-hover:grayscale-0 md:group-hover:brightness-105"
+                    className={`w-full h-full object-cover transition-all duration-500 grayscale ${
+                      expandedIndex === index ? 'grayscale-0 brightness-105' : 'md:group-hover:grayscale-0 md:group-hover:brightness-105'
+                    }`}
                     loading="lazy"
                   />
                   
