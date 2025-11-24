@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Download, RefreshCw, ArrowLeft, Search, X } from 'lucide-react';
+import { Download, RefreshCw, ArrowLeft, Search, X, Trash2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useToast } from '@/hooks/use-toast';
 import { logError } from '@/lib/logger';
@@ -23,6 +23,7 @@ export function VisitorsDashboard() {
   const [emailFilter, setEmailFilter] = useState('');
   const [userAgentFilter, setUserAgentFilter] = useState('');
   const [dateFilter, setDateFilter] = useState('');
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -153,6 +154,40 @@ export function VisitorsDashboard() {
     setEmailFilter('');
     setUserAgentFilter('');
     setDateFilter('');
+  };
+
+  const handleDelete = async (visitorId: string, email: string) => {
+    if (!confirm(`Tem certeza que deseja excluir o visitante "${email}"?`)) {
+      return;
+    }
+
+    setDeletingId(visitorId);
+    
+    try {
+      const { error } = await supabase
+        .from('age_gate_visitors')
+        .delete()
+        .eq('id', visitorId);
+
+      if (error) throw error;
+
+      // Remove da lista local
+      setVisitors(prev => prev.filter(v => v.id !== visitorId));
+
+      toast({
+        title: 'Visitante excluído',
+        description: `O visitante ${email} foi removido com sucesso.`,
+      });
+    } catch (error) {
+      logError('Dashboard:handleDelete', error);
+      toast({
+        title: 'Erro ao excluir',
+        description: 'Não foi possível excluir o visitante. Tente novamente.',
+        variant: 'destructive',
+      });
+    } finally {
+      setDeletingId(null);
+    }
   };
 
   if (checkingPermissions) {
@@ -313,6 +348,7 @@ export function VisitorsDashboard() {
                     <th className="text-left p-4 nyx-small font-semibold text-nyx-gold">Email</th>
                     <th className="text-left p-4 nyx-small font-semibold text-nyx-gold">Data de Acesso</th>
                     <th className="text-left p-4 nyx-small font-semibold text-nyx-gold">Navegador</th>
+                    <th className="text-center p-4 nyx-small font-semibold text-nyx-gold">Ações</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -334,6 +370,17 @@ export function VisitorsDashboard() {
                       </td>
                       <td className="p-4 nyx-small text-nyx-gold/70 max-w-xs truncate">
                         {visitor.user_agent || 'N/A'}
+                      </td>
+                      <td className="p-4 text-center">
+                        <Button
+                          onClick={() => handleDelete(visitor.id, visitor.email)}
+                          disabled={deletingId === visitor.id}
+                          variant="ghost"
+                          size="sm"
+                          className="text-red-400 hover:text-red-300 hover:bg-red-400/10"
+                        >
+                          <Trash2 className={`w-4 h-4 ${deletingId === visitor.id ? 'animate-pulse' : ''}`} />
+                        </Button>
                       </td>
                     </tr>
                   ))}
