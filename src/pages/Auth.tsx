@@ -17,6 +17,7 @@ export default function Auth() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -30,8 +31,61 @@ export default function Auth() {
     checkAuth();
   }, [navigate]);
 
+  const handlePasswordReset = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      toast({
+        title: 'Email necessário',
+        description: 'Por favor, digite seu email.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    const emailValidation = z.string().email('Email inválido').safeParse(email);
+    if (!emailValidation.success) {
+      toast({
+        title: 'Email inválido',
+        description: 'Por favor, digite um email válido.',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window.location.origin}/reset-password`,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: 'Email enviado!',
+        description: 'Verifique sua caixa de entrada para redefinir sua senha.',
+      });
+      
+      setIsForgotPassword(false);
+    } catch (error: any) {
+      toast({
+        title: 'Erro',
+        description: error.message || 'Ocorreu um erro. Tente novamente.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isForgotPassword) {
+      await handlePasswordReset(e);
+      return;
+    }
 
     const validation = authSchema.safeParse({ email, password });
     if (!validation.success) {
@@ -96,10 +150,13 @@ export default function Auth() {
 
         <div className="text-center space-y-2">
           <h1 className="nyx-h2">
-            {isSignUp ? 'Criar Conta' : 'Login'}
+            {isForgotPassword ? 'Recuperar Senha' : (isSignUp ? 'Criar Conta' : 'Login')}
           </h1>
           <p className="nyx-small text-nyx-gold">
-            Acesse o dashboard de visitantes
+            {isForgotPassword 
+              ? 'Digite seu email para receber instruções' 
+              : 'Acesse o dashboard de visitantes'
+            }
           </p>
         </div>
 
@@ -116,17 +173,19 @@ export default function Auth() {
             />
           </div>
 
-          <div>
-            <Input
-              type="password"
-              placeholder="Senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              disabled={isLoading}
-              className="bg-black border-nyx-gold text-nyx-cream placeholder:text-nyx-gold/50"
-            />
-          </div>
+          {!isForgotPassword && (
+            <div>
+              <Input
+                type="password"
+                placeholder="Senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                disabled={isLoading}
+                className="bg-black border-nyx-gold text-nyx-cream placeholder:text-nyx-gold/50"
+              />
+            </div>
+          )}
 
           <Button
             type="submit"
@@ -135,21 +194,45 @@ export default function Auth() {
           >
             {isLoading 
               ? 'Processando...' 
-              : (isSignUp ? 'Criar Conta' : 'Entrar')
+              : (isForgotPassword ? 'Enviar Email' : (isSignUp ? 'Criar Conta' : 'Entrar'))
             }
           </Button>
 
-          <button
-            type="button"
-            onClick={() => setIsSignUp(!isSignUp)}
-            disabled={isLoading}
-            className="w-full nyx-small text-nyx-gold hover:text-nyx-cream transition-colors"
-          >
-            {isSignUp 
-              ? 'Já tem conta? Faça login' 
-              : 'Não tem conta? Crie uma'
-            }
-          </button>
+          {!isForgotPassword && (
+            <>
+              <button
+                type="button"
+                onClick={() => setIsForgotPassword(true)}
+                disabled={isLoading}
+                className="w-full nyx-small text-nyx-gold hover:text-nyx-cream transition-colors"
+              >
+                Esqueci minha senha
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsSignUp(!isSignUp)}
+                disabled={isLoading}
+                className="w-full nyx-small text-nyx-gold hover:text-nyx-cream transition-colors"
+              >
+                {isSignUp 
+                  ? 'Já tem conta? Faça login' 
+                  : 'Não tem conta? Crie uma'
+                }
+              </button>
+            </>
+          )}
+
+          {isForgotPassword && (
+            <button
+              type="button"
+              onClick={() => setIsForgotPassword(false)}
+              disabled={isLoading}
+              className="w-full nyx-small text-nyx-gold hover:text-nyx-cream transition-colors"
+            >
+              Voltar ao login
+            </button>
+          )}
         </form>
 
         <div className="mt-8 p-4 bg-nyx-gold/5 border border-nyx-gold/20">
