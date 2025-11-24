@@ -57,7 +57,7 @@ export function References() {
 
               {/* Descrição */}
               <div>
-                <p className="nyx-small text-justify md:text-left leading-relaxed">
+                <p className="nyx-small text-justify leading-relaxed">
                   {ref.description} {ref.relation}
                 </p>
               </div>

@@ -75,7 +75,7 @@ export function Filmmakers() {
                   </a>
                 )}
               </div>
-              <p className="nyx-small text-justify md:text-left leading-relaxed">
+              <p className="nyx-small text-justify leading-relaxed">
                 {filmmakers[0].bio}
               </p>
             </motion.div>
@@ -114,7 +114,7 @@ export function Filmmakers() {
                     </a>
                   )}
                 </div>
-                <p className="nyx-small text-justify md:text-left leading-relaxed">
+                <p className="nyx-small text-justify leading-relaxed">
                   {filmmaker.bio}
                 </p>
               </motion.div>
