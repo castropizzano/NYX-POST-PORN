@@ -389,7 +389,7 @@ export function Credits() {
               href="https://archive.org/details/nyx-post-porn-2024"
               target="_blank"
               rel="noopener noreferrer"
-              className="block border-2 border-[#e8d5c4]/40 rounded-md p-4 bg-black/80 hover:border-[#e8d5c4] hover:bg-black transition-colors group"
+              className="block border border-[#9b7653]/30 rounded-md p-4 bg-black/60 hover:border-[#e8d5c4]/40 transition-colors group"
             >
               <div className="flex items-center justify-between">
                 <h4 className="nyx-meta text-[#e8d5c4]">{t.archive} | Página Oficial Internet Archive</h4>
