@@ -27,7 +27,7 @@ export function Hero() {
             <img
               src="/images/facc-badge.png"
               alt="FACC 2025 - Selección Oficial"
-              className="w-40 h-40 lg:w-48 lg:h-48 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg md:-mr-2 lg:-mr-3"
+              className="w-[84px] h-[84px] object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-lg md:-mr-2 lg:-mr-3"
               loading="lazy"
             />
           </div>
