@@ -4,6 +4,7 @@ import { FilmPlayer } from '@/components/FilmPlayer';
 import { Synopsis } from '@/components/Synopsis';
 import { Concept } from '@/components/Concept';
 import { Process } from '@/components/Process';
+import { Dialogues } from '@/components/Dialogues';
 import { Posters } from '@/components/Posters';
 import { Filmmakers } from '@/components/Filmmakers';
 import { References } from '@/components/References';
@@ -42,6 +43,7 @@ export default function Index() {
             <Synopsis />
             <Concept />
             <Process />
+            <Dialogues />
             <Posters />
             <Filmmakers />
             <References />
