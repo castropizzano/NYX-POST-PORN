@@ -41,6 +41,43 @@ export const translations = {
         text: "A performance é estruturada em seis momentos distintos que guiam a experiência sensorial e a captura fragmentada do corpo em movimento, criando uma narrativa não-linear do prazer e da autodescoberta: O Corpo como Paisagem, Toques e Respiração, Respiração e Tensão, Fragmentação do Ato, Clímax Fragmentado e Pós-Clímax."
       }
     },
+    dialogues: {
+      title: "Diálogos",
+      intro: "Como parte de uma pesquisa acadêmica conduzida pelo Prof. Carlos M. Cordero Cancio (Ph.D.) da Universidad de Puerto Rico, os realizadores de NYX-POST-PORN foram convidados a refletir sobre o processo criativo, a ética da representação do corpo e os limites da imagem cinematográfica no contexto do pós-pornô.",
+      context: "Esta seção apresenta as respostas do diretor Castro Pizzano às perguntas propostas pela pesquisa. Em breve, serão incluídas as reflexões dos demais realizadores: Patrícia Ressureição (Direção Corporal), Murilo Castro (Produção e Making Of) e Ana Pupo (Direção de Arte).",
+      interviewTitle: "Entrevista — Castro Pizzano (Diretor)",
+      note: "Esta é a primeira parte dos diálogos. As perguntas foram formuladas em espanhol pelo Prof. Carlos Cordero Cancio como parte de sua pesquisa sobre práticas cinematográficas experimentais e pós-pornográficas.",
+      questions: [
+        {
+          question: "¿Qué función tiene el desarrollo de un proceso creativo para un director/a? ¿Está cercano a la conceptualización de lo visual o a su descubrimiento?",
+          answer: "Para mim, o processo criativo não é um caminho que eu percorro sozinho, é um estado de porosidade. Eu não trabalho apenas com a conceituação de uma imagem, mas com o risco de descobri-la enquanto ela se forma diante de mim e diante do corpo que performa. Em NYX-POST-PORN, eu entro no set sabendo que existem intenções, atmosferas e princípios éticos estruturados, mas é o encontro entre corpo e câmera que verdadeiramente decide. O processo criativo, portanto, não é uma garantia, é uma escuta ativa."
+        },
+        {
+          question: "¿Cómo la poesía visual constituye un acto deconstructivo de la imaginación y práctica de la mercantilización del cuerpo?",
+          answer: "Quando eu trabalho com poesia visual, sinto que estou deliberadamente quebrando a gramática que transforma o corpo em produto. Ao fragmentar, diluir, aproximar e afastar o corpo em NYX, eu interrompo a fantasia de transparência da imagem pornográfica tradicional. A poesia visual aí não é ornamento: é ferramenta de desprogramação. Eu não ofereço o corpo para consumo, mas como enigma, como vibração, como território simbólico. Nesse gesto, eu retiro a imagem da lógica da mercantilização e abro espaço para outra imaginação possível, uma imaginação que não compra, que não domina, que sente junto."
+        },
+        {
+          question: "¿Resulta lo extremo en el cine una subversión de la mirada totalizante y del sujeto espectador/a?",
+          answer: "Quando eu trabalho com o extremo, eu não busco o choque, busco o limite da presença. Em NYX, o extremo aparece como intimidade radical, e isso desloca o espectador de uma posição confortável para uma posição vulnerável. Nesse ponto-limite, a mirada totalizante se desfaz: o espectador já não controla a distância. A obra devolve o olhar. Para mim, isso é profundamente subversivo: o extremo abre um espaço onde o espectador deixa de ser sujeito soberano e passa a ser parte de uma relação, não dono dela."
+        },
+        {
+          question: "¿Cómo la puesta en escena y la presencia digital de la imagen constituirían una práctica éticamente informada? ¿Esto conlleva una relación específica con el lenguaje cinematográfico?",
+          answer: "A minha mise-en-scène nasce de uma ética de cuidado: eu componho luz, distâncias, movimentos e texturas não para capturar, mas para acolher o corpo em performance. A presença digital, as múltiplas câmeras, a fragmentação, a textura expandida, tudo torna evidente que a imagem não é um espelho neutro: é um organismo vivo, um parceiro. Essa relação me conduz a uma linguagem cinematográfica que não domina o corpo, mas convive com ele. A ética aparece justamente aí: na recusa de transformar a performer em objeto e na decisão de assumir a imagem como coautoria sensível."
+        },
+        {
+          question: "¿Es posible el cuestionamiento del cuerpo luego del performance?",
+          answer: "Sim, eu acredito profundamente que o questionamento do corpo continua depois da performance. Quando a performer atravessa a experiência e depois retorna a ela, pelo relato, pela memória, pela própria imagem, o corpo reencontra-se como matéria crítica, não apenas como matéria performada. Para mim, esse retorno é indispensável. É nesse momento que as camadas éticas se consolidam e que a performer reinscreve sua própria narrativa. A performance não termina no clímax, termina no eco."
+        },
+        {
+          question: "El diálogo luego del evento, en donde la artista coloca en palabras la experiencia, ¿podría intervenir en la recepción misma del performance?",
+          answer: "Quando a artista fala depois do evento, eu percebo que a obra muda de temperatura. O depoimento dela não apenas explica, ele reorganiza o campo sensível de quem vê. Eu entendo esse gesto como uma extensão do trabalho: o público deixa de ver 'uma cena' e passa a ver um processo, uma pessoa, uma experiência encarnada. No caso de NYX, esse diálogo é parte da ética do projeto, uma camada que impede leituras voyeurísticas e abre espaço para uma recepção consciente, responsável, afetiva."
+        },
+        {
+          question: "En el momento en que la artista se siente observada, ¿se rompe el espacio de lo íntimo? O ¿Ese espacio de lo íntimo se da en el momento de la visualización del espectador?",
+          answer: "Eu acredito que o íntimo não é quebrado pelo olhar, ele é ativado por ele. Em NYX, a artista sabe que está sendo observada desde sempre, mas esse saber não anula a intimidade, ele a expande. O íntimo, para mim, não é o privado protegido, é o vulnerável compartilhado. Quando o espectador vê, ele não invade, ele é convidado a testemunhar. E nesse testemunho, o íntimo se completa. Não existe intimidade sem presença, e a câmera, nesse caso, é uma presença que consagra, não que viola."
+        }
+      ]
+    },
     filmPlayer: {
       trailer: "TRAILER",
       officialCut: "OFFICIAL CUT",
@@ -438,6 +475,43 @@ export const translations = {
         title: "Performance Stages",
         text: "The performance is structured in six distinct moments that guide the sensory experience and fragmented capture of the body in movement, creating a non-linear narrative of pleasure and self-discovery: The Body as Landscape, Touch and Breath, Breath and Tension, Fragmentation of the Act, Fragmented Climax and Post-Climax."
       }
+    },
+    dialogues: {
+      title: "Dialogues",
+      intro: "As part of an academic research conducted by Prof. Carlos M. Cordero Cancio (Ph.D.) from the Universidad de Puerto Rico, the filmmakers of NYX-POST-PORN were invited to reflect on the creative process, the ethics of body representation, and the limits of cinematic image in the context of post-porn.",
+      context: "This section presents the responses of director Castro Pizzano to the questions proposed by the research. Soon, the reflections of the other filmmakers will be included: Patrícia Ressureição (Corporal Direction), Murilo Castro (Production and Making Of), and Ana Pupo (Art Direction).",
+      interviewTitle: "Interview — Castro Pizzano (Director)",
+      note: "This is the first part of the dialogues. The questions were formulated in Spanish by Prof. Carlos Cordero Cancio as part of his research on experimental and post-pornographic cinematographic practices.",
+      questions: [
+        {
+          question: "¿Qué función tiene el desarrollo de un proceso creativo para un director/a? ¿Está cercano a la conceptualización de lo visual o a su descubrimiento?",
+          answer: "For me, the creative process is not a path I walk alone, it is a state of porosity. I do not work only with the conceptualization of an image, but with the risk of discovering it as it forms before me and before the performing body. In NYX-POST-PORN, I enter the set knowing that there are intentions, atmospheres, and structured ethical principles, but it is the encounter between body and camera that truly decides. The creative process, therefore, is not a guarantee, it is an active listening."
+        },
+        {
+          question: "¿Cómo la poesía visual constituye un acto deconstructivo de la imaginación y práctica de la mercantilización del cuerpo?",
+          answer: "When I work with visual poetry, I feel that I am deliberately breaking the grammar that transforms the body into a product. By fragmenting, diluting, approaching and distancing the body in NYX, I interrupt the fantasy of transparency of the traditional pornographic image. Visual poetry there is not ornament: it is a tool for deprogramming. I do not offer the body for consumption, but as an enigma, as vibration, as symbolic territory. In this gesture, I remove the image from the logic of commodification and open space for another possible imagination, an imagination that does not buy, that does not dominate, that feels together."
+        },
+        {
+          question: "¿Resulta lo extremo en el cine una subversión de la mirada totalizante y del sujeto espectador/a?",
+          answer: "When I work with the extreme, I do not seek shock, I seek the limit of presence. In NYX, the extreme appears as radical intimacy, and this shifts the spectator from a comfortable position to a vulnerable position. At this limit-point, the totalizing gaze dissolves: the spectator no longer controls the distance. The work returns the gaze. For me, this is profoundly subversive: the extreme opens a space where the spectator ceases to be a sovereign subject and becomes part of a relationship, not its owner."
+        },
+        {
+          question: "¿Cómo la puesta en escena y la presencia digital de la imagen constituirían una práctica éticamente informada? ¿Esto conlleva una relación específica con el lenguaje cinematográfico?",
+          answer: "My mise-en-scène is born from an ethics of care: I compose light, distances, movements, and textures not to capture, but to welcome the body in performance. The digital presence, the multiple cameras, the fragmentation, the expanded texture, everything makes it evident that the image is not a neutral mirror: it is a living organism, a partner. This relationship leads me to a cinematographic language that does not dominate the body, but coexists with it. Ethics appears precisely there: in the refusal to transform the performer into an object and in the decision to assume the image as sensitive co-authorship."
+        },
+        {
+          question: "¿Es posible el cuestionamiento del cuerpo luego del performance?",
+          answer: "Yes, I deeply believe that the questioning of the body continues after the performance. When the performer goes through the experience and then returns to it, through the account, the memory, the image itself, the body rediscovers itself as critical matter, not just as performed matter. For me, this return is indispensable. It is at this moment that the ethical layers are consolidated and that the performer rewrites her own narrative. The performance does not end at the climax, it ends in the echo."
+        },
+        {
+          question: "El diálogo luego del evento, en donde la artista coloca en palabras la experiencia, ¿podría intervenir en la recepción misma del performance?",
+          answer: "When the artist speaks after the event, I perceive that the work changes temperature. Her testimony does not only explain, it reorganizes the sensitive field of those who see. I understand this gesture as an extension of the work: the public stops seeing 'a scene' and begins to see a process, a person, an embodied experience. In the case of NYX, this dialogue is part of the project's ethics, a layer that prevents voyeuristic readings and opens space for a conscious, responsible, affective reception."
+        },
+        {
+          question: "En el momento en que la artista se siente observada, ¿se rompe el espacio de lo íntimo? O ¿Ese espacio de lo íntimo se da en el momento de la visualización del espectador?",
+          answer: "I believe that the intimate is not broken by the gaze, it is activated by it. In NYX, the artist knows she is being observed from the start, but this knowledge does not nullify intimacy, it expands it. The intimate, for me, is not the protected private, it is the shared vulnerable. When the spectator sees, they do not invade, they are invited to witness. And in this witnessing, the intimate is completed. There is no intimacy without presence, and the camera, in this case, is a presence that consecrates, not violates."
+        }
+      ]
     },
     filmPlayer: {
       trailer: "TRAILER",
